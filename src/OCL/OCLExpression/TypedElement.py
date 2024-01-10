@@ -1,0 +1,2 @@
+class TypedElement:
+    pass
