@@ -7,6 +7,8 @@ class Root_Handler:
 
     def get_root(self):
         return self.root
+    def set_context_name(self,name):
+        self.context_name = name
     def pop(self):
         self.last_coll_exp = self.all.pop()
         self.add_to_root(self.last_coll_exp)
@@ -19,15 +21,16 @@ class Root_Handler:
         else:
             return "var"
 
-    def add_to_root(self,op):
-        if len(self.all)==0:
+    def add_to_root(self, op):
+        if len(self.all) == 0:
             if self.root is None:
                 self.root = op
             else:
-                op.arguments.append(self.root)
+                op.source = self.root
                 self.root = op
         else:
             self.all[-1].add_body(op)
+        pass
     def pop_root(self,root):
 
         if self.root == self.last_coll_exp:
@@ -47,21 +50,25 @@ class Root_Handler:
         self.add_to_root(varID)
         # print('\x1b[6;30;42m' + 'handled ID, verify me!!!' + '\x1b[0m')
         pass
-
-
-    def handle_bag(self, bag, operator):
-        collectionLiteral = self.factory.create_collection_literal_expression("bag")
+    def create_sequence(self):
+        type = self.factory.create_sequence_type ()
+        return self.factory.create_collection_literal_expression("sequence",type)
+    def create_bag(self):
+        type = self.factory.create_bag_type()
+        return self.factory.create_collection_literal_expression("bag",type = type)
+    def create_operation_call_exp(self,name):
+       return self.factory.create_operation_call_expression(name=name)
+    def get_factory(self):
+        return self.factory
+    def handle_bag(self,  collectionLiteral, operator):
         infixOperator = None
         if operator is not None:
             infixOperator = self.factory.create_infix_operator(operator)
-        for item in bag:
-            collectionLiteral.add_to_collection_items(self.factory.create_collection_item("bag",item))
+
         if infixOperator is not None:
-            left = self.pop_root(self.root)
+            operationCallExp = self.factory.create_operation_call_expression(None,collectionLiteral,infixOperator,None,True)
 
-            operationCallExp = self.factory.create_operation_call_expression(left,collectionLiteral,infixOperator)
-
-            self.add_to_root(operationCallExp)
+        self.add_to_root(operationCallExp)
 
     def handlePrimaryExp(self,primaryExp,operator):
         pass
@@ -144,11 +151,16 @@ class Root_Handler:
         pass
 
     def handlePrint(self, root):
-
-        print(root)
-
+        if root == None:
+            return
         if hasattr(root, 'arguments'):
-            if len(root.arguments) != 0:
-                for arg in root.arguments:
-                    self.handlePrint(arg)
+            print(root.arguments)
+            print(root.get_referred_operation())
+            self.handlePrint(root.get_source())
+
+        if hasattr(root,'body'):
+            print(root.name)
+            print(root.iterator)
+            for item in root.body:
+                print(item)
 

@@ -13,7 +13,8 @@ class OCLsListener(ParseTreeListener):
         self.rootHandler = rh
         self.forAllBody = False
         self.operator =[]
-        self.bag = []
+        self.coll_data = []
+        self.debug = False
     # Enter a parse tree produced by OCLsParser#oclFile.
     def enterOclFile(self, ctx:OCLsParser.OclFileContext):
         #print(inspect.stack()[0][3])
@@ -26,7 +27,7 @@ class OCLsListener(ParseTreeListener):
 
     # Enter a parse tree produced by OCLsParser#ContextExp.
     def enterContextExp(self, ctx:OCLsParser.ContextExpContext):
-
+        self.context = (ctx.getText())
         #print(inspect.stack()[0][3])
         pass
 
@@ -39,7 +40,8 @@ class OCLsListener(ParseTreeListener):
 
     # Enter a parse tree produced by OCLsParser#constraint.
     def enterConstraint(self, ctx:OCLsParser.ConstraintContext):
-        self.constraint = ctx.getText()
+        self.context_name = (self.context.split(ctx.getText()))[0].replace('context', '')
+        self.rootHandler.set_context_name(self.context_name)
 
     # Exit a parse tree produced by OCLsParser#constraint.
     def exitConstraint(self, ctx:OCLsParser.ConstraintContext):
@@ -61,7 +63,8 @@ class OCLsListener(ParseTreeListener):
 
     # Enter a parse tree produced by OCLsParser#type.
     def enterType(self, ctx:OCLsParser.TypeContext):
-        #print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
         pass
 
     # Exit a parse tree produced by OCLsParser#type.
@@ -72,6 +75,9 @@ class OCLsListener(ParseTreeListener):
     # Enter a parse tree produced by OCLsParser#collectionType.
     def enterCollectionType(self, ctx:OCLsParser.CollectionTypeContext):
         #print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         pass
 
     # Exit a parse tree produced by OCLsParser#collectionType.
@@ -82,6 +88,9 @@ class OCLsListener(ParseTreeListener):
     # Enter a parse tree produced by OCLsParser#userDefinedType.
     def enterUserDefinedType(self, ctx:OCLsParser.UserDefinedTypeContext):
         #print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         pass
 
     # Exit a parse tree produced by OCLsParser#userDefinedType.
@@ -92,6 +101,10 @@ class OCLsListener(ParseTreeListener):
     # Enter a parse tree produced by OCLsParser#binary.
     def enterBinary(self, ctx:OCLsParser.BinaryContext):
         #print(inspect.stack()[0][3])
+        self.binary = ctx.getText()
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         #print(ctx.getText())
         pass
 
@@ -104,6 +117,9 @@ class OCLsListener(ParseTreeListener):
     # Enter a parse tree produced by OCLsParser#unary.
     def enterUnary(self, ctx:OCLsParser.UnaryContext):
         #print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         pass
 
     # Exit a parse tree produced by OCLsParser#unary.
@@ -114,6 +130,9 @@ class OCLsListener(ParseTreeListener):
     # Enter a parse tree produced by OCLsParser#if.
     def enterIf(self, ctx:OCLsParser.IfContext):
         #print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         pass
 
     # Exit a parse tree produced by OCLsParser#if.
@@ -124,6 +143,9 @@ class OCLsListener(ParseTreeListener):
     # Enter a parse tree produced by OCLsParser#OCLISTYPEOF.
     def enterOCLISTYPEOF(self, ctx:OCLsParser.OCLISTYPEOFContext):
         #print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         pass
 
     # Exit a parse tree produced by OCLsParser#OCLISTYPEOF.
@@ -134,6 +156,9 @@ class OCLsListener(ParseTreeListener):
     # Enter a parse tree produced by OCLsParser#OCLASTYPE.
     def enterOCLASTYPE(self, ctx:OCLsParser.OCLASTYPEContext):
         #print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         pass
 
     # Exit a parse tree produced by OCLsParser#OCLASTYPE.
@@ -144,6 +169,9 @@ class OCLsListener(ParseTreeListener):
     # Enter a parse tree produced by OCLsParser#OCLISKINDOF.
     def enterOCLISKINDOF(self, ctx:OCLsParser.OCLISKINDOFContext):
         #print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         pass
 
     # Exit a parse tree produced by OCLsParser#OCLISKINDOF.
@@ -154,6 +182,9 @@ class OCLsListener(ParseTreeListener):
     # Enter a parse tree produced by OCLsParser#ISEMPTY.
     def enterISEMPTY(self, ctx:OCLsParser.ISEMPTYContext):
         #print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         pass
 
     # Exit a parse tree produced by OCLsParser#ISEMPTY.
@@ -164,6 +195,9 @@ class OCLsListener(ParseTreeListener):
     # Enter a parse tree produced by OCLsParser#SUM.
     def enterSUM(self, ctx:OCLsParser.SUMContext):
         #print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         pass
 
     # Exit a parse tree produced by OCLsParser#SUM.
@@ -174,6 +208,9 @@ class OCLsListener(ParseTreeListener):
     # Enter a parse tree produced by OCLsParser#SIZE.
     def enterSIZE(self, ctx:OCLsParser.SIZEContext):
         #print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         pass
 
     # Exit a parse tree produced by OCLsParser#SIZE.
@@ -184,6 +221,9 @@ class OCLsListener(ParseTreeListener):
     # Enter a parse tree produced by OCLsParser#INCLUDES.
     def enterINCLUDES(self, ctx:OCLsParser.INCLUDESContext):
         #print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         pass
 
     # Exit a parse tree produced by OCLsParser#INCLUDES.
@@ -194,6 +234,9 @@ class OCLsListener(ParseTreeListener):
     # Enter a parse tree produced by OCLsParser#EXCLUDES.
     def enterEXCLUDES(self, ctx:OCLsParser.EXCLUDESContext):
         #print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         pass
 
     # Exit a parse tree produced by OCLsParser#EXCLUDES.
@@ -203,17 +246,31 @@ class OCLsListener(ParseTreeListener):
 
     # Enter a parse tree produced by OCLsParser#SEQUENCE.
     def enterSEQUENCE(self, ctx:OCLsParser.SEQUENCEContext):
-        #print(inspect.stack()[0][3])
+        # print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
+        self.coll_data.append(self.rootHandler.create_sequence())
+
         pass
 
     # Exit a parse tree produced by OCLsParser#SEQUENCE.
     def exitSEQUENCE(self, ctx:OCLsParser.SEQUENCEContext):
+        op = None
+        print(ctx.getText())
+        if len(self.operator) != 0:
+            op = self.operator[-1]
+        self.rootHandler.handle_sequence(self.coll_data.pop(), op)
+
         pass
 
 
     # Enter a parse tree produced by OCLsParser#SUBSEQUENCE.
     def enterSUBSEQUENCE(self, ctx:OCLsParser.SUBSEQUENCEContext):
         #print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         pass
 
     # Exit a parse tree produced by OCLsParser#SUBSEQUENCE.
@@ -224,6 +281,9 @@ class OCLsListener(ParseTreeListener):
     # Enter a parse tree produced by OCLsParser#ALLINSTANCES.
     def enterALLINSTANCES(self, ctx:OCLsParser.ALLINSTANCESContext):
         #print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         pass
 
     # Exit a parse tree produced by OCLsParser#ALLINSTANCES.
@@ -234,6 +294,9 @@ class OCLsListener(ParseTreeListener):
     # Enter a parse tree produced by OCLsParser#ORDEREDSET.
     def enterORDEREDSET(self, ctx:OCLsParser.ORDEREDSETContext):
         #print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         pass
 
     # Exit a parse tree produced by OCLsParser#ORDEREDSET.
@@ -244,6 +307,9 @@ class OCLsListener(ParseTreeListener):
     # Enter a parse tree produced by OCLsParser#SUBORDEREDSET.
     def enterSUBORDEREDSET(self, ctx:OCLsParser.SUBORDEREDSETContext):
         #print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         pass
 
     # Exit a parse tree produced by OCLsParser#SUBORDEREDSET.
@@ -254,6 +320,9 @@ class OCLsListener(ParseTreeListener):
     # Enter a parse tree produced by OCLsParser#SET.
     def enterSET(self, ctx:OCLsParser.SETContext):
         #print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         pass
 
     # Exit a parse tree produced by OCLsParser#SET.
@@ -263,9 +332,10 @@ class OCLsListener(ParseTreeListener):
 
     # Enter a parse tree produced by OCLsParser#BAG.
     def enterBAG(self, ctx:OCLsParser.BAGContext):
+        if not self.debug:
+            print(inspect.stack()[0][3])
 
-        self.bag.append([])
-
+        self.coll_data.append(self.rootHandler.create_bag())
         pass
 
     # Exit a parse tree produced by OCLsParser#BAG.
@@ -273,23 +343,31 @@ class OCLsListener(ParseTreeListener):
         op = None
         if len(self.operator)!=0:
             op = self.operator[-1]
-        self.rootHandler.handle_bag(self.bag.pop(), op)
+        self.rootHandler.handle_bag(self.coll_data.pop(), op)
 
         pass
 
 
     # Enter a parse tree produced by OCLsParser#PREPEND.
     def enterPREPEND(self, ctx:OCLsParser.PREPENDContext):
-        #print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
+        op_call_exp = self.rootHandler.create_operation_call_exp('PREPEND')
+        self.coll_data.append(op_call_exp)
+
         pass
 
     # Exit a parse tree produced by OCLsParser#PREPEND.
     def exitPREPEND(self, ctx:OCLsParser.PREPENDContext):
+        self.rootHandler.add_to_root(self.coll_data.pop())
         pass
 
 
     # Enter a parse tree produced by OCLsParser#LAST.
     def enterLAST(self, ctx:OCLsParser.LASTContext):
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         #print(inspect.stack()[0][3])
         pass
 
@@ -300,6 +378,9 @@ class OCLsListener(ParseTreeListener):
 
     # Enter a parse tree produced by OCLsParser#APPEND.
     def enterAPPEND(self, ctx:OCLsParser.APPENDContext):
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         #print(inspect.stack()[0][3])
         pass
 
@@ -311,6 +392,8 @@ class OCLsListener(ParseTreeListener):
     # Enter a parse tree produced by OCLsParser#COLLECTION.
     def enterCOLLECTION(self, ctx:OCLsParser.COLLECTIONContext):
 
+        if not self.debug:
+            print(inspect.stack()[0][3])
 
         self.rootHandler.handle_collection(ctx.getText())
         #print(inspect.stack()[0][3])
@@ -326,6 +409,9 @@ class OCLsListener(ParseTreeListener):
     # Enter a parse tree produced by OCLsParser#CollectionExpressionVariable.
     def enterCollectionExpressionVariable(self, ctx:OCLsParser.CollectionExpressionVariableContext):
         #print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         self.rootHandler.handle_collection(ctx.getText())
         pass
 
@@ -338,6 +424,9 @@ class OCLsListener(ParseTreeListener):
 
     # Enter a parse tree produced by OCLsParser#SYMMETRICDIFFERENCE.
     def enterSYMMETRICDIFFERENCE(self, ctx:OCLsParser.SYMMETRICDIFFERENCEContext):
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         #print(inspect.stack()[0][3])
         pass
 
@@ -348,6 +437,9 @@ class OCLsListener(ParseTreeListener):
 
     # Enter a parse tree produced by OCLsParser#FIRST.
     def enterFIRST(self, ctx:OCLsParser.FIRSTContext):
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         #print(inspect.stack()[0][3])
         pass
 
@@ -358,6 +450,9 @@ class OCLsListener(ParseTreeListener):
 
     # Enter a parse tree produced by OCLsParser#DERIVE.
     def enterDERIVE(self, ctx:OCLsParser.DERIVEContext):
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         #print(inspect.stack()[0][3])
         pass
 
@@ -368,6 +463,9 @@ class OCLsListener(ParseTreeListener):
 
     # Enter a parse tree produced by OCLsParser#UNION.
     def enterUNION(self, ctx:OCLsParser.UNIONContext):
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         #print(inspect.stack()[0][3])
         pass
 
@@ -378,6 +476,9 @@ class OCLsListener(ParseTreeListener):
 
     # Enter a parse tree produced by OCLsParser#defExp.
     def enterDefExp(self, ctx:OCLsParser.DefExpContext):
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         #print(inspect.stack()[0][3])
         pass
 
@@ -388,6 +489,9 @@ class OCLsListener(ParseTreeListener):
 
     # Enter a parse tree produced by OCLsParser#defIDAssignmentexpression.
     def enterDefIDAssignmentexpression(self, ctx:OCLsParser.DefIDAssignmentexpressionContext):
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         #print(inspect.stack()[0][3])
         pass
 
@@ -398,6 +502,8 @@ class OCLsListener(ParseTreeListener):
 
     # Enter a parse tree produced by OCLsParser#PrimaryExp.
     def enterPrimaryExp(self, ctx:OCLsParser.PrimaryExpContext):
+        if not self.debug:
+            print(inspect.stack()[0][3])
 
         #print(inspect.stack()[0][3])
         #print(ctx.getText())
@@ -417,6 +523,9 @@ class OCLsListener(ParseTreeListener):
 
     # Enter a parse tree produced by OCLsParser#funcCall.
     def enterFuncCall(self, ctx:OCLsParser.FuncCallContext):
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         #print(inspect.stack()[0][3])
         pass
 
@@ -427,8 +536,10 @@ class OCLsListener(ParseTreeListener):
 
     # Enter a parse tree produced by OCLsParser#op.
     def enterOp(self, ctx:OCLsParser.OpContext):
+        if not self.debug:
+            print(inspect.stack()[0][3])
 
-        self.operator.append(ctx.getText())
+        # self.operator.append(ctx.getText())
         pass
 
     # Exit a parse tree produced by OCLsParser#op.
@@ -438,6 +549,9 @@ class OCLsListener(ParseTreeListener):
 
     # Enter a parse tree produced by OCLsParser#arrowexp.
     def enterArrowexp(self, ctx:OCLsParser.ArrowexpContext):
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         #print(inspect.stack()[0][3])
         pass
 
@@ -448,8 +562,10 @@ class OCLsListener(ParseTreeListener):
 
     # Enter a parse tree produced by OCLsParser#number.
     def enterNumber(self, ctx:OCLsParser.NumberContext):
-
-        self.bag[-1].append(ctx.getText())
+        if not self.debug:
+            print(inspect.stack()[0][3])
+        item = self.rootHandler.get_factory().create_collection_item("item", ctx.getText())
+        self.coll_data[-1].add(item)
         pass
 
     # Exit a parse tree produced by OCLsParser#number.
@@ -460,6 +576,9 @@ class OCLsListener(ParseTreeListener):
     # Enter a parse tree produced by OCLsParser#PredefinedfunctionCall.
     def enterPredefinedfunctionCall(self, ctx:OCLsParser.PredefinedfunctionCallContext):
         #print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         pass
 
     # Exit a parse tree produced by OCLsParser#PredefinedfunctionCall.
@@ -471,7 +590,14 @@ class OCLsListener(ParseTreeListener):
     def enterID(self, ctx:OCLsParser.IDContext):
         #print(inspect.stack()[0][3])
         #print(ctx.getText())
-        self.rootHandler.handle_ID(ctx.getText())
+
+        if not self.debug:
+            print(inspect.stack()[0][3])
+        if len(self.coll_data) != 0:
+            item = self.rootHandler.get_factory().create_collection_item("item", ctx.getText())
+            self.coll_data[-1].add(item)
+        else:
+            self.rootHandler.handle_ID(ctx.getText())
         pass
 
     # Exit a parse tree produced by OCLsParser#ID.
@@ -482,6 +608,9 @@ class OCLsListener(ParseTreeListener):
     # Enter a parse tree produced by OCLsParser#SingleQuoteExp.
     def enterSingleQuoteExp(self, ctx:OCLsParser.SingleQuoteExpContext):
         #print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         pass
 
     # Exit a parse tree produced by OCLsParser#SingleQuoteExp.
@@ -492,6 +621,9 @@ class OCLsListener(ParseTreeListener):
     # Enter a parse tree produced by OCLsParser#doubleDots.
     def enterDoubleDots(self, ctx:OCLsParser.DoubleDotsContext):
         #print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         pass
 
     # Exit a parse tree produced by OCLsParser#doubleDots.
@@ -501,18 +633,27 @@ class OCLsListener(ParseTreeListener):
 
     # Enter a parse tree produced by OCLsParser#binaryExpression.
     def enterBinaryExpression(self, ctx:OCLsParser.BinaryExpressionContext):
-        #print(inspect.stack()[0][3])
-        #print(ctx.getText())
+        # print(inspect.stack()[0][3])
+        # print(ctx.getText())
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         pass
 
     # Exit a parse tree produced by OCLsParser#binaryExpression.
     def exitBinaryExpression(self, ctx:OCLsParser.BinaryExpressionContext):
         #print(inspect.stack()[0][3])
+
+        and_or = self.binary.split(ctx.getText())[0]
+        # print(and_or)
+        inBetween_op = None
+        if "and" or "or" in and_or:
+            inBetween_op = and_or
         if len(self.operator) != 0:
             text_to_process = ctx.getText()
             if "()" in text_to_process:
                 text_to_process = ctx.parentCtx.parentCtx.getText()
-            self.rootHandler.handle_binary_expression(text_to_process,self.operator[-1])
+            self.rootHandler.handle_binary_expression(text_to_process,self.operator[-1],inBetween_op)
             self.operator.pop()
 
         pass
@@ -521,6 +662,9 @@ class OCLsListener(ParseTreeListener):
     # Enter a parse tree produced by OCLsParser#unaryExpression.
     def enterUnaryExpression(self, ctx:OCLsParser.UnaryExpressionContext):
         #print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         pass
 
     # Exit a parse tree produced by OCLsParser#unaryExpression.
@@ -530,6 +674,8 @@ class OCLsListener(ParseTreeListener):
 
     # Enter a parse tree produced by OCLsParser#operator.
     def enterOperator(self, ctx:OCLsParser.OperatorContext):
+        if not self.debug:
+            print(inspect.stack()[0][3])
 
         self.operator.append(ctx.getText())
 
@@ -543,6 +689,9 @@ class OCLsListener(ParseTreeListener):
     # Enter a parse tree produced by OCLsParser#numberORUserDefined.
     def enterNumberORUserDefined(self, ctx:OCLsParser.NumberORUserDefinedContext):
         #print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         pass
 
     # Exit a parse tree produced by OCLsParser#numberORUserDefined.
@@ -552,6 +701,9 @@ class OCLsListener(ParseTreeListener):
 
     # Enter a parse tree produced by OCLsParser#primaryExpression.
     def enterPrimaryExpression(self, ctx:OCLsParser.PrimaryExpressionContext):
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         pass
 
     # Exit a parse tree produced by OCLsParser#primaryExpression.
@@ -565,6 +717,9 @@ class OCLsListener(ParseTreeListener):
     # Enter a parse tree produced by OCLsParser#literal.
     def enterLiteral(self, ctx:OCLsParser.LiteralContext):
         #print(inspect.stack()[0][3])
+        if not self.debug:
+            print(inspect.stack()[0][3])
+
         pass
 
     # Exit a parse tree produced by OCLsParser#literal.

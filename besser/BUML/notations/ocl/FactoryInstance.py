@@ -14,22 +14,32 @@ class Factory:
         return RealLiteralExpression(name, val)
         pass
 
-    def create_operation_call_expression(self, leftpart, rightpart, infixOperator, inBetweenOp=None):
-        if inBetweenOp is None:
+    def create_operation_call_expression(self, leftpart = None, rightpart= None, infixOperator= None, inBetweenOp=None,isleftNone=False,name = None):
+        if inBetweenOp is None and isleftNone is False and name is None:
             return OperationCallExpression("Operation", infixOperator.get_infix_operator(),
                                            [leftpart, infixOperator, rightpart])
-        else:
+        elif inBetweenOp is None and isleftNone is True and name is None:
             return OperationCallExpression("Operation", infixOperator.get_infix_operator(),
-                                           [inBetweenOp, leftpart, infixOperator, rightpart])
-
+                                           [infixOperator, rightpart])
+        elif inBetweenOp is not None and name is None:
+            oce = OperationCallExpression("Operation", infixOperator.get_infix_operator(),
+                                           [leftpart, infixOperator, rightpart])
+            oce.set_referred_operation(inBetweenOp)
+            return oce
+        else:
+            return OperationCallExpression(name=name, operation =name,arguments=[] )
 
 
 
     def create_loop_expression(self,collectionOperator):
         return LoopExp(collectionOperator,None)
         pass
-    def create_collection_literal_expression(self,type):
-        return CollectionLiteralExp(name = "NP",type=type)
+    def create_bag_type(self):
+        return BagType("BagType")
+    def create_collection_literal_expression(self,name,type):
+        return CollectionLiteralExp(name = name,type=type)
+    def create_sequence_type(self):
+        return SequenceType("SequenceType")
     def create_collection_item(self,name ,item):
         return CollectionItem(name,item)
     def create_iterator_expression(self,name,type):

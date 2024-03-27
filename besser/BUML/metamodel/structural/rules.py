@@ -5,7 +5,18 @@ from besser.BUML.metamodel.structural import Class, NamedElement, TypedElement, 
 class OCLExpression(TypedElement):
     def __init__(self, name: str, type: Type):
         super().__init__(name, type)
+        self.source = None
+        self.referredOperation = None
 
+    def set_source(self, source):
+        self.source = source
+
+    def get_source(self):
+        return self.source
+    def set_referred_operation(self,op):
+        self.referredOperation = op
+    def get_referred_operation(self):
+        return self.referredOperation
     def __str__(self) -> str:
         pass
 
@@ -65,6 +76,8 @@ class OperationCallExpression(OCLExpression):
         self.operation: str = operation
         self.arguments: list[OCLExpression] = arguments
 
+    def add(self,item):
+        self.arguments.append(item)
     def __repr__(self):
         return f'OperationCallExpression({self.operation},{self.arguments})'
 
@@ -188,6 +201,8 @@ class RealLiteralExpression(LiteralExpression):
 
 
 class Classifier:
+    def __init__(self, name= None):
+        self.name = name
     pass
 class CallExp(OCLExpression):
     pass
@@ -253,7 +268,7 @@ class IteratorExp(LoopExp):
         self.name = name
         self.type = type
     pass
-    def __str__(self):
+    def __repr__(self):
         return self.name +":" +self.type
 
 class LetExp(OCLExpression):
@@ -317,7 +332,7 @@ class CollectionLiteralExp(LiteralExp):
         for item in self.collectionItems:
             toRet = toRet + str(item)
         return toRet
-    def add_to_collection_items(self,item):
+    def add(self,item):
         self.collectionItems.append(item)
 
 class CollectionLiteralPart(TypedElement):

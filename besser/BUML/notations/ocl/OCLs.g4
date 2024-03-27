@@ -38,7 +38,7 @@ expression:
           |  Arrow? EXCLUDES LPAREN expression RPAREN  expression? RPAREN* #EXCLUDES
           |  Arrow? LPAREN* SEQUENCE LBRACE* LPAREN* (SingleQuote? expression SingleQuote? COMMA?)* RBRACE* RPAREN* expression? #SEQUENCE
           |  Arrow? LPAREN* SUBSEQUENCE LBRACE* LPAREN* (SingleQuote? expression SingleQuote? COMMA?)* RPAREN* RBRACE*  expression? #SUBSEQUENCE
-          | Arrow? ALLINSTANCES LPAREN+ expression RPAREN+ expression?  #ALLINSTANCES
+          |  Arrow? ALLINSTANCES LPAREN+ expression RPAREN+ expression?  #ALLINSTANCES
 
           | Arrow? LPAREN* ORDEREDSET LBRACE (SingleQuote? expression SingleQuote? COMMA?)* RBRACE RPAREN* expression?  #ORDEREDSET
           | Arrow? LPAREN* SUBORDEREDSET LBRACE* LPAREN* (SingleQuote? expression SingleQuote? COMMA?)* RBRACE* RPAREN* expression? RPAREN  #SUBORDEREDSET
@@ -61,7 +61,7 @@ expression:
           | ID COLON ID EQUAL expression #defIDAssignmentexpression
           | LPAREN*  primaryExpression?  (DOT ID)* operator? primaryExpression?  (DOT ID)+ expression? #PrimaryExp
           | primaryExpression  (DOT)* ID* functionCall operator? expression?  #funcCall
-        | operator numberORUserDefined?  #op
+          | operator numberORUserDefined?  #op
           | Arrow expression #arrowexp
           | NUMBER expression?  #number
           | Arrow? functionCall expression? #PredefinedfunctionCall
