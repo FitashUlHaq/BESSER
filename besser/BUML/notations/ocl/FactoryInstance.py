@@ -14,6 +14,15 @@ class Factory:
         return RealLiteralExpression(name, val)
         pass
 
+    def create_if_else_exp(self,name, type):
+        return IfExp(name,type)
+    def create_set_type(self):
+        return SetType("Set")
+    def create_ordered_set_type(self):
+        return OrderedSetType("OrderedSetType")
+    def create_sub_ordered_set_type(self):
+        return OrderedSetType("SubOrderedSetType")
+
     def create_operation_call_expression(self, leftpart = None, rightpart= None, infixOperator= None, inBetweenOp=None,isleftNone=False,name = None):
         if inBetweenOp is None and isleftNone is False and name is None:
             return OperationCallExpression("Operation", infixOperator.get_infix_operator(),

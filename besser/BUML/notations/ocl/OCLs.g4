@@ -25,7 +25,10 @@ userDefinedType: ID ;
 expression:
           (AND | OR )? binaryExpression expression? #binary
           | unaryExpression expression? #unary
-          | IF expression THEN expression ELSE expression ENDIF  #if
+          | IF expression  #ifExp
+          | THEN expression #thenExp
+          | ELSE expression #elseExp
+          | ENDIF  expression? #endIfExp
           | primaryExpression  (DOT ID)* DOT OCLISTYPEOF LPAREN type RPAREN expression? #OCLISTYPEOF
           | primaryExpression  (DOT ID)* DOT OCLASTYPE LPAREN type RPAREN expression? #OCLASTYPE
           | primaryExpression  (DOT ID)* DOT OCLISKINDOF LPAREN type RPAREN expression? #OCLISKINDOF
@@ -61,6 +64,7 @@ expression:
           | ID COLON ID EQUAL expression #defIDAssignmentexpression
           | LPAREN*  primaryExpression?  (DOT ID)* operator? primaryExpression?  (DOT ID)+ expression? #PrimaryExp
           | primaryExpression  (DOT)* ID* functionCall operator? expression?  #funcCall
+//          | operator expression #operatorExp
           | operator numberORUserDefined?  #op
           | Arrow expression #arrowexp
           | NUMBER expression?  #number

@@ -9,6 +9,8 @@ class Root_Handler:
         return self.root
     def set_context_name(self,name):
         self.context_name = name
+    def create_if_else_exp(self,name,type):
+        return self.factory.create_if_else_exp(name,type)
     def pop(self):
         self.last_coll_exp = self.all.pop()
         self.add_to_root(self.last_coll_exp)
@@ -50,6 +52,17 @@ class Root_Handler:
         self.add_to_root(varID)
         # print('\x1b[6;30;42m' + 'handled ID, verify me!!!' + '\x1b[0m')
         pass
+    def create_ordered_set(self):
+        type = self.factory.create_ordered_set_type()
+        return self.factory.create_collection_literal_expression("orderedSet", type)
+
+    def create_set(self):
+        type = self.factory.create_set_type()
+        return self.factory.create_collection_literal_expression("set", type)
+
+    def create_sub_ordered_set(self):
+        type = self.factory.create_ordered_set_type()
+        return self.factory.create_collection_literal_expression("subOrderedSet", type)
     def create_sequence(self):
         type = self.factory.create_sequence_type ()
         return self.factory.create_collection_literal_expression("sequence",type)
@@ -69,10 +82,13 @@ class Root_Handler:
             operationCallExp = self.factory.create_operation_call_expression(None,collectionLiteral,infixOperator,None,True)
 
         self.add_to_root(operationCallExp)
-
+    def handle_adding_to_root(self, expression, op=None):
+        if op is not None:
+            expression.set_referred_operation(op)
+        self.add_to_root(expression)
+        pass
     def handlePrimaryExp(self,primaryExp,operator):
         pass
-
 
     def handle_collection(self,oclExp):
 
