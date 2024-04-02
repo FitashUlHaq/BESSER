@@ -116,31 +116,33 @@ class IfExp(OCLExpression):
         # self.ifOwner = null
         super().__init__(name, type)
 
-        self.ifCondition = ifcond
-        self.else_expression = elseExp
-        self.then_expression = thenExp
+        self._ifCondition = ifcond
+        self._else_expression = elseExp
+        self._then_expression = thenExp
 
     @property
-    def get_if_Condition (self):
-        return self.ifCondition
+    def ifCondition (self) ->OCLExpression:
+        return self._ifCondition
 
     @property
-    def get_else_condition(self):
-        return self.else_expression
+    def elseCondition(self)->OCLExpression:
+        return self._else_expression
     @property
-    def get_then_expression(self):
-        return self.then_expression
+    def thenExpression(self)->OCLExpression:
+        return self._then_expression
 
-    @property
-    def set_if_Condition (self,if_cond):
-        self.ifCondition = if_cond
+    @ifCondition.setter
+    def ifCondition (self,if_cond):
+        self._ifCondition = if_cond
 
-    @property
-    def set_else_condition(self,else_cond):
-        self.else_expression = else_cond
-    @property
-    def set_then_expression(self, then_expression):
-        self.then_expression = then_expression
+    @elseCondition.setter
+    def elseCondition(self,else_cond):
+        self._else_expression = else_cond
+    @thenExpression.setter
+    def thenexpression(self, then_expression):
+        self._then_expression = then_expression
+
+
 class VariableExp(OCLExpression):
     def __init__(self,name: str, type: Type):
         super().__init__(name, type)

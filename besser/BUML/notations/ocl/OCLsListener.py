@@ -731,6 +731,7 @@ class OCLsListener(ParseTreeListener):
         if self.debug:
             print(inspect.stack()[0][3])
         self.all_if_else.append(self.rootHandler.create_if_else_exp('if', 'IfExpression'))
+
         pass
 
     # Exit a parse tree produced by OCLsParser#ifExp.
@@ -744,7 +745,8 @@ class OCLsListener(ParseTreeListener):
         if self.debug:
             print(inspect.stack()[0][3])
         pass
-        self.rootHandler.pop()
+        top = self.rootHandler.getTop()
+        self.all_if_else[-1].ifCondition=top
 
     # Exit a parse tree produced by OCLsParser#thenExp.
     def exitThenExp(self, ctx: OCLsParser.ThenExpContext):
@@ -756,7 +758,7 @@ class OCLsListener(ParseTreeListener):
     def enterElseExp(self, ctx: OCLsParser.ElseExpContext):
         if self.debug:
             print(inspect.stack()[0][3])
-
+        self.all_if_else[-1].thenCondition=self.rootHandler.getTop()
         pass
 
     # Exit a parse tree produced by OCLsParser#elseExp.
@@ -770,6 +772,9 @@ class OCLsListener(ParseTreeListener):
         if self.debug:
             print(inspect.stack()[0][3])
         pass
+
+        self.all_if_else[-1].elseCondition = self.rootHandler.getTop(True)
+        self.rootHandler.add_to_root(self.all_if_else.pop())
 
     # Exit a parse tree produced by OCLsParser#endIfExp.
     def exitEndIfExp(self, ctx: OCLsParser.EndIfExpContext):

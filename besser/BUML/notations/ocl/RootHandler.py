@@ -4,12 +4,14 @@ class Root_Handler:
         self.root = None
         self.factory = Factory()
         self.all =[]
+        self.if_else_roots = []
 
     def get_root(self):
         return self.root
     def set_context_name(self,name):
         self.context_name = name
     def create_if_else_exp(self,name,type):
+        self.if_else_roots.append(None)
         return self.factory.create_if_else_exp(name,type)
     def pop(self):
         self.last_coll_exp = self.all.pop()
@@ -23,15 +25,27 @@ class Root_Handler:
         else:
             return "var"
 
-    def add_to_root(self, op):
+    def _add_root(self,root,op):
         if len(self.all) == 0:
-            if self.root is None:
-                self.root = op
+            if root is None:
+                root = op
             else:
-                op.source = self.root
-                self.root = op
+                op.source = root
+                root = op
         else:
             self.all[-1].add_body(op)
+        return root
+    def getTop(self,last = False):
+        currentHead = self.if_else_roots.pop()
+        if not last:
+            self.if_else_roots.append(None)
+        return currentHead
+    def add_to_root(self, op):
+        if len(self.if_else_roots) != 0:
+            self.if_else_roots.append(self._add_root(self.if_else_roots.pop(),op))
+            pass
+        else:
+            self.root = self._add_root(self.root, op)
         pass
     def pop_root(self,root):
 
