@@ -48,12 +48,12 @@ class IntegerLiteralExpression(LiteralExpression):
 
 # Expression that returns the value of a given Property
 class PropertyCallExpression(OCLExpression):
-    def __init__(self, name: str, property: Property):
-        super().__init__(name, Type(property.type))
-        self.property: Property = property
+    def __init__(self, name: str, property: Type):
+        super().__init__(name, property)
+        self.property = property
 
     def __repr__(self):
-        return f'PropertyCallExpression({self.property.name})'
+        return f'PropertyCallExpression({self.name})'
 
     def __str__(self) -> str:
         return str(self.property.name)
@@ -176,7 +176,7 @@ class TypeExp(OCLExpression):
         def __init__(self,name: str, type: Type):
             super().__init__(name, type)
 
-            self.referedType = Classifier()
+            self.referedType = Classifier(name)
 class Parameter:
     def __init__(self,val):
         self.value =val
@@ -280,7 +280,7 @@ class LetExp(OCLExpression):
         self.variable = None
 class BooleanLiteralExpression(LiteralExpression):
     def __init__(self, name: str, value: bool):
-        super().__init__(name, type=PrimitiveDataType(name="Boolean"), value=value)
+        super().__init__(name, type=PrimitiveDataType(name="bool"), value=value)
 
     def __repr__(self):
         return f'BooleanLiteralExpression({self.value})'

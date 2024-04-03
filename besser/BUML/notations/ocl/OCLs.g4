@@ -41,7 +41,7 @@ expression:
           |  Arrow? EXCLUDES LPAREN expression RPAREN  expression? RPAREN* #EXCLUDES
           |  Arrow? LPAREN* SEQUENCE LBRACE* LPAREN* (SingleQuote? expression SingleQuote? COMMA?)* RBRACE* RPAREN* expression? #SEQUENCE
           |  Arrow? LPAREN* SUBSEQUENCE LBRACE* LPAREN* (SingleQuote? expression SingleQuote? COMMA?)* RPAREN* RBRACE*  expression? #SUBSEQUENCE
-          |  Arrow? ALLINSTANCES LPAREN+ expression RPAREN+ expression?  #ALLINSTANCES
+          |  Arrow? ALLINSTANCES LPAREN+ expression? RPAREN+ expression?  #ALLINSTANCES
 
           | Arrow? LPAREN* ORDEREDSET LBRACE (SingleQuote? expression SingleQuote? COMMA?)* RBRACE RPAREN* expression?  #ORDEREDSET
           | Arrow? LPAREN* SUBORDEREDSET LBRACE* LPAREN* (SingleQuote? expression SingleQuote? COMMA?)* RBRACE* RPAREN* expression? RPAREN  #SUBORDEREDSET

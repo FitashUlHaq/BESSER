@@ -2,10 +2,14 @@ from besser.BUML.metamodel.structural.rules import *
 
 class Factory:
 
+    def create_property_Call_Expression(self,name, type):
+        return PropertyCallExpression(name,type)
     def create_variable_expression(self,name,type):
         var = VariableExp(name,type)
         return var
 
+    def create_boolean_literal_expression(self, name, val):
+        return BooleanLiteralExpression(name, val)
     def create_integer_literal_expression(self, name, val):
         return IntegerLiteralExpression(name, val)
         pass
@@ -38,7 +42,8 @@ class Factory:
         else:
             return OperationCallExpression(name=name, operation =name,arguments=[] )
 
-
+    def create_type_exp(self,classifier):
+        return TypeExp(classifier,classifier)
 
     def create_loop_expression(self,collectionOperator):
         return LoopExp(collectionOperator,None)

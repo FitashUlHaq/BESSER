@@ -5,6 +5,8 @@ class Root_Handler:
         self.factory = Factory()
         self.all =[]
         self.if_else_roots = []
+    def handle_property(self,prop):
+         self.add_to_root(self.factory.create_property_Call_Expression(prop,"NP"))
 
     def get_root(self):
         return self.root
@@ -22,6 +24,8 @@ class Root_Handler:
                 return "real"
             else:
                 return "int"
+        elif txt == "True" or txt == "False":
+            return "bool"
         else:
             return "var"
 
@@ -83,6 +87,9 @@ class Root_Handler:
     def create_bag(self):
         type = self.factory.create_bag_type()
         return self.factory.create_collection_literal_expression("bag",type = type)
+
+    def create_type_exp(self,classifier):
+        return self.factory.create_type_exp(classifier)
     def create_operation_call_exp(self,name):
        return self.factory.create_operation_call_expression(name=name)
     def get_factory(self):
@@ -154,25 +161,28 @@ class Root_Handler:
         rightPart = None
 
         if "var" in leftside:
-            leftPart = self.factory.create_variable_expression(expressionParts[0], type="NP")
+            leftPart = self.factory.create_property_Call_Expression(expressionParts[0], type="NP")
         elif "int" in leftside:
             leftPart = self.factory.create_integer_literal_expression("NP", int(expressionParts[0]))
         elif "real" in leftside:
             leftPart = self.factory.create_real_literal_expression("NP", float(expressionParts[0]))
+        elif "bool" in leftside:
+            leftPart = self.factory.create_boolean_literal_expression("NP", bool(expressionParts[0]))
+
 
         if "var" in rightside:
-            rightPart = self.factory.create_variable_expression(expressionParts[1], type="NP")
+            rightPart = self.factory.create_property_Call_Expression(expressionParts[1], type="NP")
         elif "int" in rightside:
             rightPart = self.factory.create_integer_literal_expression("NP", int(expressionParts[1]))
         elif "real" in rightside:
             rightPart = self.factory.create_real_literal_expression("NP", float(expressionParts[1]))
+        elif "bool" in rightside:
+            rightside = self.factory.create_boolean_literal_expression("NP", bool(expressionParts[1]))
 
         infixOperator = self.factory.create_infix_operator(operator)
         inBetweenOp = None
         if inbetween is not None:
             inBetweenOp = self.factory.create_infix_operator(inbetween)
-
-
         opeartion_call_exp = self.factory.create_operation_call_expression(leftPart, rightPart, infixOperator,
                                                                            inBetweenOp)
         self.add_to_root(opeartion_call_exp)
