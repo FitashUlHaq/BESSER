@@ -72,6 +72,7 @@ expression:
           | primaryExpression expression? #ID
           | SingleQuote expression DOT? SingleQuote DOT? expression? #SingleQuoteExp
           | DoubleDots expression #doubleDots
+          | DoubleCOLON expression #doubleCOLONs
 
 
 ;
