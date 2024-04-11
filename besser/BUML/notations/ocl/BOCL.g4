@@ -1,4 +1,4 @@
-grammar OCLs;
+grammar BOCL;
 
 //oclFile: contextDeclaration;
 
@@ -80,7 +80,7 @@ expression:
 
 
 binaryExpression:  ((primaryExpression (DOT ID)*) | NUMBER)   (DOT ID)* operator ((primaryExpression (DOT ID)*) | NUMBER) ;
-unaryExpression: (NOT | MINUS) expression ;
+unaryExpression: (NOT | MINUS|operator) expression ;
 //
 operator: EQUAL | NOTEQUAL| LT | LE | GT | GE | PLUS | MINUS | EMPTYSTRING | Divide | AND | OR | XOR | IMPLIES ; // Added 'xor' and 'implies'
 //
@@ -105,6 +105,7 @@ COLLECT: 'collect' ;
 OCLANY: 'OclAny' ;
 OCLVOID: 'OclVoid' ;
 WS: [ \t\r\n]+ -> skip ;
+
 
 
 // Symbols
@@ -174,7 +175,7 @@ Arrow: '->' | '→';
 Def: 'def';
 
 // Basic tokens
-ID: [a-zA-Z_][a-zA-Z0-9_]* ;
+ID: [a-zA-Z_][a-zA-Z0-9@_]* ;
 
 NUMBER: [0-9]+ ('.' [0-9]+)? ;
 STRING_LITERAL: '"' ( ~["\\] | '\\' . )* '"' ;

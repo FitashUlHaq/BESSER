@@ -27,18 +27,28 @@ class Factory:
     def create_sub_ordered_set_type(self):
         return OrderedSetType("SubOrderedSetType")
 
-    def create_operation_call_expression(self, leftpart = None, rightpart= None, infixOperator= None, inBetweenOp=None,isleftNone=False,name = None):
+    def create_operation_call_expression(self, leftpart = None, rightpart= None, infixOperator= None, inBetweenOp=None,beforeOp = None,isleftNone=False,name = None):
         if inBetweenOp is None and isleftNone is False and name is None:
-            return OperationCallExpression("Operation", infixOperator.get_infix_operator(),
+            if beforeOp is None:
+                return OperationCallExpression("Operation", infixOperator.get_infix_operator(),
                                            [leftpart, infixOperator, rightpart])
+            else:
+                return OperationCallExpression("Operation", infixOperator.get_infix_operator(),
+                                           [beforeOp, leftpart, infixOperator, rightpart])
         elif inBetweenOp is None and isleftNone is True and name is None:
             return OperationCallExpression("Operation", infixOperator.get_infix_operator(),
                                            [infixOperator, rightpart])
         elif inBetweenOp is not None and name is None:
-            oce = OperationCallExpression("Operation", infixOperator.get_infix_operator(),
-                                           [leftpart, infixOperator, rightpart])
-            oce.set_referred_operation(inBetweenOp)
-            return oce
+            if beforeOp is None:
+                oce = OperationCallExpression("Operation", infixOperator.get_infix_operator(),
+                                               [leftpart, infixOperator, rightpart])
+                oce.set_referred_operation(inBetweenOp)
+                return oce
+            else:
+                oce = OperationCallExpression("Operation", infixOperator.get_infix_operator(),
+                                              [beforeOp,leftpart, infixOperator, rightpart])
+                oce.set_referred_operation(inBetweenOp)
+                return oce
         else:
             return OperationCallExpression(name=name, operation =name,arguments=[] )
 

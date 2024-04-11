@@ -1,4 +1,4 @@
-# Generated from OCLs.g4 by ANTLR 4.13.1
+# Generated from BOCL.g4 by ANTLR 4.13.1
 from antlr4 import *
 from io import StringIO
 import sys
@@ -69,7 +69,7 @@ def serializedATN():
         107,54,109,55,111,56,113,57,115,58,117,59,119,60,121,61,123,62,125,
         63,127,64,129,65,131,66,133,67,135,68,137,69,139,70,141,71,143,72,
         145,73,147,74,149,75,151,76,153,77,155,78,157,79,159,80,161,81,163,
-        82,1,0,6,3,0,9,10,13,13,32,32,3,0,65,90,95,95,97,122,4,0,48,57,65,
+        82,1,0,6,3,0,9,10,13,13,32,32,3,0,65,90,95,95,97,122,4,0,48,57,64,
         90,95,95,97,122,1,0,48,57,2,0,34,34,92,92,2,0,10,10,13,13,671,0,
         1,1,0,0,0,0,3,1,0,0,0,0,5,1,0,0,0,0,7,1,0,0,0,0,9,1,0,0,0,0,11,1,
         0,0,0,0,13,1,0,0,0,0,15,1,0,0,0,0,17,1,0,0,0,0,19,1,0,0,0,0,21,1,
@@ -245,7 +245,7 @@ def serializedATN():
         619,633,641,655,1,6,0,0
     ]
 
-class OCLsLexer(Lexer):
+class BOCLLexer(Lexer):
 
     atn = ATNDeserializer().deserialize(serializedATN())
 
@@ -383,7 +383,7 @@ class OCLsLexer(Lexer):
                   "Def", "ID", "NUMBER", "STRING_LITERAL", "BOOLEAN_LITERAL", 
                   "COMMENT", "LINE_COMMENT" ]
 
-    grammarFileName = "OCLs.g4"
+    grammarFileName = "BOCL.g4"
 
     def __init__(self, input=None, output:TextIO = sys.stdout):
         super().__init__(input, output)

@@ -1,4 +1,4 @@
-# Generated from OCLs.g4 by ANTLR 4.13.1
+# Generated from BOCL.g4 by ANTLR 4.13.1
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -10,7 +10,7 @@ else:
 
 def serializedATN():
     return [
-        4,1,82,955,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,82,959,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
         1,0,1,0,5,0,31,8,0,10,0,12,0,34,9,0,1,1,1,1,1,1,1,1,3,1,40,8,1,1,
         1,3,1,43,8,1,1,1,5,1,46,8,1,10,1,12,1,49,9,1,1,1,3,1,52,8,1,1,1,
@@ -84,28 +84,28 @@ def serializedATN():
         3,7,881,8,7,1,7,3,7,884,8,7,1,7,1,7,1,7,1,7,3,7,890,8,7,1,8,1,8,
         1,8,5,8,895,8,8,10,8,12,8,898,9,8,1,8,3,8,901,8,8,1,8,1,8,5,8,905,
         8,8,10,8,12,8,908,9,8,1,8,1,8,1,8,1,8,5,8,914,8,8,10,8,12,8,917,
-        9,8,1,8,3,8,920,8,8,1,9,1,9,1,9,1,10,1,10,1,11,1,11,3,11,929,8,11,
-        1,11,1,11,3,11,933,8,11,1,11,3,11,936,8,11,1,11,3,11,939,8,11,3,
-        11,941,8,11,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,3,12,951,8,12,
-        1,13,1,13,1,13,0,0,14,0,2,4,6,8,10,12,14,16,18,20,22,24,26,0,7,3,
-        0,3,4,68,70,76,76,1,0,2,4,1,0,33,34,1,0,6,9,2,0,35,35,46,46,4,0,
-        23,23,33,34,36,40,46,51,2,0,72,72,78,80,1175,0,28,1,0,0,0,2,35,1,
-        0,0,0,4,86,1,0,0,0,6,135,1,0,0,0,8,146,1,0,0,0,10,168,1,0,0,0,12,
-        170,1,0,0,0,14,889,1,0,0,0,16,900,1,0,0,0,18,921,1,0,0,0,20,924,
-        1,0,0,0,22,940,1,0,0,0,24,950,1,0,0,0,26,952,1,0,0,0,28,32,3,2,1,
-        0,29,31,3,14,7,0,30,29,1,0,0,0,31,34,1,0,0,0,32,30,1,0,0,0,32,33,
-        1,0,0,0,33,1,1,0,0,0,34,32,1,0,0,0,35,36,5,1,0,0,36,39,5,77,0,0,
-        37,38,5,20,0,0,38,40,3,8,4,0,39,37,1,0,0,0,39,40,1,0,0,0,40,42,1,
-        0,0,0,41,43,5,17,0,0,42,41,1,0,0,0,42,43,1,0,0,0,43,47,1,0,0,0,44,
-        46,3,4,2,0,45,44,1,0,0,0,46,49,1,0,0,0,47,45,1,0,0,0,47,48,1,0,0,
-        0,48,51,1,0,0,0,49,47,1,0,0,0,50,52,5,18,0,0,51,50,1,0,0,0,51,52,
-        1,0,0,0,52,54,1,0,0,0,53,55,5,14,0,0,54,53,1,0,0,0,54,55,1,0,0,0,
-        55,57,1,0,0,0,56,58,3,6,3,0,57,56,1,0,0,0,57,58,1,0,0,0,58,60,1,
-        0,0,0,59,61,5,20,0,0,60,59,1,0,0,0,60,61,1,0,0,0,61,63,1,0,0,0,62,
-        64,3,8,4,0,63,62,1,0,0,0,63,64,1,0,0,0,64,66,1,0,0,0,65,67,5,15,
-        0,0,66,65,1,0,0,0,66,67,1,0,0,0,67,69,1,0,0,0,68,70,5,77,0,0,69,
-        68,1,0,0,0,69,70,1,0,0,0,70,72,1,0,0,0,71,73,5,16,0,0,72,71,1,0,
-        0,0,72,73,1,0,0,0,73,75,1,0,0,0,74,76,5,20,0,0,75,74,1,0,0,0,75,
+        9,8,1,8,3,8,920,8,8,1,9,1,9,1,9,3,9,925,8,9,1,9,1,9,1,10,1,10,1,
+        11,1,11,3,11,933,8,11,1,11,1,11,3,11,937,8,11,1,11,3,11,940,8,11,
+        1,11,3,11,943,8,11,3,11,945,8,11,1,12,1,12,1,12,1,12,1,12,1,12,1,
+        12,1,12,3,12,955,8,12,1,13,1,13,1,13,0,0,14,0,2,4,6,8,10,12,14,16,
+        18,20,22,24,26,0,6,3,0,3,4,68,70,76,76,1,0,2,4,1,0,33,34,1,0,6,9,
+        4,0,23,23,33,34,36,40,46,51,2,0,72,72,78,80,1181,0,28,1,0,0,0,2,
+        35,1,0,0,0,4,86,1,0,0,0,6,135,1,0,0,0,8,146,1,0,0,0,10,168,1,0,0,
+        0,12,170,1,0,0,0,14,889,1,0,0,0,16,900,1,0,0,0,18,924,1,0,0,0,20,
+        928,1,0,0,0,22,944,1,0,0,0,24,954,1,0,0,0,26,956,1,0,0,0,28,32,3,
+        2,1,0,29,31,3,14,7,0,30,29,1,0,0,0,31,34,1,0,0,0,32,30,1,0,0,0,32,
+        33,1,0,0,0,33,1,1,0,0,0,34,32,1,0,0,0,35,36,5,1,0,0,36,39,5,77,0,
+        0,37,38,5,20,0,0,38,40,3,8,4,0,39,37,1,0,0,0,39,40,1,0,0,0,40,42,
+        1,0,0,0,41,43,5,17,0,0,42,41,1,0,0,0,42,43,1,0,0,0,43,47,1,0,0,0,
+        44,46,3,4,2,0,45,44,1,0,0,0,46,49,1,0,0,0,47,45,1,0,0,0,47,48,1,
+        0,0,0,48,51,1,0,0,0,49,47,1,0,0,0,50,52,5,18,0,0,51,50,1,0,0,0,51,
+        52,1,0,0,0,52,54,1,0,0,0,53,55,5,14,0,0,54,53,1,0,0,0,54,55,1,0,
+        0,0,55,57,1,0,0,0,56,58,3,6,3,0,57,56,1,0,0,0,57,58,1,0,0,0,58,60,
+        1,0,0,0,59,61,5,20,0,0,60,59,1,0,0,0,60,61,1,0,0,0,61,63,1,0,0,0,
+        62,64,3,8,4,0,63,62,1,0,0,0,63,64,1,0,0,0,64,66,1,0,0,0,65,67,5,
+        15,0,0,66,65,1,0,0,0,66,67,1,0,0,0,67,69,1,0,0,0,68,70,5,77,0,0,
+        69,68,1,0,0,0,69,70,1,0,0,0,70,72,1,0,0,0,71,73,5,16,0,0,72,71,1,
+        0,0,0,72,73,1,0,0,0,73,75,1,0,0,0,74,76,5,20,0,0,75,74,1,0,0,0,75,
         76,1,0,0,0,76,78,1,0,0,0,77,79,7,0,0,0,78,77,1,0,0,0,78,79,1,0,0,
         0,79,81,1,0,0,0,80,82,5,20,0,0,81,80,1,0,0,0,81,82,1,0,0,0,82,84,
         1,0,0,0,83,85,3,14,7,0,84,83,1,0,0,0,84,85,1,0,0,0,85,3,1,0,0,0,
@@ -371,33 +371,34 @@ def serializedATN():
         912,5,22,0,0,912,914,5,77,0,0,913,911,1,0,0,0,914,917,1,0,0,0,915,
         913,1,0,0,0,915,916,1,0,0,0,916,920,1,0,0,0,917,915,1,0,0,0,918,
         920,5,78,0,0,919,910,1,0,0,0,919,918,1,0,0,0,920,17,1,0,0,0,921,
-        922,7,4,0,0,922,923,3,14,7,0,923,19,1,0,0,0,924,925,7,5,0,0,925,
-        21,1,0,0,0,926,941,5,78,0,0,927,929,5,24,0,0,928,927,1,0,0,0,928,
-        929,1,0,0,0,929,930,1,0,0,0,930,932,5,77,0,0,931,933,5,15,0,0,932,
-        931,1,0,0,0,932,933,1,0,0,0,933,935,1,0,0,0,934,936,5,16,0,0,935,
-        934,1,0,0,0,935,936,1,0,0,0,936,938,1,0,0,0,937,939,5,24,0,0,938,
-        937,1,0,0,0,938,939,1,0,0,0,939,941,1,0,0,0,940,926,1,0,0,0,940,
-        928,1,0,0,0,941,23,1,0,0,0,942,951,3,26,13,0,943,951,5,5,0,0,944,
-        951,3,6,3,0,945,946,5,15,0,0,946,947,3,14,7,0,947,948,5,16,0,0,948,
-        951,1,0,0,0,949,951,5,77,0,0,950,942,1,0,0,0,950,943,1,0,0,0,950,
-        944,1,0,0,0,950,945,1,0,0,0,950,949,1,0,0,0,951,25,1,0,0,0,952,953,
-        7,6,0,0,953,27,1,0,0,0,182,32,39,42,47,51,54,57,60,63,66,69,72,75,
-        78,81,84,88,93,98,102,105,109,120,127,131,135,146,168,173,177,181,
-        191,198,207,214,223,230,239,242,248,256,261,265,271,279,284,288,
-        294,302,307,311,318,323,327,334,339,343,348,355,361,365,369,372,
-        376,382,388,392,395,400,407,413,417,421,424,428,434,440,444,447,
-        453,456,461,464,467,472,478,482,485,489,496,500,503,508,515,521,
-        525,529,532,536,542,548,552,556,561,568,574,578,582,585,589,595,
-        601,605,608,613,620,626,630,634,637,641,647,653,657,664,667,671,
-        674,678,684,687,695,698,704,708,711,715,721,724,727,734,737,741,
-        747,750,757,766,769,776,783,791,804,808,814,818,821,827,830,836,
-        842,847,850,854,860,863,867,871,876,880,883,889,896,900,906,915,
-        919,928,932,935,938,940,950
+        925,5,35,0,0,922,925,5,46,0,0,923,925,3,20,10,0,924,921,1,0,0,0,
+        924,922,1,0,0,0,924,923,1,0,0,0,925,926,1,0,0,0,926,927,3,14,7,0,
+        927,19,1,0,0,0,928,929,7,4,0,0,929,21,1,0,0,0,930,945,5,78,0,0,931,
+        933,5,24,0,0,932,931,1,0,0,0,932,933,1,0,0,0,933,934,1,0,0,0,934,
+        936,5,77,0,0,935,937,5,15,0,0,936,935,1,0,0,0,936,937,1,0,0,0,937,
+        939,1,0,0,0,938,940,5,16,0,0,939,938,1,0,0,0,939,940,1,0,0,0,940,
+        942,1,0,0,0,941,943,5,24,0,0,942,941,1,0,0,0,942,943,1,0,0,0,943,
+        945,1,0,0,0,944,930,1,0,0,0,944,932,1,0,0,0,945,23,1,0,0,0,946,955,
+        3,26,13,0,947,955,5,5,0,0,948,955,3,6,3,0,949,950,5,15,0,0,950,951,
+        3,14,7,0,951,952,5,16,0,0,952,955,1,0,0,0,953,955,5,77,0,0,954,946,
+        1,0,0,0,954,947,1,0,0,0,954,948,1,0,0,0,954,949,1,0,0,0,954,953,
+        1,0,0,0,955,25,1,0,0,0,956,957,7,5,0,0,957,27,1,0,0,0,183,32,39,
+        42,47,51,54,57,60,63,66,69,72,75,78,81,84,88,93,98,102,105,109,120,
+        127,131,135,146,168,173,177,181,191,198,207,214,223,230,239,242,
+        248,256,261,265,271,279,284,288,294,302,307,311,318,323,327,334,
+        339,343,348,355,361,365,369,372,376,382,388,392,395,400,407,413,
+        417,421,424,428,434,440,444,447,453,456,461,464,467,472,478,482,
+        485,489,496,500,503,508,515,521,525,529,532,536,542,548,552,556,
+        561,568,574,578,582,585,589,595,601,605,608,613,620,626,630,634,
+        637,641,647,653,657,664,667,671,674,678,684,687,695,698,704,708,
+        711,715,721,724,727,734,737,741,747,750,757,766,769,776,783,791,
+        804,808,814,818,821,827,830,836,842,847,850,854,860,863,867,871,
+        876,880,883,889,896,900,906,915,919,924,932,936,939,942,944,954
     ]
 
-class OCLsParser ( Parser ):
+class BOCLParser ( Parser ):
 
-    grammarFileName = "OCLs.g4"
+    grammarFileName = "BOCL.g4"
 
     atn = ATNDeserializer().deserialize(serializedATN())
 
@@ -559,18 +560,18 @@ class OCLsParser ( Parser ):
             self.parser = parser
 
         def contextDeclaration(self):
-            return self.getTypedRuleContext(OCLsParser.ContextDeclarationContext,0)
+            return self.getTypedRuleContext(BOCLParser.ContextDeclarationContext,0)
 
 
         def expression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(OCLsParser.ExpressionContext)
+                return self.getTypedRuleContexts(BOCLParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(OCLsParser.ExpressionContext,i)
+                return self.getTypedRuleContext(BOCLParser.ExpressionContext,i)
 
 
         def getRuleIndex(self):
-            return OCLsParser.RULE_oclFile
+            return BOCLParser.RULE_oclFile
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterOclFile" ):
@@ -585,7 +586,7 @@ class OCLsParser ( Parser ):
 
     def oclFile(self):
 
-        localctx = OCLsParser.OclFileContext(self, self._ctx, self.state)
+        localctx = BOCLParser.OclFileContext(self, self._ctx, self.state)
         self.enterRule(localctx, 0, self.RULE_oclFile)
         self._la = 0 # Token type
         try:
@@ -620,7 +621,7 @@ class OCLsParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return OCLsParser.RULE_contextDeclaration
+            return BOCLParser.RULE_contextDeclaration
 
      
         def copyFrom(self, ctx:ParserRuleContext):
@@ -630,62 +631,62 @@ class OCLsParser ( Parser ):
 
     class ContextExpContext(ContextDeclarationContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ContextDeclarationContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ContextDeclarationContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def CONTEXT(self):
-            return self.getToken(OCLsParser.CONTEXT, 0)
+            return self.getToken(BOCLParser.CONTEXT, 0)
         def ID(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.ID)
+                return self.getTokens(BOCLParser.ID)
             else:
-                return self.getToken(OCLsParser.ID, i)
+                return self.getToken(BOCLParser.ID, i)
         def COLON(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.COLON)
+                return self.getTokens(BOCLParser.COLON)
             else:
-                return self.getToken(OCLsParser.COLON, i)
+                return self.getToken(BOCLParser.COLON, i)
         def type_(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(OCLsParser.TypeContext)
+                return self.getTypedRuleContexts(BOCLParser.TypeContext)
             else:
-                return self.getTypedRuleContext(OCLsParser.TypeContext,i)
+                return self.getTypedRuleContext(BOCLParser.TypeContext,i)
 
         def LBRACE(self):
-            return self.getToken(OCLsParser.LBRACE, 0)
+            return self.getToken(BOCLParser.LBRACE, 0)
         def constraint(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(OCLsParser.ConstraintContext)
+                return self.getTypedRuleContexts(BOCLParser.ConstraintContext)
             else:
-                return self.getTypedRuleContext(OCLsParser.ConstraintContext,i)
+                return self.getTypedRuleContext(BOCLParser.ConstraintContext,i)
 
         def RBRACE(self):
-            return self.getToken(OCLsParser.RBRACE, 0)
+            return self.getToken(BOCLParser.RBRACE, 0)
         def DoubleCOLON(self):
-            return self.getToken(OCLsParser.DoubleCOLON, 0)
+            return self.getToken(BOCLParser.DoubleCOLON, 0)
         def functionCall(self):
-            return self.getTypedRuleContext(OCLsParser.FunctionCallContext,0)
+            return self.getTypedRuleContext(BOCLParser.FunctionCallContext,0)
 
         def LPAREN(self):
-            return self.getToken(OCLsParser.LPAREN, 0)
+            return self.getToken(BOCLParser.LPAREN, 0)
         def RPAREN(self):
-            return self.getToken(OCLsParser.RPAREN, 0)
+            return self.getToken(BOCLParser.RPAREN, 0)
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
         def DERIVE(self):
-            return self.getToken(OCLsParser.DERIVE, 0)
+            return self.getToken(BOCLParser.DERIVE, 0)
         def BODY(self):
-            return self.getToken(OCLsParser.BODY, 0)
+            return self.getToken(BOCLParser.BODY, 0)
         def Init(self):
-            return self.getToken(OCLsParser.Init, 0)
+            return self.getToken(BOCLParser.Init, 0)
         def PRE(self):
-            return self.getToken(OCLsParser.PRE, 0)
+            return self.getToken(BOCLParser.PRE, 0)
         def POST(self):
-            return self.getToken(OCLsParser.POST, 0)
+            return self.getToken(BOCLParser.POST, 0)
         def Def(self):
-            return self.getToken(OCLsParser.Def, 0)
+            return self.getToken(BOCLParser.Def, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterContextExp" ):
@@ -699,22 +700,22 @@ class OCLsParser ( Parser ):
 
     def contextDeclaration(self):
 
-        localctx = OCLsParser.ContextDeclarationContext(self, self._ctx, self.state)
+        localctx = BOCLParser.ContextDeclarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 2, self.RULE_contextDeclaration)
         self._la = 0 # Token type
         try:
-            localctx = OCLsParser.ContextExpContext(self, localctx)
+            localctx = BOCLParser.ContextExpContext(self, localctx)
             self.enterOuterAlt(localctx, 1)
             self.state = 35
-            self.match(OCLsParser.CONTEXT)
+            self.match(BOCLParser.CONTEXT)
             self.state = 36
-            self.match(OCLsParser.ID)
+            self.match(BOCLParser.ID)
             self.state = 39
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,1,self._ctx)
             if la_ == 1:
                 self.state = 37
-                self.match(OCLsParser.COLON)
+                self.match(BOCLParser.COLON)
                 self.state = 38
                 self.type_()
 
@@ -724,7 +725,7 @@ class OCLsParser ( Parser ):
             _la = self._input.LA(1)
             if _la==17:
                 self.state = 41
-                self.match(OCLsParser.LBRACE)
+                self.match(BOCLParser.LBRACE)
 
 
             self.state = 47
@@ -743,7 +744,7 @@ class OCLsParser ( Parser ):
             _la = self._input.LA(1)
             if _la==18:
                 self.state = 50
-                self.match(OCLsParser.RBRACE)
+                self.match(BOCLParser.RBRACE)
 
 
             self.state = 54
@@ -751,7 +752,7 @@ class OCLsParser ( Parser ):
             la_ = self._interp.adaptivePredict(self._input,5,self._ctx)
             if la_ == 1:
                 self.state = 53
-                self.match(OCLsParser.DoubleCOLON)
+                self.match(BOCLParser.DoubleCOLON)
 
 
             self.state = 57
@@ -767,7 +768,7 @@ class OCLsParser ( Parser ):
             la_ = self._interp.adaptivePredict(self._input,7,self._ctx)
             if la_ == 1:
                 self.state = 59
-                self.match(OCLsParser.COLON)
+                self.match(BOCLParser.COLON)
 
 
             self.state = 63
@@ -783,7 +784,7 @@ class OCLsParser ( Parser ):
             la_ = self._interp.adaptivePredict(self._input,9,self._ctx)
             if la_ == 1:
                 self.state = 65
-                self.match(OCLsParser.LPAREN)
+                self.match(BOCLParser.LPAREN)
 
 
             self.state = 69
@@ -791,7 +792,7 @@ class OCLsParser ( Parser ):
             la_ = self._interp.adaptivePredict(self._input,10,self._ctx)
             if la_ == 1:
                 self.state = 68
-                self.match(OCLsParser.ID)
+                self.match(BOCLParser.ID)
 
 
             self.state = 72
@@ -799,7 +800,7 @@ class OCLsParser ( Parser ):
             _la = self._input.LA(1)
             if _la==16:
                 self.state = 71
-                self.match(OCLsParser.RPAREN)
+                self.match(BOCLParser.RPAREN)
 
 
             self.state = 75
@@ -807,7 +808,7 @@ class OCLsParser ( Parser ):
             la_ = self._interp.adaptivePredict(self._input,12,self._ctx)
             if la_ == 1:
                 self.state = 74
-                self.match(OCLsParser.COLON)
+                self.match(BOCLParser.COLON)
 
 
             self.state = 78
@@ -828,7 +829,7 @@ class OCLsParser ( Parser ):
             _la = self._input.LA(1)
             if _la==20:
                 self.state = 80
-                self.match(OCLsParser.COLON)
+                self.match(BOCLParser.COLON)
 
 
             self.state = 84
@@ -856,29 +857,29 @@ class OCLsParser ( Parser ):
             self.parser = parser
 
         def COLON(self):
-            return self.getToken(OCLsParser.COLON, 0)
+            return self.getToken(BOCLParser.COLON, 0)
 
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def INV(self):
-            return self.getToken(OCLsParser.INV, 0)
+            return self.getToken(BOCLParser.INV, 0)
 
         def PRE(self):
-            return self.getToken(OCLsParser.PRE, 0)
+            return self.getToken(BOCLParser.PRE, 0)
 
         def POST(self):
-            return self.getToken(OCLsParser.POST, 0)
+            return self.getToken(BOCLParser.POST, 0)
 
         def ID(self):
-            return self.getToken(OCLsParser.ID, 0)
+            return self.getToken(BOCLParser.ID, 0)
 
         def SEMI(self):
-            return self.getToken(OCLsParser.SEMI, 0)
+            return self.getToken(BOCLParser.SEMI, 0)
 
         def getRuleIndex(self):
-            return OCLsParser.RULE_constraint
+            return BOCLParser.RULE_constraint
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterConstraint" ):
@@ -893,7 +894,7 @@ class OCLsParser ( Parser ):
 
     def constraint(self):
 
-        localctx = OCLsParser.ConstraintContext(self, self._ctx, self.state)
+        localctx = BOCLParser.ConstraintContext(self, self._ctx, self.state)
         self.enterRule(localctx, 4, self.RULE_constraint)
         self._la = 0 # Token type
         try:
@@ -910,11 +911,11 @@ class OCLsParser ( Parser ):
             _la = self._input.LA(1)
             if _la==77:
                 self.state = 87
-                self.match(OCLsParser.ID)
+                self.match(BOCLParser.ID)
 
 
             self.state = 90
-            self.match(OCLsParser.COLON)
+            self.match(BOCLParser.COLON)
             self.state = 91
             self.expression()
             self.state = 93
@@ -922,7 +923,7 @@ class OCLsParser ( Parser ):
             _la = self._input.LA(1)
             if _la==19:
                 self.state = 92
-                self.match(OCLsParser.SEMI)
+                self.match(BOCLParser.SEMI)
 
 
         except RecognitionException as re:
@@ -943,49 +944,49 @@ class OCLsParser ( Parser ):
 
         def ID(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.ID)
+                return self.getTokens(BOCLParser.ID)
             else:
-                return self.getToken(OCLsParser.ID, i)
+                return self.getToken(BOCLParser.ID, i)
 
         def LPAREN(self):
-            return self.getToken(OCLsParser.LPAREN, 0)
+            return self.getToken(BOCLParser.LPAREN, 0)
 
         def RPAREN(self):
-            return self.getToken(OCLsParser.RPAREN, 0)
+            return self.getToken(BOCLParser.RPAREN, 0)
 
         def expression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(OCLsParser.ExpressionContext)
+                return self.getTypedRuleContexts(BOCLParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(OCLsParser.ExpressionContext,i)
+                return self.getTypedRuleContext(BOCLParser.ExpressionContext,i)
 
 
         def SingleQuote(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.SingleQuote)
+                return self.getTokens(BOCLParser.SingleQuote)
             else:
-                return self.getToken(OCLsParser.SingleQuote, i)
+                return self.getToken(BOCLParser.SingleQuote, i)
 
         def COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.COMMA)
+                return self.getTokens(BOCLParser.COMMA)
             else:
-                return self.getToken(OCLsParser.COMMA, i)
+                return self.getToken(BOCLParser.COMMA, i)
 
         def COLON(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.COLON)
+                return self.getTokens(BOCLParser.COLON)
             else:
-                return self.getToken(OCLsParser.COLON, i)
+                return self.getToken(BOCLParser.COLON, i)
 
         def NUMBER(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.NUMBER)
+                return self.getTokens(BOCLParser.NUMBER)
             else:
-                return self.getToken(OCLsParser.NUMBER, i)
+                return self.getToken(BOCLParser.NUMBER, i)
 
         def getRuleIndex(self):
-            return OCLsParser.RULE_functionCall
+            return BOCLParser.RULE_functionCall
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFunctionCall" ):
@@ -1000,7 +1001,7 @@ class OCLsParser ( Parser ):
 
     def functionCall(self):
 
-        localctx = OCLsParser.FunctionCallContext(self, self._ctx, self.state)
+        localctx = BOCLParser.FunctionCallContext(self, self._ctx, self.state)
         self.enterRule(localctx, 6, self.RULE_functionCall)
         self._la = 0 # Token type
         try:
@@ -1010,9 +1011,9 @@ class OCLsParser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 95
-                self.match(OCLsParser.ID)
+                self.match(BOCLParser.ID)
                 self.state = 96
-                self.match(OCLsParser.LPAREN)
+                self.match(BOCLParser.LPAREN)
                 self.state = 109
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -1022,7 +1023,7 @@ class OCLsParser ( Parser ):
                     la_ = self._interp.adaptivePredict(self._input,18,self._ctx)
                     if la_ == 1:
                         self.state = 97
-                        self.match(OCLsParser.SingleQuote)
+                        self.match(BOCLParser.SingleQuote)
 
 
                     self.state = 100
@@ -1032,7 +1033,7 @@ class OCLsParser ( Parser ):
                     la_ = self._interp.adaptivePredict(self._input,19,self._ctx)
                     if la_ == 1:
                         self.state = 101
-                        self.match(OCLsParser.SingleQuote)
+                        self.match(BOCLParser.SingleQuote)
 
 
                     self.state = 105
@@ -1040,7 +1041,7 @@ class OCLsParser ( Parser ):
                     _la = self._input.LA(1)
                     if _la==21:
                         self.state = 104
-                        self.match(OCLsParser.COMMA)
+                        self.match(BOCLParser.COMMA)
 
 
                     self.state = 111
@@ -1048,49 +1049,49 @@ class OCLsParser ( Parser ):
                     _la = self._input.LA(1)
 
                 self.state = 112
-                self.match(OCLsParser.RPAREN)
+                self.match(BOCLParser.RPAREN)
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 113
-                self.match(OCLsParser.ID)
+                self.match(BOCLParser.ID)
                 self.state = 114
-                self.match(OCLsParser.LPAREN)
+                self.match(BOCLParser.LPAREN)
                 self.state = 120
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while _la==77:
                     self.state = 115
-                    self.match(OCLsParser.ID)
+                    self.match(BOCLParser.ID)
                     self.state = 116
-                    self.match(OCLsParser.COLON)
+                    self.match(BOCLParser.COLON)
                     self.state = 117
-                    self.match(OCLsParser.ID)
+                    self.match(BOCLParser.ID)
                     self.state = 122
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
                 self.state = 123
-                self.match(OCLsParser.RPAREN)
+                self.match(BOCLParser.RPAREN)
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 124
-                self.match(OCLsParser.LPAREN)
+                self.match(BOCLParser.LPAREN)
                 self.state = 131
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while _la==78:
                     self.state = 125
-                    self.match(OCLsParser.NUMBER)
+                    self.match(BOCLParser.NUMBER)
                     self.state = 127
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if _la==21:
                         self.state = 126
-                        self.match(OCLsParser.COMMA)
+                        self.match(BOCLParser.COMMA)
 
 
                     self.state = 133
@@ -1098,7 +1099,7 @@ class OCLsParser ( Parser ):
                     _la = self._input.LA(1)
 
                 self.state = 134
-                self.match(OCLsParser.RPAREN)
+                self.match(BOCLParser.RPAREN)
                 pass
 
 
@@ -1119,36 +1120,36 @@ class OCLsParser ( Parser ):
             self.parser = parser
 
         def BOOLEAN_TYPE(self):
-            return self.getToken(OCLsParser.BOOLEAN_TYPE, 0)
+            return self.getToken(BOCLParser.BOOLEAN_TYPE, 0)
 
         def INTEGER_TYPE(self):
-            return self.getToken(OCLsParser.INTEGER_TYPE, 0)
+            return self.getToken(BOCLParser.INTEGER_TYPE, 0)
 
         def REAL_TYPE(self):
-            return self.getToken(OCLsParser.REAL_TYPE, 0)
+            return self.getToken(BOCLParser.REAL_TYPE, 0)
 
         def STRING_TYPE(self):
-            return self.getToken(OCLsParser.STRING_TYPE, 0)
+            return self.getToken(BOCLParser.STRING_TYPE, 0)
 
         def OCLANY(self):
-            return self.getToken(OCLsParser.OCLANY, 0)
+            return self.getToken(BOCLParser.OCLANY, 0)
 
         def OCLVOID(self):
-            return self.getToken(OCLsParser.OCLVOID, 0)
+            return self.getToken(BOCLParser.OCLVOID, 0)
 
         def collectionType(self):
-            return self.getTypedRuleContext(OCLsParser.CollectionTypeContext,0)
+            return self.getTypedRuleContext(BOCLParser.CollectionTypeContext,0)
 
 
         def userDefinedType(self):
-            return self.getTypedRuleContext(OCLsParser.UserDefinedTypeContext,0)
+            return self.getTypedRuleContext(BOCLParser.UserDefinedTypeContext,0)
 
 
         def SET(self):
-            return self.getToken(OCLsParser.SET, 0)
+            return self.getToken(BOCLParser.SET, 0)
 
         def getRuleIndex(self):
-            return OCLsParser.RULE_type
+            return BOCLParser.RULE_type
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterType" ):
@@ -1163,7 +1164,7 @@ class OCLsParser ( Parser ):
 
     def type_(self):
 
-        localctx = OCLsParser.TypeContext(self, self._ctx, self.state)
+        localctx = BOCLParser.TypeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 8, self.RULE_type)
         try:
             self.state = 146
@@ -1172,37 +1173,37 @@ class OCLsParser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 137
-                self.match(OCLsParser.BOOLEAN_TYPE)
+                self.match(BOCLParser.BOOLEAN_TYPE)
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 138
-                self.match(OCLsParser.INTEGER_TYPE)
+                self.match(BOCLParser.INTEGER_TYPE)
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 139
-                self.match(OCLsParser.REAL_TYPE)
+                self.match(BOCLParser.REAL_TYPE)
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 140
-                self.match(OCLsParser.STRING_TYPE)
+                self.match(BOCLParser.STRING_TYPE)
                 pass
 
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 141
-                self.match(OCLsParser.OCLANY)
+                self.match(BOCLParser.OCLANY)
                 pass
 
             elif la_ == 6:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 142
-                self.match(OCLsParser.OCLVOID)
+                self.match(BOCLParser.OCLVOID)
                 pass
 
             elif la_ == 7:
@@ -1220,7 +1221,7 @@ class OCLsParser ( Parser ):
             elif la_ == 9:
                 self.enterOuterAlt(localctx, 9)
                 self.state = 145
-                self.match(OCLsParser.SET)
+                self.match(BOCLParser.SET)
                 pass
 
 
@@ -1241,29 +1242,29 @@ class OCLsParser ( Parser ):
             self.parser = parser
 
         def SET(self):
-            return self.getToken(OCLsParser.SET, 0)
+            return self.getToken(BOCLParser.SET, 0)
 
         def LT(self):
-            return self.getToken(OCLsParser.LT, 0)
+            return self.getToken(BOCLParser.LT, 0)
 
         def type_(self):
-            return self.getTypedRuleContext(OCLsParser.TypeContext,0)
+            return self.getTypedRuleContext(BOCLParser.TypeContext,0)
 
 
         def GT(self):
-            return self.getToken(OCLsParser.GT, 0)
+            return self.getToken(BOCLParser.GT, 0)
 
         def BAG(self):
-            return self.getToken(OCLsParser.BAG, 0)
+            return self.getToken(BOCLParser.BAG, 0)
 
         def SEQUENCE(self):
-            return self.getToken(OCLsParser.SEQUENCE, 0)
+            return self.getToken(BOCLParser.SEQUENCE, 0)
 
         def ORDEREDSET(self):
-            return self.getToken(OCLsParser.ORDEREDSET, 0)
+            return self.getToken(BOCLParser.ORDEREDSET, 0)
 
         def getRuleIndex(self):
-            return OCLsParser.RULE_collectionType
+            return BOCLParser.RULE_collectionType
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterCollectionType" ):
@@ -1278,7 +1279,7 @@ class OCLsParser ( Parser ):
 
     def collectionType(self):
 
-        localctx = OCLsParser.CollectionTypeContext(self, self._ctx, self.state)
+        localctx = BOCLParser.CollectionTypeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 10, self.RULE_collectionType)
         try:
             self.state = 168
@@ -1287,46 +1288,46 @@ class OCLsParser ( Parser ):
             if token in [42]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 148
-                self.match(OCLsParser.SET)
+                self.match(BOCLParser.SET)
                 self.state = 149
-                self.match(OCLsParser.LT)
+                self.match(BOCLParser.LT)
                 self.state = 150
                 self.type_()
                 self.state = 151
-                self.match(OCLsParser.GT)
+                self.match(BOCLParser.GT)
                 pass
             elif token in [43]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 153
-                self.match(OCLsParser.BAG)
+                self.match(BOCLParser.BAG)
                 self.state = 154
-                self.match(OCLsParser.LT)
+                self.match(BOCLParser.LT)
                 self.state = 155
                 self.type_()
                 self.state = 156
-                self.match(OCLsParser.GT)
+                self.match(BOCLParser.GT)
                 pass
             elif token in [44]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 158
-                self.match(OCLsParser.SEQUENCE)
+                self.match(BOCLParser.SEQUENCE)
                 self.state = 159
-                self.match(OCLsParser.LT)
+                self.match(BOCLParser.LT)
                 self.state = 160
                 self.type_()
                 self.state = 161
-                self.match(OCLsParser.GT)
+                self.match(BOCLParser.GT)
                 pass
             elif token in [45]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 163
-                self.match(OCLsParser.ORDEREDSET)
+                self.match(BOCLParser.ORDEREDSET)
                 self.state = 164
-                self.match(OCLsParser.LT)
+                self.match(BOCLParser.LT)
                 self.state = 165
                 self.type_()
                 self.state = 166
-                self.match(OCLsParser.GT)
+                self.match(BOCLParser.GT)
                 pass
             else:
                 raise NoViableAltException(self)
@@ -1348,10 +1349,10 @@ class OCLsParser ( Parser ):
             self.parser = parser
 
         def ID(self):
-            return self.getToken(OCLsParser.ID, 0)
+            return self.getToken(BOCLParser.ID, 0)
 
         def getRuleIndex(self):
-            return OCLsParser.RULE_userDefinedType
+            return BOCLParser.RULE_userDefinedType
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterUserDefinedType" ):
@@ -1366,12 +1367,12 @@ class OCLsParser ( Parser ):
 
     def userDefinedType(self):
 
-        localctx = OCLsParser.UserDefinedTypeContext(self, self._ctx, self.state)
+        localctx = BOCLParser.UserDefinedTypeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 12, self.RULE_userDefinedType)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 170
-            self.match(OCLsParser.ID)
+            self.match(BOCLParser.ID)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1390,7 +1391,7 @@ class OCLsParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return OCLsParser.RULE_expression
+            return BOCLParser.RULE_expression
 
      
         def copyFrom(self, ctx:ParserRuleContext):
@@ -1400,14 +1401,14 @@ class OCLsParser ( Parser ):
 
     class ElseExpContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ELSE(self):
-            return self.getToken(OCLsParser.ELSE, 0)
+            return self.getToken(BOCLParser.ELSE, 0)
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -1421,14 +1422,14 @@ class OCLsParser ( Parser ):
 
     class ArrowexpContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def Arrow(self):
-            return self.getToken(OCLsParser.Arrow, 0)
+            return self.getToken(BOCLParser.Arrow, 0)
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -1442,47 +1443,47 @@ class OCLsParser ( Parser ):
 
     class COLLECTIONContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def LPAREN(self):
-            return self.getToken(OCLsParser.LPAREN, 0)
+            return self.getToken(BOCLParser.LPAREN, 0)
         def PIPE(self):
-            return self.getToken(OCLsParser.PIPE, 0)
+            return self.getToken(BOCLParser.PIPE, 0)
         def expression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(OCLsParser.ExpressionContext)
+                return self.getTypedRuleContexts(BOCLParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(OCLsParser.ExpressionContext,i)
+                return self.getTypedRuleContext(BOCLParser.ExpressionContext,i)
 
         def RPAREN(self):
-            return self.getToken(OCLsParser.RPAREN, 0)
+            return self.getToken(BOCLParser.RPAREN, 0)
         def FORALL(self):
-            return self.getToken(OCLsParser.FORALL, 0)
+            return self.getToken(BOCLParser.FORALL, 0)
         def EXISTS(self):
-            return self.getToken(OCLsParser.EXISTS, 0)
+            return self.getToken(BOCLParser.EXISTS, 0)
         def SELECT(self):
-            return self.getToken(OCLsParser.SELECT, 0)
+            return self.getToken(BOCLParser.SELECT, 0)
         def COLLECT(self):
-            return self.getToken(OCLsParser.COLLECT, 0)
+            return self.getToken(BOCLParser.COLLECT, 0)
         def Arrow(self):
-            return self.getToken(OCLsParser.Arrow, 0)
+            return self.getToken(BOCLParser.Arrow, 0)
         def ID(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.ID)
+                return self.getTokens(BOCLParser.ID)
             else:
-                return self.getToken(OCLsParser.ID, i)
+                return self.getToken(BOCLParser.ID, i)
         def COLON(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.COLON)
+                return self.getTokens(BOCLParser.COLON)
             else:
-                return self.getToken(OCLsParser.COLON, i)
+                return self.getToken(BOCLParser.COLON, i)
         def COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.COMMA)
+                return self.getTokens(BOCLParser.COMMA)
             else:
-                return self.getToken(OCLsParser.COMMA, i)
+                return self.getToken(BOCLParser.COMMA, i)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterCOLLECTION" ):
@@ -1495,50 +1496,50 @@ class OCLsParser ( Parser ):
 
     class SETContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def SET(self):
-            return self.getToken(OCLsParser.SET, 0)
+            return self.getToken(BOCLParser.SET, 0)
         def Arrow(self):
-            return self.getToken(OCLsParser.Arrow, 0)
+            return self.getToken(BOCLParser.Arrow, 0)
         def LPAREN(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.LPAREN)
+                return self.getTokens(BOCLParser.LPAREN)
             else:
-                return self.getToken(OCLsParser.LPAREN, i)
+                return self.getToken(BOCLParser.LPAREN, i)
         def LBRACE(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.LBRACE)
+                return self.getTokens(BOCLParser.LBRACE)
             else:
-                return self.getToken(OCLsParser.LBRACE, i)
+                return self.getToken(BOCLParser.LBRACE, i)
         def expression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(OCLsParser.ExpressionContext)
+                return self.getTypedRuleContexts(BOCLParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(OCLsParser.ExpressionContext,i)
+                return self.getTypedRuleContext(BOCLParser.ExpressionContext,i)
 
         def RBRACE(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.RBRACE)
+                return self.getTokens(BOCLParser.RBRACE)
             else:
-                return self.getToken(OCLsParser.RBRACE, i)
+                return self.getToken(BOCLParser.RBRACE, i)
         def RPAREN(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.RPAREN)
+                return self.getTokens(BOCLParser.RPAREN)
             else:
-                return self.getToken(OCLsParser.RPAREN, i)
+                return self.getToken(BOCLParser.RPAREN, i)
         def SingleQuote(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.SingleQuote)
+                return self.getTokens(BOCLParser.SingleQuote)
             else:
-                return self.getToken(OCLsParser.SingleQuote, i)
+                return self.getToken(BOCLParser.SingleQuote, i)
         def COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.COMMA)
+                return self.getTokens(BOCLParser.COMMA)
             else:
-                return self.getToken(OCLsParser.COMMA, i)
+                return self.getToken(BOCLParser.COMMA, i)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSET" ):
@@ -1551,21 +1552,21 @@ class OCLsParser ( Parser ):
 
     class DefIDAssignmentexpressionContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ID(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.ID)
+                return self.getTokens(BOCLParser.ID)
             else:
-                return self.getToken(OCLsParser.ID, i)
+                return self.getToken(BOCLParser.ID, i)
         def COLON(self):
-            return self.getToken(OCLsParser.COLON, 0)
+            return self.getToken(BOCLParser.COLON, 0)
         def EQUAL(self):
-            return self.getToken(OCLsParser.EQUAL, 0)
+            return self.getToken(BOCLParser.EQUAL, 0)
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -1579,17 +1580,17 @@ class OCLsParser ( Parser ):
 
     class PredefinedfunctionCallContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def functionCall(self):
-            return self.getTypedRuleContext(OCLsParser.FunctionCallContext,0)
+            return self.getTypedRuleContext(BOCLParser.FunctionCallContext,0)
 
         def Arrow(self):
-            return self.getToken(OCLsParser.Arrow, 0)
+            return self.getToken(BOCLParser.Arrow, 0)
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -1603,15 +1604,15 @@ class OCLsParser ( Parser ):
 
     class UnaryContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def unaryExpression(self):
-            return self.getTypedRuleContext(OCLsParser.UnaryExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.UnaryExpressionContext,0)
 
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -1625,27 +1626,27 @@ class OCLsParser ( Parser ):
 
     class INCLUDESContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def INCLUDES(self):
-            return self.getToken(OCLsParser.INCLUDES, 0)
+            return self.getToken(BOCLParser.INCLUDES, 0)
         def LPAREN(self):
-            return self.getToken(OCLsParser.LPAREN, 0)
+            return self.getToken(BOCLParser.LPAREN, 0)
         def expression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(OCLsParser.ExpressionContext)
+                return self.getTypedRuleContexts(BOCLParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(OCLsParser.ExpressionContext,i)
+                return self.getTypedRuleContext(BOCLParser.ExpressionContext,i)
 
         def RPAREN(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.RPAREN)
+                return self.getTokens(BOCLParser.RPAREN)
             else:
-                return self.getToken(OCLsParser.RPAREN, i)
+                return self.getToken(BOCLParser.RPAREN, i)
         def Arrow(self):
-            return self.getToken(OCLsParser.Arrow, 0)
+            return self.getToken(BOCLParser.Arrow, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterINCLUDES" ):
@@ -1658,14 +1659,14 @@ class OCLsParser ( Parser ):
 
     class ThenExpContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def THEN(self):
-            return self.getToken(OCLsParser.THEN, 0)
+            return self.getToken(BOCLParser.THEN, 0)
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -1679,50 +1680,50 @@ class OCLsParser ( Parser ):
 
     class SUBORDEREDSETContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def SUBORDEREDSET(self):
-            return self.getToken(OCLsParser.SUBORDEREDSET, 0)
+            return self.getToken(BOCLParser.SUBORDEREDSET, 0)
         def RPAREN(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.RPAREN)
+                return self.getTokens(BOCLParser.RPAREN)
             else:
-                return self.getToken(OCLsParser.RPAREN, i)
+                return self.getToken(BOCLParser.RPAREN, i)
         def Arrow(self):
-            return self.getToken(OCLsParser.Arrow, 0)
+            return self.getToken(BOCLParser.Arrow, 0)
         def LPAREN(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.LPAREN)
+                return self.getTokens(BOCLParser.LPAREN)
             else:
-                return self.getToken(OCLsParser.LPAREN, i)
+                return self.getToken(BOCLParser.LPAREN, i)
         def LBRACE(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.LBRACE)
+                return self.getTokens(BOCLParser.LBRACE)
             else:
-                return self.getToken(OCLsParser.LBRACE, i)
+                return self.getToken(BOCLParser.LBRACE, i)
         def expression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(OCLsParser.ExpressionContext)
+                return self.getTypedRuleContexts(BOCLParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(OCLsParser.ExpressionContext,i)
+                return self.getTypedRuleContext(BOCLParser.ExpressionContext,i)
 
         def RBRACE(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.RBRACE)
+                return self.getTokens(BOCLParser.RBRACE)
             else:
-                return self.getToken(OCLsParser.RBRACE, i)
+                return self.getToken(BOCLParser.RBRACE, i)
         def SingleQuote(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.SingleQuote)
+                return self.getTokens(BOCLParser.SingleQuote)
             else:
-                return self.getToken(OCLsParser.SingleQuote, i)
+                return self.getToken(BOCLParser.SingleQuote, i)
         def COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.COMMA)
+                return self.getTokens(BOCLParser.COMMA)
             else:
-                return self.getToken(OCLsParser.COMMA, i)
+                return self.getToken(BOCLParser.COMMA, i)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSUBORDEREDSET" ):
@@ -1735,36 +1736,36 @@ class OCLsParser ( Parser ):
 
     class PrimaryExpContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def LPAREN(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.LPAREN)
+                return self.getTokens(BOCLParser.LPAREN)
             else:
-                return self.getToken(OCLsParser.LPAREN, i)
+                return self.getToken(BOCLParser.LPAREN, i)
         def primaryExpression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(OCLsParser.PrimaryExpressionContext)
+                return self.getTypedRuleContexts(BOCLParser.PrimaryExpressionContext)
             else:
-                return self.getTypedRuleContext(OCLsParser.PrimaryExpressionContext,i)
+                return self.getTypedRuleContext(BOCLParser.PrimaryExpressionContext,i)
 
         def DOT(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.DOT)
+                return self.getTokens(BOCLParser.DOT)
             else:
-                return self.getToken(OCLsParser.DOT, i)
+                return self.getToken(BOCLParser.DOT, i)
         def ID(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.ID)
+                return self.getTokens(BOCLParser.ID)
             else:
-                return self.getToken(OCLsParser.ID, i)
+                return self.getToken(BOCLParser.ID, i)
         def operator(self):
-            return self.getTypedRuleContext(OCLsParser.OperatorContext,0)
+            return self.getTypedRuleContext(BOCLParser.OperatorContext,0)
 
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -1778,34 +1779,34 @@ class OCLsParser ( Parser ):
 
     class OCLISKINDOFContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def primaryExpression(self):
-            return self.getTypedRuleContext(OCLsParser.PrimaryExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.PrimaryExpressionContext,0)
 
         def DOT(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.DOT)
+                return self.getTokens(BOCLParser.DOT)
             else:
-                return self.getToken(OCLsParser.DOT, i)
+                return self.getToken(BOCLParser.DOT, i)
         def OCLISKINDOF(self):
-            return self.getToken(OCLsParser.OCLISKINDOF, 0)
+            return self.getToken(BOCLParser.OCLISKINDOF, 0)
         def LPAREN(self):
-            return self.getToken(OCLsParser.LPAREN, 0)
+            return self.getToken(BOCLParser.LPAREN, 0)
         def type_(self):
-            return self.getTypedRuleContext(OCLsParser.TypeContext,0)
+            return self.getTypedRuleContext(BOCLParser.TypeContext,0)
 
         def RPAREN(self):
-            return self.getToken(OCLsParser.RPAREN, 0)
+            return self.getToken(BOCLParser.RPAREN, 0)
         def ID(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.ID)
+                return self.getTokens(BOCLParser.ID)
             else:
-                return self.getToken(OCLsParser.ID, i)
+                return self.getToken(BOCLParser.ID, i)
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -1819,14 +1820,14 @@ class OCLsParser ( Parser ):
 
     class NumberContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def NUMBER(self):
-            return self.getToken(OCLsParser.NUMBER, 0)
+            return self.getToken(BOCLParser.NUMBER, 0)
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -1840,14 +1841,14 @@ class OCLsParser ( Parser ):
 
     class DoubleCOLONsContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def DoubleCOLON(self):
-            return self.getToken(OCLsParser.DoubleCOLON, 0)
+            return self.getToken(BOCLParser.DoubleCOLON, 0)
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -1861,27 +1862,27 @@ class OCLsParser ( Parser ):
 
     class SYMMETRICDIFFERENCEContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def Arrow(self):
-            return self.getToken(OCLsParser.Arrow, 0)
+            return self.getToken(BOCLParser.Arrow, 0)
         def SYMMETRICDIFFERENCE(self):
-            return self.getToken(OCLsParser.SYMMETRICDIFFERENCE, 0)
+            return self.getToken(BOCLParser.SYMMETRICDIFFERENCE, 0)
         def LPAREN(self):
-            return self.getToken(OCLsParser.LPAREN, 0)
+            return self.getToken(BOCLParser.LPAREN, 0)
         def expression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(OCLsParser.ExpressionContext)
+                return self.getTypedRuleContexts(BOCLParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(OCLsParser.ExpressionContext,i)
+                return self.getTypedRuleContext(BOCLParser.ExpressionContext,i)
 
         def RPAREN(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.RPAREN)
+                return self.getTokens(BOCLParser.RPAREN)
             else:
-                return self.getToken(OCLsParser.RPAREN, i)
+                return self.getToken(BOCLParser.RPAREN, i)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSYMMETRICDIFFERENCE" ):
@@ -1894,50 +1895,50 @@ class OCLsParser ( Parser ):
 
     class SEQUENCEContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def SEQUENCE(self):
-            return self.getToken(OCLsParser.SEQUENCE, 0)
+            return self.getToken(BOCLParser.SEQUENCE, 0)
         def Arrow(self):
-            return self.getToken(OCLsParser.Arrow, 0)
+            return self.getToken(BOCLParser.Arrow, 0)
         def LPAREN(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.LPAREN)
+                return self.getTokens(BOCLParser.LPAREN)
             else:
-                return self.getToken(OCLsParser.LPAREN, i)
+                return self.getToken(BOCLParser.LPAREN, i)
         def LBRACE(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.LBRACE)
+                return self.getTokens(BOCLParser.LBRACE)
             else:
-                return self.getToken(OCLsParser.LBRACE, i)
+                return self.getToken(BOCLParser.LBRACE, i)
         def expression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(OCLsParser.ExpressionContext)
+                return self.getTypedRuleContexts(BOCLParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(OCLsParser.ExpressionContext,i)
+                return self.getTypedRuleContext(BOCLParser.ExpressionContext,i)
 
         def RBRACE(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.RBRACE)
+                return self.getTokens(BOCLParser.RBRACE)
             else:
-                return self.getToken(OCLsParser.RBRACE, i)
+                return self.getToken(BOCLParser.RBRACE, i)
         def RPAREN(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.RPAREN)
+                return self.getTokens(BOCLParser.RPAREN)
             else:
-                return self.getToken(OCLsParser.RPAREN, i)
+                return self.getToken(BOCLParser.RPAREN, i)
         def SingleQuote(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.SingleQuote)
+                return self.getTokens(BOCLParser.SingleQuote)
             else:
-                return self.getToken(OCLsParser.SingleQuote, i)
+                return self.getToken(BOCLParser.SingleQuote, i)
         def COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.COMMA)
+                return self.getTokens(BOCLParser.COMMA)
             else:
-                return self.getToken(OCLsParser.COMMA, i)
+                return self.getToken(BOCLParser.COMMA, i)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSEQUENCE" ):
@@ -1950,44 +1951,44 @@ class OCLsParser ( Parser ):
 
     class ORDEREDSETContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ORDEREDSET(self):
-            return self.getToken(OCLsParser.ORDEREDSET, 0)
+            return self.getToken(BOCLParser.ORDEREDSET, 0)
         def LBRACE(self):
-            return self.getToken(OCLsParser.LBRACE, 0)
+            return self.getToken(BOCLParser.LBRACE, 0)
         def RBRACE(self):
-            return self.getToken(OCLsParser.RBRACE, 0)
+            return self.getToken(BOCLParser.RBRACE, 0)
         def Arrow(self):
-            return self.getToken(OCLsParser.Arrow, 0)
+            return self.getToken(BOCLParser.Arrow, 0)
         def LPAREN(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.LPAREN)
+                return self.getTokens(BOCLParser.LPAREN)
             else:
-                return self.getToken(OCLsParser.LPAREN, i)
+                return self.getToken(BOCLParser.LPAREN, i)
         def expression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(OCLsParser.ExpressionContext)
+                return self.getTypedRuleContexts(BOCLParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(OCLsParser.ExpressionContext,i)
+                return self.getTypedRuleContext(BOCLParser.ExpressionContext,i)
 
         def RPAREN(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.RPAREN)
+                return self.getTokens(BOCLParser.RPAREN)
             else:
-                return self.getToken(OCLsParser.RPAREN, i)
+                return self.getToken(BOCLParser.RPAREN, i)
         def SingleQuote(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.SingleQuote)
+                return self.getTokens(BOCLParser.SingleQuote)
             else:
-                return self.getToken(OCLsParser.SingleQuote, i)
+                return self.getToken(BOCLParser.SingleQuote, i)
         def COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.COMMA)
+                return self.getTokens(BOCLParser.COMMA)
             else:
-                return self.getToken(OCLsParser.COMMA, i)
+                return self.getToken(BOCLParser.COMMA, i)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterORDEREDSET" ):
@@ -2000,14 +2001,14 @@ class OCLsParser ( Parser ):
 
     class DoubleDotsContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def DoubleDots(self):
-            return self.getToken(OCLsParser.DoubleDots, 0)
+            return self.getToken(BOCLParser.DoubleDots, 0)
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -2021,27 +2022,27 @@ class OCLsParser ( Parser ):
 
     class EXCLUDESContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def EXCLUDES(self):
-            return self.getToken(OCLsParser.EXCLUDES, 0)
+            return self.getToken(BOCLParser.EXCLUDES, 0)
         def LPAREN(self):
-            return self.getToken(OCLsParser.LPAREN, 0)
+            return self.getToken(BOCLParser.LPAREN, 0)
         def expression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(OCLsParser.ExpressionContext)
+                return self.getTypedRuleContexts(BOCLParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(OCLsParser.ExpressionContext,i)
+                return self.getTypedRuleContext(BOCLParser.ExpressionContext,i)
 
         def RPAREN(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.RPAREN)
+                return self.getTokens(BOCLParser.RPAREN)
             else:
-                return self.getToken(OCLsParser.RPAREN, i)
+                return self.getToken(BOCLParser.RPAREN, i)
         def Arrow(self):
-            return self.getToken(OCLsParser.Arrow, 0)
+            return self.getToken(BOCLParser.Arrow, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterEXCLUDES" ):
@@ -2054,20 +2055,20 @@ class OCLsParser ( Parser ):
 
     class DERIVEContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def Arrow(self):
-            return self.getToken(OCLsParser.Arrow, 0)
+            return self.getToken(BOCLParser.Arrow, 0)
         def DERIVE(self):
-            return self.getToken(OCLsParser.DERIVE, 0)
+            return self.getToken(BOCLParser.DERIVE, 0)
         def LPAREN(self):
-            return self.getToken(OCLsParser.LPAREN, 0)
+            return self.getToken(BOCLParser.LPAREN, 0)
         def RPAREN(self):
-            return self.getToken(OCLsParser.RPAREN, 0)
+            return self.getToken(BOCLParser.RPAREN, 0)
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -2081,15 +2082,15 @@ class OCLsParser ( Parser ):
 
     class IDContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def primaryExpression(self):
-            return self.getTypedRuleContext(OCLsParser.PrimaryExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.PrimaryExpressionContext,0)
 
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -2103,30 +2104,30 @@ class OCLsParser ( Parser ):
 
     class ALLINSTANCESContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ALLINSTANCES(self):
-            return self.getToken(OCLsParser.ALLINSTANCES, 0)
+            return self.getToken(BOCLParser.ALLINSTANCES, 0)
         def Arrow(self):
-            return self.getToken(OCLsParser.Arrow, 0)
+            return self.getToken(BOCLParser.Arrow, 0)
         def LPAREN(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.LPAREN)
+                return self.getTokens(BOCLParser.LPAREN)
             else:
-                return self.getToken(OCLsParser.LPAREN, i)
+                return self.getToken(BOCLParser.LPAREN, i)
         def expression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(OCLsParser.ExpressionContext)
+                return self.getTypedRuleContexts(BOCLParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(OCLsParser.ExpressionContext,i)
+                return self.getTypedRuleContext(BOCLParser.ExpressionContext,i)
 
         def RPAREN(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.RPAREN)
+                return self.getTokens(BOCLParser.RPAREN)
             else:
-                return self.getToken(OCLsParser.RPAREN, i)
+                return self.getToken(BOCLParser.RPAREN, i)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterALLINSTANCES" ):
@@ -2139,15 +2140,15 @@ class OCLsParser ( Parser ):
 
     class OpContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def operator(self):
-            return self.getTypedRuleContext(OCLsParser.OperatorContext,0)
+            return self.getTypedRuleContext(BOCLParser.OperatorContext,0)
 
         def numberORUserDefined(self):
-            return self.getTypedRuleContext(OCLsParser.NumberORUserDefinedContext,0)
+            return self.getTypedRuleContext(BOCLParser.NumberORUserDefinedContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -2161,50 +2162,50 @@ class OCLsParser ( Parser ):
 
     class SUBSEQUENCEContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def SUBSEQUENCE(self):
-            return self.getToken(OCLsParser.SUBSEQUENCE, 0)
+            return self.getToken(BOCLParser.SUBSEQUENCE, 0)
         def Arrow(self):
-            return self.getToken(OCLsParser.Arrow, 0)
+            return self.getToken(BOCLParser.Arrow, 0)
         def LPAREN(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.LPAREN)
+                return self.getTokens(BOCLParser.LPAREN)
             else:
-                return self.getToken(OCLsParser.LPAREN, i)
+                return self.getToken(BOCLParser.LPAREN, i)
         def LBRACE(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.LBRACE)
+                return self.getTokens(BOCLParser.LBRACE)
             else:
-                return self.getToken(OCLsParser.LBRACE, i)
+                return self.getToken(BOCLParser.LBRACE, i)
         def expression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(OCLsParser.ExpressionContext)
+                return self.getTypedRuleContexts(BOCLParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(OCLsParser.ExpressionContext,i)
+                return self.getTypedRuleContext(BOCLParser.ExpressionContext,i)
 
         def RPAREN(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.RPAREN)
+                return self.getTokens(BOCLParser.RPAREN)
             else:
-                return self.getToken(OCLsParser.RPAREN, i)
+                return self.getToken(BOCLParser.RPAREN, i)
         def RBRACE(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.RBRACE)
+                return self.getTokens(BOCLParser.RBRACE)
             else:
-                return self.getToken(OCLsParser.RBRACE, i)
+                return self.getToken(BOCLParser.RBRACE, i)
         def SingleQuote(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.SingleQuote)
+                return self.getTokens(BOCLParser.SingleQuote)
             else:
-                return self.getToken(OCLsParser.SingleQuote, i)
+                return self.getToken(BOCLParser.SingleQuote, i)
         def COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.COMMA)
+                return self.getTokens(BOCLParser.COMMA)
             else:
-                return self.getToken(OCLsParser.COMMA, i)
+                return self.getToken(BOCLParser.COMMA, i)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSUBSEQUENCE" ):
@@ -2217,36 +2218,36 @@ class OCLsParser ( Parser ):
 
     class SIZEContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def Arrow(self):
-            return self.getToken(OCLsParser.Arrow, 0)
+            return self.getToken(BOCLParser.Arrow, 0)
         def SIZE(self):
-            return self.getToken(OCLsParser.SIZE, 0)
+            return self.getToken(BOCLParser.SIZE, 0)
         def LPAREN(self):
-            return self.getToken(OCLsParser.LPAREN, 0)
+            return self.getToken(BOCLParser.LPAREN, 0)
         def RPAREN(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.RPAREN)
+                return self.getTokens(BOCLParser.RPAREN)
             else:
-                return self.getToken(OCLsParser.RPAREN, i)
+                return self.getToken(BOCLParser.RPAREN, i)
         def primaryExpression(self):
-            return self.getTypedRuleContext(OCLsParser.PrimaryExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.PrimaryExpressionContext,0)
 
         def DOT(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.DOT)
+                return self.getTokens(BOCLParser.DOT)
             else:
-                return self.getToken(OCLsParser.DOT, i)
+                return self.getToken(BOCLParser.DOT, i)
         def ID(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.ID)
+                return self.getTokens(BOCLParser.ID)
             else:
-                return self.getToken(OCLsParser.ID, i)
+                return self.getToken(BOCLParser.ID, i)
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -2260,26 +2261,26 @@ class OCLsParser ( Parser ):
 
     class SingleQuoteExpContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def SingleQuote(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.SingleQuote)
+                return self.getTokens(BOCLParser.SingleQuote)
             else:
-                return self.getToken(OCLsParser.SingleQuote, i)
+                return self.getToken(BOCLParser.SingleQuote, i)
         def expression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(OCLsParser.ExpressionContext)
+                return self.getTypedRuleContexts(BOCLParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(OCLsParser.ExpressionContext,i)
+                return self.getTypedRuleContext(BOCLParser.ExpressionContext,i)
 
         def DOT(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.DOT)
+                return self.getTokens(BOCLParser.DOT)
             else:
-                return self.getToken(OCLsParser.DOT, i)
+                return self.getToken(BOCLParser.DOT, i)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSingleQuoteExp" ):
@@ -2292,50 +2293,50 @@ class OCLsParser ( Parser ):
 
     class BAGContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def BAG(self):
-            return self.getToken(OCLsParser.BAG, 0)
+            return self.getToken(BOCLParser.BAG, 0)
         def Arrow(self):
-            return self.getToken(OCLsParser.Arrow, 0)
+            return self.getToken(BOCLParser.Arrow, 0)
         def LPAREN(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.LPAREN)
+                return self.getTokens(BOCLParser.LPAREN)
             else:
-                return self.getToken(OCLsParser.LPAREN, i)
+                return self.getToken(BOCLParser.LPAREN, i)
         def LBRACE(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.LBRACE)
+                return self.getTokens(BOCLParser.LBRACE)
             else:
-                return self.getToken(OCLsParser.LBRACE, i)
+                return self.getToken(BOCLParser.LBRACE, i)
         def expression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(OCLsParser.ExpressionContext)
+                return self.getTypedRuleContexts(BOCLParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(OCLsParser.ExpressionContext,i)
+                return self.getTypedRuleContext(BOCLParser.ExpressionContext,i)
 
         def RBRACE(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.RBRACE)
+                return self.getTokens(BOCLParser.RBRACE)
             else:
-                return self.getToken(OCLsParser.RBRACE, i)
+                return self.getToken(BOCLParser.RBRACE, i)
         def RPAREN(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.RPAREN)
+                return self.getTokens(BOCLParser.RPAREN)
             else:
-                return self.getToken(OCLsParser.RPAREN, i)
+                return self.getToken(BOCLParser.RPAREN, i)
         def SingleQuote(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.SingleQuote)
+                return self.getTokens(BOCLParser.SingleQuote)
             else:
-                return self.getToken(OCLsParser.SingleQuote, i)
+                return self.getToken(BOCLParser.SingleQuote, i)
         def COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.COMMA)
+                return self.getTokens(BOCLParser.COMMA)
             else:
-                return self.getToken(OCLsParser.COMMA, i)
+                return self.getToken(BOCLParser.COMMA, i)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterBAG" ):
@@ -2348,34 +2349,34 @@ class OCLsParser ( Parser ):
 
     class OCLISTYPEOFContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def primaryExpression(self):
-            return self.getTypedRuleContext(OCLsParser.PrimaryExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.PrimaryExpressionContext,0)
 
         def DOT(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.DOT)
+                return self.getTokens(BOCLParser.DOT)
             else:
-                return self.getToken(OCLsParser.DOT, i)
+                return self.getToken(BOCLParser.DOT, i)
         def OCLISTYPEOF(self):
-            return self.getToken(OCLsParser.OCLISTYPEOF, 0)
+            return self.getToken(BOCLParser.OCLISTYPEOF, 0)
         def LPAREN(self):
-            return self.getToken(OCLsParser.LPAREN, 0)
+            return self.getToken(BOCLParser.LPAREN, 0)
         def type_(self):
-            return self.getTypedRuleContext(OCLsParser.TypeContext,0)
+            return self.getTypedRuleContext(BOCLParser.TypeContext,0)
 
         def RPAREN(self):
-            return self.getToken(OCLsParser.RPAREN, 0)
+            return self.getToken(BOCLParser.RPAREN, 0)
         def ID(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.ID)
+                return self.getTokens(BOCLParser.ID)
             else:
-                return self.getToken(OCLsParser.ID, i)
+                return self.getToken(BOCLParser.ID, i)
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -2389,36 +2390,36 @@ class OCLsParser ( Parser ):
 
     class SUMContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def Arrow(self):
-            return self.getToken(OCLsParser.Arrow, 0)
+            return self.getToken(BOCLParser.Arrow, 0)
         def SUM(self):
-            return self.getToken(OCLsParser.SUM, 0)
+            return self.getToken(BOCLParser.SUM, 0)
         def LPAREN(self):
-            return self.getToken(OCLsParser.LPAREN, 0)
+            return self.getToken(BOCLParser.LPAREN, 0)
         def RPAREN(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.RPAREN)
+                return self.getTokens(BOCLParser.RPAREN)
             else:
-                return self.getToken(OCLsParser.RPAREN, i)
+                return self.getToken(BOCLParser.RPAREN, i)
         def primaryExpression(self):
-            return self.getTypedRuleContext(OCLsParser.PrimaryExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.PrimaryExpressionContext,0)
 
         def DOT(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.DOT)
+                return self.getTokens(BOCLParser.DOT)
             else:
-                return self.getToken(OCLsParser.DOT, i)
+                return self.getToken(BOCLParser.DOT, i)
         def ID(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.ID)
+                return self.getTokens(BOCLParser.ID)
             else:
-                return self.getToken(OCLsParser.ID, i)
+                return self.getToken(BOCLParser.ID, i)
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -2432,20 +2433,20 @@ class OCLsParser ( Parser ):
 
     class FIRSTContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def Arrow(self):
-            return self.getToken(OCLsParser.Arrow, 0)
+            return self.getToken(BOCLParser.Arrow, 0)
         def FIRST(self):
-            return self.getToken(OCLsParser.FIRST, 0)
+            return self.getToken(BOCLParser.FIRST, 0)
         def LPAREN(self):
-            return self.getToken(OCLsParser.LPAREN, 0)
+            return self.getToken(BOCLParser.LPAREN, 0)
         def RPAREN(self):
-            return self.getToken(OCLsParser.RPAREN, 0)
+            return self.getToken(BOCLParser.RPAREN, 0)
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -2459,37 +2460,37 @@ class OCLsParser ( Parser ):
 
     class APPENDContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def Arrow(self):
-            return self.getToken(OCLsParser.Arrow, 0)
+            return self.getToken(BOCLParser.Arrow, 0)
         def APPEND(self):
-            return self.getToken(OCLsParser.APPEND, 0)
+            return self.getToken(BOCLParser.APPEND, 0)
         def LPAREN(self):
-            return self.getToken(OCLsParser.LPAREN, 0)
+            return self.getToken(BOCLParser.LPAREN, 0)
         def expression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(OCLsParser.ExpressionContext)
+                return self.getTypedRuleContexts(BOCLParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(OCLsParser.ExpressionContext,i)
+                return self.getTypedRuleContext(BOCLParser.ExpressionContext,i)
 
         def RPAREN(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.RPAREN)
+                return self.getTokens(BOCLParser.RPAREN)
             else:
-                return self.getToken(OCLsParser.RPAREN, i)
+                return self.getToken(BOCLParser.RPAREN, i)
         def SingleQuote(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.SingleQuote)
+                return self.getTokens(BOCLParser.SingleQuote)
             else:
-                return self.getToken(OCLsParser.SingleQuote, i)
+                return self.getToken(BOCLParser.SingleQuote, i)
         def COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.COMMA)
+                return self.getTokens(BOCLParser.COMMA)
             else:
-                return self.getToken(OCLsParser.COMMA, i)
+                return self.getToken(BOCLParser.COMMA, i)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterAPPEND" ):
@@ -2502,34 +2503,34 @@ class OCLsParser ( Parser ):
 
     class OCLASTYPEContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def primaryExpression(self):
-            return self.getTypedRuleContext(OCLsParser.PrimaryExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.PrimaryExpressionContext,0)
 
         def DOT(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.DOT)
+                return self.getTokens(BOCLParser.DOT)
             else:
-                return self.getToken(OCLsParser.DOT, i)
+                return self.getToken(BOCLParser.DOT, i)
         def OCLASTYPE(self):
-            return self.getToken(OCLsParser.OCLASTYPE, 0)
+            return self.getToken(BOCLParser.OCLASTYPE, 0)
         def LPAREN(self):
-            return self.getToken(OCLsParser.LPAREN, 0)
+            return self.getToken(BOCLParser.LPAREN, 0)
         def type_(self):
-            return self.getTypedRuleContext(OCLsParser.TypeContext,0)
+            return self.getTypedRuleContext(BOCLParser.TypeContext,0)
 
         def RPAREN(self):
-            return self.getToken(OCLsParser.RPAREN, 0)
+            return self.getToken(BOCLParser.RPAREN, 0)
         def ID(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.ID)
+                return self.getTokens(BOCLParser.ID)
             else:
-                return self.getToken(OCLsParser.ID, i)
+                return self.getToken(BOCLParser.ID, i)
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -2543,30 +2544,30 @@ class OCLsParser ( Parser ):
 
     class CollectionExpressionVariableContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def LPAREN(self):
-            return self.getToken(OCLsParser.LPAREN, 0)
+            return self.getToken(BOCLParser.LPAREN, 0)
         def expression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(OCLsParser.ExpressionContext)
+                return self.getTypedRuleContexts(BOCLParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(OCLsParser.ExpressionContext,i)
+                return self.getTypedRuleContext(BOCLParser.ExpressionContext,i)
 
         def RPAREN(self):
-            return self.getToken(OCLsParser.RPAREN, 0)
+            return self.getToken(BOCLParser.RPAREN, 0)
         def FORALL(self):
-            return self.getToken(OCLsParser.FORALL, 0)
+            return self.getToken(BOCLParser.FORALL, 0)
         def EXISTS(self):
-            return self.getToken(OCLsParser.EXISTS, 0)
+            return self.getToken(BOCLParser.EXISTS, 0)
         def SELECT(self):
-            return self.getToken(OCLsParser.SELECT, 0)
+            return self.getToken(BOCLParser.SELECT, 0)
         def COLLECT(self):
-            return self.getToken(OCLsParser.COLLECT, 0)
+            return self.getToken(BOCLParser.COLLECT, 0)
         def Arrow(self):
-            return self.getToken(OCLsParser.Arrow, 0)
+            return self.getToken(BOCLParser.Arrow, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterCollectionExpressionVariable" ):
@@ -2579,23 +2580,23 @@ class OCLsParser ( Parser ):
 
     class LASTContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def Arrow(self):
-            return self.getToken(OCLsParser.Arrow, 0)
+            return self.getToken(BOCLParser.Arrow, 0)
         def LAST(self):
-            return self.getToken(OCLsParser.LAST, 0)
+            return self.getToken(BOCLParser.LAST, 0)
         def LPAREN(self):
-            return self.getToken(OCLsParser.LPAREN, 0)
+            return self.getToken(BOCLParser.LPAREN, 0)
         def RPAREN(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.RPAREN)
+                return self.getTokens(BOCLParser.RPAREN)
             else:
-                return self.getToken(OCLsParser.RPAREN, i)
+                return self.getToken(BOCLParser.RPAREN, i)
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -2609,20 +2610,20 @@ class OCLsParser ( Parser ):
 
     class BinaryContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def binaryExpression(self):
-            return self.getTypedRuleContext(OCLsParser.BinaryExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.BinaryExpressionContext,0)
 
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
         def AND(self):
-            return self.getToken(OCLsParser.AND, 0)
+            return self.getToken(BOCLParser.AND, 0)
         def OR(self):
-            return self.getToken(OCLsParser.OR, 0)
+            return self.getToken(BOCLParser.OR, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterBinary" ):
@@ -2635,14 +2636,14 @@ class OCLsParser ( Parser ):
 
     class IfExpContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def IF(self):
-            return self.getToken(OCLsParser.IF, 0)
+            return self.getToken(BOCLParser.IF, 0)
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -2656,14 +2657,14 @@ class OCLsParser ( Parser ):
 
     class EndIfExpContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ENDIF(self):
-            return self.getToken(OCLsParser.ENDIF, 0)
+            return self.getToken(BOCLParser.ENDIF, 0)
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -2677,36 +2678,36 @@ class OCLsParser ( Parser ):
 
     class ISEMPTYContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def Arrow(self):
-            return self.getToken(OCLsParser.Arrow, 0)
+            return self.getToken(BOCLParser.Arrow, 0)
         def ISEMPTY(self):
-            return self.getToken(OCLsParser.ISEMPTY, 0)
+            return self.getToken(BOCLParser.ISEMPTY, 0)
         def LPAREN(self):
-            return self.getToken(OCLsParser.LPAREN, 0)
+            return self.getToken(BOCLParser.LPAREN, 0)
         def RPAREN(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.RPAREN)
+                return self.getTokens(BOCLParser.RPAREN)
             else:
-                return self.getToken(OCLsParser.RPAREN, i)
+                return self.getToken(BOCLParser.RPAREN, i)
         def primaryExpression(self):
-            return self.getTypedRuleContext(OCLsParser.PrimaryExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.PrimaryExpressionContext,0)
 
         def DOT(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.DOT)
+                return self.getTokens(BOCLParser.DOT)
             else:
-                return self.getToken(OCLsParser.DOT, i)
+                return self.getToken(BOCLParser.DOT, i)
         def ID(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.ID)
+                return self.getTokens(BOCLParser.ID)
             else:
-                return self.getToken(OCLsParser.ID, i)
+                return self.getToken(BOCLParser.ID, i)
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -2720,16 +2721,16 @@ class OCLsParser ( Parser ):
 
     class DefExpContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def Def(self):
-            return self.getToken(OCLsParser.Def, 0)
+            return self.getToken(BOCLParser.Def, 0)
         def COLON(self):
-            return self.getToken(OCLsParser.COLON, 0)
+            return self.getToken(BOCLParser.COLON, 0)
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -2743,31 +2744,31 @@ class OCLsParser ( Parser ):
 
     class FuncCallContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def primaryExpression(self):
-            return self.getTypedRuleContext(OCLsParser.PrimaryExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.PrimaryExpressionContext,0)
 
         def functionCall(self):
-            return self.getTypedRuleContext(OCLsParser.FunctionCallContext,0)
+            return self.getTypedRuleContext(BOCLParser.FunctionCallContext,0)
 
         def DOT(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.DOT)
+                return self.getTokens(BOCLParser.DOT)
             else:
-                return self.getToken(OCLsParser.DOT, i)
+                return self.getToken(BOCLParser.DOT, i)
         def ID(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.ID)
+                return self.getTokens(BOCLParser.ID)
             else:
-                return self.getToken(OCLsParser.ID, i)
+                return self.getToken(BOCLParser.ID, i)
         def operator(self):
-            return self.getTypedRuleContext(OCLsParser.OperatorContext,0)
+            return self.getTypedRuleContext(BOCLParser.OperatorContext,0)
 
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -2781,24 +2782,24 @@ class OCLsParser ( Parser ):
 
     class UNIONContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def Arrow(self):
-            return self.getToken(OCLsParser.Arrow, 0)
+            return self.getToken(BOCLParser.Arrow, 0)
         def UNION(self):
-            return self.getToken(OCLsParser.UNION, 0)
+            return self.getToken(BOCLParser.UNION, 0)
         def LPAREN(self):
-            return self.getToken(OCLsParser.LPAREN, 0)
+            return self.getToken(BOCLParser.LPAREN, 0)
         def expression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(OCLsParser.ExpressionContext)
+                return self.getTypedRuleContexts(BOCLParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(OCLsParser.ExpressionContext,i)
+                return self.getTypedRuleContext(BOCLParser.ExpressionContext,i)
 
         def RPAREN(self):
-            return self.getToken(OCLsParser.RPAREN, 0)
+            return self.getToken(BOCLParser.RPAREN, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterUNION" ):
@@ -2811,40 +2812,40 @@ class OCLsParser ( Parser ):
 
     class PREPENDContext(ExpressionContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a OCLsParser.ExpressionContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a BOCLParser.ExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def Arrow(self):
-            return self.getToken(OCLsParser.Arrow, 0)
+            return self.getToken(BOCLParser.Arrow, 0)
         def PREPEND(self):
-            return self.getToken(OCLsParser.PREPEND, 0)
+            return self.getToken(BOCLParser.PREPEND, 0)
         def LPAREN(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.LPAREN)
+                return self.getTokens(BOCLParser.LPAREN)
             else:
-                return self.getToken(OCLsParser.LPAREN, i)
+                return self.getToken(BOCLParser.LPAREN, i)
         def expression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(OCLsParser.ExpressionContext)
+                return self.getTypedRuleContexts(BOCLParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(OCLsParser.ExpressionContext,i)
+                return self.getTypedRuleContext(BOCLParser.ExpressionContext,i)
 
         def RPAREN(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.RPAREN)
+                return self.getTokens(BOCLParser.RPAREN)
             else:
-                return self.getToken(OCLsParser.RPAREN, i)
+                return self.getToken(BOCLParser.RPAREN, i)
         def SingleQuote(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.SingleQuote)
+                return self.getTokens(BOCLParser.SingleQuote)
             else:
-                return self.getToken(OCLsParser.SingleQuote, i)
+                return self.getToken(BOCLParser.SingleQuote, i)
         def COMMA(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.COMMA)
+                return self.getTokens(BOCLParser.COMMA)
             else:
-                return self.getToken(OCLsParser.COMMA, i)
+                return self.getToken(BOCLParser.COMMA, i)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterPREPEND" ):
@@ -2858,7 +2859,7 @@ class OCLsParser ( Parser ):
 
     def expression(self):
 
-        localctx = OCLsParser.ExpressionContext(self, self._ctx, self.state)
+        localctx = BOCLParser.ExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 14, self.RULE_expression)
         self._la = 0 # Token type
         try:
@@ -2866,7 +2867,7 @@ class OCLsParser ( Parser ):
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,170,self._ctx)
             if la_ == 1:
-                localctx = OCLsParser.BinaryContext(self, localctx)
+                localctx = BOCLParser.BinaryContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
                 self.state = 173
                 self._errHandler.sync(self)
@@ -2894,7 +2895,7 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 2:
-                localctx = OCLsParser.UnaryContext(self, localctx)
+                localctx = BOCLParser.UnaryContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
                 self.state = 179
                 self.unaryExpression()
@@ -2909,37 +2910,37 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 3:
-                localctx = OCLsParser.IfExpContext(self, localctx)
+                localctx = BOCLParser.IfExpContext(self, localctx)
                 self.enterOuterAlt(localctx, 3)
                 self.state = 183
-                self.match(OCLsParser.IF)
+                self.match(BOCLParser.IF)
                 self.state = 184
                 self.expression()
                 pass
 
             elif la_ == 4:
-                localctx = OCLsParser.ThenExpContext(self, localctx)
+                localctx = BOCLParser.ThenExpContext(self, localctx)
                 self.enterOuterAlt(localctx, 4)
                 self.state = 185
-                self.match(OCLsParser.THEN)
+                self.match(BOCLParser.THEN)
                 self.state = 186
                 self.expression()
                 pass
 
             elif la_ == 5:
-                localctx = OCLsParser.ElseExpContext(self, localctx)
+                localctx = BOCLParser.ElseExpContext(self, localctx)
                 self.enterOuterAlt(localctx, 5)
                 self.state = 187
-                self.match(OCLsParser.ELSE)
+                self.match(BOCLParser.ELSE)
                 self.state = 188
                 self.expression()
                 pass
 
             elif la_ == 6:
-                localctx = OCLsParser.EndIfExpContext(self, localctx)
+                localctx = BOCLParser.EndIfExpContext(self, localctx)
                 self.enterOuterAlt(localctx, 6)
                 self.state = 189
-                self.match(OCLsParser.ENDIF)
+                self.match(BOCLParser.ENDIF)
                 self.state = 191
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,31,self._ctx)
@@ -2951,7 +2952,7 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 7:
-                localctx = OCLsParser.OCLISTYPEOFContext(self, localctx)
+                localctx = BOCLParser.OCLISTYPEOFContext(self, localctx)
                 self.enterOuterAlt(localctx, 7)
                 self.state = 193
                 self.primaryExpression()
@@ -2961,23 +2962,23 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 194
-                        self.match(OCLsParser.DOT)
+                        self.match(BOCLParser.DOT)
                         self.state = 195
-                        self.match(OCLsParser.ID) 
+                        self.match(BOCLParser.ID) 
                     self.state = 200
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,32,self._ctx)
 
                 self.state = 201
-                self.match(OCLsParser.DOT)
+                self.match(BOCLParser.DOT)
                 self.state = 202
-                self.match(OCLsParser.OCLISTYPEOF)
+                self.match(BOCLParser.OCLISTYPEOF)
                 self.state = 203
-                self.match(OCLsParser.LPAREN)
+                self.match(BOCLParser.LPAREN)
                 self.state = 204
                 self.type_()
                 self.state = 205
-                self.match(OCLsParser.RPAREN)
+                self.match(BOCLParser.RPAREN)
                 self.state = 207
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,33,self._ctx)
@@ -2989,7 +2990,7 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 8:
-                localctx = OCLsParser.OCLASTYPEContext(self, localctx)
+                localctx = BOCLParser.OCLASTYPEContext(self, localctx)
                 self.enterOuterAlt(localctx, 8)
                 self.state = 209
                 self.primaryExpression()
@@ -2999,23 +3000,23 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 210
-                        self.match(OCLsParser.DOT)
+                        self.match(BOCLParser.DOT)
                         self.state = 211
-                        self.match(OCLsParser.ID) 
+                        self.match(BOCLParser.ID) 
                     self.state = 216
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,34,self._ctx)
 
                 self.state = 217
-                self.match(OCLsParser.DOT)
+                self.match(BOCLParser.DOT)
                 self.state = 218
-                self.match(OCLsParser.OCLASTYPE)
+                self.match(BOCLParser.OCLASTYPE)
                 self.state = 219
-                self.match(OCLsParser.LPAREN)
+                self.match(BOCLParser.LPAREN)
                 self.state = 220
                 self.type_()
                 self.state = 221
-                self.match(OCLsParser.RPAREN)
+                self.match(BOCLParser.RPAREN)
                 self.state = 223
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,35,self._ctx)
@@ -3027,7 +3028,7 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 9:
-                localctx = OCLsParser.OCLISKINDOFContext(self, localctx)
+                localctx = BOCLParser.OCLISKINDOFContext(self, localctx)
                 self.enterOuterAlt(localctx, 9)
                 self.state = 225
                 self.primaryExpression()
@@ -3037,23 +3038,23 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 226
-                        self.match(OCLsParser.DOT)
+                        self.match(BOCLParser.DOT)
                         self.state = 227
-                        self.match(OCLsParser.ID) 
+                        self.match(BOCLParser.ID) 
                     self.state = 232
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,36,self._ctx)
 
                 self.state = 233
-                self.match(OCLsParser.DOT)
+                self.match(BOCLParser.DOT)
                 self.state = 234
-                self.match(OCLsParser.OCLISKINDOF)
+                self.match(BOCLParser.OCLISKINDOF)
                 self.state = 235
-                self.match(OCLsParser.LPAREN)
+                self.match(BOCLParser.LPAREN)
                 self.state = 236
                 self.type_()
                 self.state = 237
-                self.match(OCLsParser.RPAREN)
+                self.match(BOCLParser.RPAREN)
                 self.state = 239
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,37,self._ctx)
@@ -3065,7 +3066,7 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 10:
-                localctx = OCLsParser.ISEMPTYContext(self, localctx)
+                localctx = BOCLParser.ISEMPTYContext(self, localctx)
                 self.enterOuterAlt(localctx, 10)
                 self.state = 242
                 self._errHandler.sync(self)
@@ -3080,21 +3081,21 @@ class OCLsParser ( Parser ):
                 _la = self._input.LA(1)
                 while _la==22:
                     self.state = 244
-                    self.match(OCLsParser.DOT)
+                    self.match(BOCLParser.DOT)
                     self.state = 245
-                    self.match(OCLsParser.ID)
+                    self.match(BOCLParser.ID)
                     self.state = 250
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
                 self.state = 251
-                self.match(OCLsParser.Arrow)
+                self.match(BOCLParser.Arrow)
                 self.state = 252
-                self.match(OCLsParser.ISEMPTY)
+                self.match(BOCLParser.ISEMPTY)
                 self.state = 253
-                self.match(OCLsParser.LPAREN)
+                self.match(BOCLParser.LPAREN)
                 self.state = 254
-                self.match(OCLsParser.RPAREN)
+                self.match(BOCLParser.RPAREN)
                 self.state = 256
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,40,self._ctx)
@@ -3109,7 +3110,7 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 258
-                        self.match(OCLsParser.RPAREN) 
+                        self.match(BOCLParser.RPAREN) 
                     self.state = 263
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,41,self._ctx)
@@ -3117,7 +3118,7 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 11:
-                localctx = OCLsParser.SUMContext(self, localctx)
+                localctx = BOCLParser.SUMContext(self, localctx)
                 self.enterOuterAlt(localctx, 11)
                 self.state = 265
                 self._errHandler.sync(self)
@@ -3132,21 +3133,21 @@ class OCLsParser ( Parser ):
                 _la = self._input.LA(1)
                 while _la==22:
                     self.state = 267
-                    self.match(OCLsParser.DOT)
+                    self.match(BOCLParser.DOT)
                     self.state = 268
-                    self.match(OCLsParser.ID)
+                    self.match(BOCLParser.ID)
                     self.state = 273
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
                 self.state = 274
-                self.match(OCLsParser.Arrow)
+                self.match(BOCLParser.Arrow)
                 self.state = 275
-                self.match(OCLsParser.SUM)
+                self.match(BOCLParser.SUM)
                 self.state = 276
-                self.match(OCLsParser.LPAREN)
+                self.match(BOCLParser.LPAREN)
                 self.state = 277
-                self.match(OCLsParser.RPAREN)
+                self.match(BOCLParser.RPAREN)
                 self.state = 279
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,44,self._ctx)
@@ -3161,7 +3162,7 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 281
-                        self.match(OCLsParser.RPAREN) 
+                        self.match(BOCLParser.RPAREN) 
                     self.state = 286
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,45,self._ctx)
@@ -3169,7 +3170,7 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 12:
-                localctx = OCLsParser.SIZEContext(self, localctx)
+                localctx = BOCLParser.SIZEContext(self, localctx)
                 self.enterOuterAlt(localctx, 12)
                 self.state = 288
                 self._errHandler.sync(self)
@@ -3184,21 +3185,21 @@ class OCLsParser ( Parser ):
                 _la = self._input.LA(1)
                 while _la==22:
                     self.state = 290
-                    self.match(OCLsParser.DOT)
+                    self.match(BOCLParser.DOT)
                     self.state = 291
-                    self.match(OCLsParser.ID)
+                    self.match(BOCLParser.ID)
                     self.state = 296
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
                 self.state = 297
-                self.match(OCLsParser.Arrow)
+                self.match(BOCLParser.Arrow)
                 self.state = 298
-                self.match(OCLsParser.SIZE)
+                self.match(BOCLParser.SIZE)
                 self.state = 299
-                self.match(OCLsParser.LPAREN)
+                self.match(BOCLParser.LPAREN)
                 self.state = 300
-                self.match(OCLsParser.RPAREN)
+                self.match(BOCLParser.RPAREN)
                 self.state = 302
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,48,self._ctx)
@@ -3213,7 +3214,7 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 304
-                        self.match(OCLsParser.RPAREN) 
+                        self.match(BOCLParser.RPAREN) 
                     self.state = 309
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,49,self._ctx)
@@ -3221,24 +3222,24 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 13:
-                localctx = OCLsParser.INCLUDESContext(self, localctx)
+                localctx = BOCLParser.INCLUDESContext(self, localctx)
                 self.enterOuterAlt(localctx, 13)
                 self.state = 311
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==75:
                     self.state = 310
-                    self.match(OCLsParser.Arrow)
+                    self.match(BOCLParser.Arrow)
 
 
                 self.state = 313
-                self.match(OCLsParser.INCLUDES)
+                self.match(BOCLParser.INCLUDES)
                 self.state = 314
-                self.match(OCLsParser.LPAREN)
+                self.match(BOCLParser.LPAREN)
                 self.state = 315
                 self.expression()
                 self.state = 316
-                self.match(OCLsParser.RPAREN)
+                self.match(BOCLParser.RPAREN)
                 self.state = 318
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,51,self._ctx)
@@ -3253,7 +3254,7 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 320
-                        self.match(OCLsParser.RPAREN) 
+                        self.match(BOCLParser.RPAREN) 
                     self.state = 325
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,52,self._ctx)
@@ -3261,24 +3262,24 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 14:
-                localctx = OCLsParser.EXCLUDESContext(self, localctx)
+                localctx = BOCLParser.EXCLUDESContext(self, localctx)
                 self.enterOuterAlt(localctx, 14)
                 self.state = 327
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==75:
                     self.state = 326
-                    self.match(OCLsParser.Arrow)
+                    self.match(BOCLParser.Arrow)
 
 
                 self.state = 329
-                self.match(OCLsParser.EXCLUDES)
+                self.match(BOCLParser.EXCLUDES)
                 self.state = 330
-                self.match(OCLsParser.LPAREN)
+                self.match(BOCLParser.LPAREN)
                 self.state = 331
                 self.expression()
                 self.state = 332
-                self.match(OCLsParser.RPAREN)
+                self.match(BOCLParser.RPAREN)
                 self.state = 334
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,54,self._ctx)
@@ -3293,7 +3294,7 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 336
-                        self.match(OCLsParser.RPAREN) 
+                        self.match(BOCLParser.RPAREN) 
                     self.state = 341
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,55,self._ctx)
@@ -3301,14 +3302,14 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 15:
-                localctx = OCLsParser.SEQUENCEContext(self, localctx)
+                localctx = BOCLParser.SEQUENCEContext(self, localctx)
                 self.enterOuterAlt(localctx, 15)
                 self.state = 343
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==75:
                     self.state = 342
-                    self.match(OCLsParser.Arrow)
+                    self.match(BOCLParser.Arrow)
 
 
                 self.state = 348
@@ -3316,19 +3317,19 @@ class OCLsParser ( Parser ):
                 _la = self._input.LA(1)
                 while _la==15:
                     self.state = 345
-                    self.match(OCLsParser.LPAREN)
+                    self.match(BOCLParser.LPAREN)
                     self.state = 350
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
                 self.state = 351
-                self.match(OCLsParser.SEQUENCE)
+                self.match(BOCLParser.SEQUENCE)
                 self.state = 355
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while _la==17:
                     self.state = 352
-                    self.match(OCLsParser.LBRACE)
+                    self.match(BOCLParser.LBRACE)
                     self.state = 357
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
@@ -3339,7 +3340,7 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 358
-                        self.match(OCLsParser.LPAREN) 
+                        self.match(BOCLParser.LPAREN) 
                     self.state = 363
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,59,self._ctx)
@@ -3354,7 +3355,7 @@ class OCLsParser ( Parser ):
                         la_ = self._interp.adaptivePredict(self._input,60,self._ctx)
                         if la_ == 1:
                             self.state = 364
-                            self.match(OCLsParser.SingleQuote)
+                            self.match(BOCLParser.SingleQuote)
 
 
                         self.state = 367
@@ -3364,7 +3365,7 @@ class OCLsParser ( Parser ):
                         la_ = self._interp.adaptivePredict(self._input,61,self._ctx)
                         if la_ == 1:
                             self.state = 368
-                            self.match(OCLsParser.SingleQuote)
+                            self.match(BOCLParser.SingleQuote)
 
 
                         self.state = 372
@@ -3372,7 +3373,7 @@ class OCLsParser ( Parser ):
                         la_ = self._interp.adaptivePredict(self._input,62,self._ctx)
                         if la_ == 1:
                             self.state = 371
-                            self.match(OCLsParser.COMMA)
+                            self.match(BOCLParser.COMMA)
 
                  
                     self.state = 378
@@ -3385,7 +3386,7 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 379
-                        self.match(OCLsParser.RBRACE) 
+                        self.match(BOCLParser.RBRACE) 
                     self.state = 384
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,64,self._ctx)
@@ -3396,7 +3397,7 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 385
-                        self.match(OCLsParser.RPAREN) 
+                        self.match(BOCLParser.RPAREN) 
                     self.state = 390
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,65,self._ctx)
@@ -3412,14 +3413,14 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 16:
-                localctx = OCLsParser.SUBSEQUENCEContext(self, localctx)
+                localctx = BOCLParser.SUBSEQUENCEContext(self, localctx)
                 self.enterOuterAlt(localctx, 16)
                 self.state = 395
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==75:
                     self.state = 394
-                    self.match(OCLsParser.Arrow)
+                    self.match(BOCLParser.Arrow)
 
 
                 self.state = 400
@@ -3427,19 +3428,19 @@ class OCLsParser ( Parser ):
                 _la = self._input.LA(1)
                 while _la==15:
                     self.state = 397
-                    self.match(OCLsParser.LPAREN)
+                    self.match(BOCLParser.LPAREN)
                     self.state = 402
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
                 self.state = 403
-                self.match(OCLsParser.SUBSEQUENCE)
+                self.match(BOCLParser.SUBSEQUENCE)
                 self.state = 407
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while _la==17:
                     self.state = 404
-                    self.match(OCLsParser.LBRACE)
+                    self.match(BOCLParser.LBRACE)
                     self.state = 409
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
@@ -3450,7 +3451,7 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 410
-                        self.match(OCLsParser.LPAREN) 
+                        self.match(BOCLParser.LPAREN) 
                     self.state = 415
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,70,self._ctx)
@@ -3465,7 +3466,7 @@ class OCLsParser ( Parser ):
                         la_ = self._interp.adaptivePredict(self._input,71,self._ctx)
                         if la_ == 1:
                             self.state = 416
-                            self.match(OCLsParser.SingleQuote)
+                            self.match(BOCLParser.SingleQuote)
 
 
                         self.state = 419
@@ -3475,7 +3476,7 @@ class OCLsParser ( Parser ):
                         la_ = self._interp.adaptivePredict(self._input,72,self._ctx)
                         if la_ == 1:
                             self.state = 420
-                            self.match(OCLsParser.SingleQuote)
+                            self.match(BOCLParser.SingleQuote)
 
 
                         self.state = 424
@@ -3483,7 +3484,7 @@ class OCLsParser ( Parser ):
                         la_ = self._interp.adaptivePredict(self._input,73,self._ctx)
                         if la_ == 1:
                             self.state = 423
-                            self.match(OCLsParser.COMMA)
+                            self.match(BOCLParser.COMMA)
 
                  
                     self.state = 430
@@ -3496,7 +3497,7 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 431
-                        self.match(OCLsParser.RPAREN) 
+                        self.match(BOCLParser.RPAREN) 
                     self.state = 436
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,75,self._ctx)
@@ -3507,7 +3508,7 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 437
-                        self.match(OCLsParser.RBRACE) 
+                        self.match(BOCLParser.RBRACE) 
                     self.state = 442
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,76,self._ctx)
@@ -3523,25 +3524,25 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 17:
-                localctx = OCLsParser.ALLINSTANCESContext(self, localctx)
+                localctx = BOCLParser.ALLINSTANCESContext(self, localctx)
                 self.enterOuterAlt(localctx, 17)
                 self.state = 447
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==75:
                     self.state = 446
-                    self.match(OCLsParser.Arrow)
+                    self.match(BOCLParser.Arrow)
 
 
                 self.state = 449
-                self.match(OCLsParser.ALLINSTANCES)
+                self.match(BOCLParser.ALLINSTANCES)
                 self.state = 451 
                 self._errHandler.sync(self)
                 _alt = 1
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt == 1:
                         self.state = 450
-                        self.match(OCLsParser.LPAREN)
+                        self.match(BOCLParser.LPAREN)
 
                     else:
                         raise NoViableAltException(self)
@@ -3563,7 +3564,7 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt == 1:
                         self.state = 458
-                        self.match(OCLsParser.RPAREN)
+                        self.match(BOCLParser.RPAREN)
 
                     else:
                         raise NoViableAltException(self)
@@ -3582,14 +3583,14 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 18:
-                localctx = OCLsParser.ORDEREDSETContext(self, localctx)
+                localctx = BOCLParser.ORDEREDSETContext(self, localctx)
                 self.enterOuterAlt(localctx, 18)
                 self.state = 467
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==75:
                     self.state = 466
-                    self.match(OCLsParser.Arrow)
+                    self.match(BOCLParser.Arrow)
 
 
                 self.state = 472
@@ -3597,15 +3598,15 @@ class OCLsParser ( Parser ):
                 _la = self._input.LA(1)
                 while _la==15:
                     self.state = 469
-                    self.match(OCLsParser.LPAREN)
+                    self.match(BOCLParser.LPAREN)
                     self.state = 474
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
                 self.state = 475
-                self.match(OCLsParser.ORDEREDSET)
+                self.match(BOCLParser.ORDEREDSET)
                 self.state = 476
-                self.match(OCLsParser.LBRACE)
+                self.match(BOCLParser.LBRACE)
                 self.state = 489
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -3615,7 +3616,7 @@ class OCLsParser ( Parser ):
                     la_ = self._interp.adaptivePredict(self._input,85,self._ctx)
                     if la_ == 1:
                         self.state = 477
-                        self.match(OCLsParser.SingleQuote)
+                        self.match(BOCLParser.SingleQuote)
 
 
                     self.state = 480
@@ -3625,7 +3626,7 @@ class OCLsParser ( Parser ):
                     la_ = self._interp.adaptivePredict(self._input,86,self._ctx)
                     if la_ == 1:
                         self.state = 481
-                        self.match(OCLsParser.SingleQuote)
+                        self.match(BOCLParser.SingleQuote)
 
 
                     self.state = 485
@@ -3633,7 +3634,7 @@ class OCLsParser ( Parser ):
                     _la = self._input.LA(1)
                     if _la==21:
                         self.state = 484
-                        self.match(OCLsParser.COMMA)
+                        self.match(BOCLParser.COMMA)
 
 
                     self.state = 491
@@ -3641,14 +3642,14 @@ class OCLsParser ( Parser ):
                     _la = self._input.LA(1)
 
                 self.state = 492
-                self.match(OCLsParser.RBRACE)
+                self.match(BOCLParser.RBRACE)
                 self.state = 496
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,89,self._ctx)
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 493
-                        self.match(OCLsParser.RPAREN) 
+                        self.match(BOCLParser.RPAREN) 
                     self.state = 498
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,89,self._ctx)
@@ -3664,14 +3665,14 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 19:
-                localctx = OCLsParser.SUBORDEREDSETContext(self, localctx)
+                localctx = BOCLParser.SUBORDEREDSETContext(self, localctx)
                 self.enterOuterAlt(localctx, 19)
                 self.state = 503
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==75:
                     self.state = 502
-                    self.match(OCLsParser.Arrow)
+                    self.match(BOCLParser.Arrow)
 
 
                 self.state = 508
@@ -3679,19 +3680,19 @@ class OCLsParser ( Parser ):
                 _la = self._input.LA(1)
                 while _la==15:
                     self.state = 505
-                    self.match(OCLsParser.LPAREN)
+                    self.match(BOCLParser.LPAREN)
                     self.state = 510
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
                 self.state = 511
-                self.match(OCLsParser.SUBORDEREDSET)
+                self.match(BOCLParser.SUBORDEREDSET)
                 self.state = 515
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while _la==17:
                     self.state = 512
-                    self.match(OCLsParser.LBRACE)
+                    self.match(BOCLParser.LBRACE)
                     self.state = 517
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
@@ -3702,7 +3703,7 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 518
-                        self.match(OCLsParser.LPAREN) 
+                        self.match(BOCLParser.LPAREN) 
                     self.state = 523
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,94,self._ctx)
@@ -3717,7 +3718,7 @@ class OCLsParser ( Parser ):
                         la_ = self._interp.adaptivePredict(self._input,95,self._ctx)
                         if la_ == 1:
                             self.state = 524
-                            self.match(OCLsParser.SingleQuote)
+                            self.match(BOCLParser.SingleQuote)
 
 
                         self.state = 527
@@ -3727,7 +3728,7 @@ class OCLsParser ( Parser ):
                         la_ = self._interp.adaptivePredict(self._input,96,self._ctx)
                         if la_ == 1:
                             self.state = 528
-                            self.match(OCLsParser.SingleQuote)
+                            self.match(BOCLParser.SingleQuote)
 
 
                         self.state = 532
@@ -3735,7 +3736,7 @@ class OCLsParser ( Parser ):
                         _la = self._input.LA(1)
                         if _la==21:
                             self.state = 531
-                            self.match(OCLsParser.COMMA)
+                            self.match(BOCLParser.COMMA)
 
                  
                     self.state = 538
@@ -3747,7 +3748,7 @@ class OCLsParser ( Parser ):
                 _la = self._input.LA(1)
                 while _la==18:
                     self.state = 539
-                    self.match(OCLsParser.RBRACE)
+                    self.match(BOCLParser.RBRACE)
                     self.state = 544
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
@@ -3758,7 +3759,7 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 545
-                        self.match(OCLsParser.RPAREN) 
+                        self.match(BOCLParser.RPAREN) 
                     self.state = 550
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,100,self._ctx)
@@ -3772,18 +3773,18 @@ class OCLsParser ( Parser ):
 
 
                 self.state = 554
-                self.match(OCLsParser.RPAREN)
+                self.match(BOCLParser.RPAREN)
                 pass
 
             elif la_ == 20:
-                localctx = OCLsParser.SETContext(self, localctx)
+                localctx = BOCLParser.SETContext(self, localctx)
                 self.enterOuterAlt(localctx, 20)
                 self.state = 556
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==75:
                     self.state = 555
-                    self.match(OCLsParser.Arrow)
+                    self.match(BOCLParser.Arrow)
 
 
                 self.state = 561
@@ -3791,20 +3792,20 @@ class OCLsParser ( Parser ):
                 _la = self._input.LA(1)
                 while _la==15:
                     self.state = 558
-                    self.match(OCLsParser.LPAREN)
+                    self.match(BOCLParser.LPAREN)
                     self.state = 563
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
                 self.state = 564
-                self.match(OCLsParser.SET)
+                self.match(BOCLParser.SET)
                 self.state = 568
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,104,self._ctx)
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 565
-                        self.match(OCLsParser.LPAREN) 
+                        self.match(BOCLParser.LPAREN) 
                     self.state = 570
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,104,self._ctx)
@@ -3814,7 +3815,7 @@ class OCLsParser ( Parser ):
                 _la = self._input.LA(1)
                 while _la==17:
                     self.state = 571
-                    self.match(OCLsParser.LBRACE)
+                    self.match(BOCLParser.LBRACE)
                     self.state = 576
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
@@ -3829,7 +3830,7 @@ class OCLsParser ( Parser ):
                         la_ = self._interp.adaptivePredict(self._input,106,self._ctx)
                         if la_ == 1:
                             self.state = 577
-                            self.match(OCLsParser.SingleQuote)
+                            self.match(BOCLParser.SingleQuote)
 
 
                         self.state = 580
@@ -3839,7 +3840,7 @@ class OCLsParser ( Parser ):
                         la_ = self._interp.adaptivePredict(self._input,107,self._ctx)
                         if la_ == 1:
                             self.state = 581
-                            self.match(OCLsParser.SingleQuote)
+                            self.match(BOCLParser.SingleQuote)
 
 
                         self.state = 585
@@ -3847,7 +3848,7 @@ class OCLsParser ( Parser ):
                         la_ = self._interp.adaptivePredict(self._input,108,self._ctx)
                         if la_ == 1:
                             self.state = 584
-                            self.match(OCLsParser.COMMA)
+                            self.match(BOCLParser.COMMA)
 
                  
                     self.state = 591
@@ -3860,7 +3861,7 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 592
-                        self.match(OCLsParser.RBRACE) 
+                        self.match(BOCLParser.RBRACE) 
                     self.state = 597
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,110,self._ctx)
@@ -3871,7 +3872,7 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 598
-                        self.match(OCLsParser.RPAREN) 
+                        self.match(BOCLParser.RPAREN) 
                     self.state = 603
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,111,self._ctx)
@@ -3887,14 +3888,14 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 21:
-                localctx = OCLsParser.BAGContext(self, localctx)
+                localctx = BOCLParser.BAGContext(self, localctx)
                 self.enterOuterAlt(localctx, 21)
                 self.state = 608
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==75:
                     self.state = 607
-                    self.match(OCLsParser.Arrow)
+                    self.match(BOCLParser.Arrow)
 
 
                 self.state = 613
@@ -3902,20 +3903,20 @@ class OCLsParser ( Parser ):
                 _la = self._input.LA(1)
                 while _la==15:
                     self.state = 610
-                    self.match(OCLsParser.LPAREN)
+                    self.match(BOCLParser.LPAREN)
                     self.state = 615
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
                 self.state = 616
-                self.match(OCLsParser.BAG)
+                self.match(BOCLParser.BAG)
                 self.state = 620
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,115,self._ctx)
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 617
-                        self.match(OCLsParser.LPAREN) 
+                        self.match(BOCLParser.LPAREN) 
                     self.state = 622
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,115,self._ctx)
@@ -3925,7 +3926,7 @@ class OCLsParser ( Parser ):
                 _la = self._input.LA(1)
                 while _la==17:
                     self.state = 623
-                    self.match(OCLsParser.LBRACE)
+                    self.match(BOCLParser.LBRACE)
                     self.state = 628
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
@@ -3940,7 +3941,7 @@ class OCLsParser ( Parser ):
                         la_ = self._interp.adaptivePredict(self._input,117,self._ctx)
                         if la_ == 1:
                             self.state = 629
-                            self.match(OCLsParser.SingleQuote)
+                            self.match(BOCLParser.SingleQuote)
 
 
                         self.state = 632
@@ -3950,7 +3951,7 @@ class OCLsParser ( Parser ):
                         la_ = self._interp.adaptivePredict(self._input,118,self._ctx)
                         if la_ == 1:
                             self.state = 633
-                            self.match(OCLsParser.SingleQuote)
+                            self.match(BOCLParser.SingleQuote)
 
 
                         self.state = 637
@@ -3958,7 +3959,7 @@ class OCLsParser ( Parser ):
                         la_ = self._interp.adaptivePredict(self._input,119,self._ctx)
                         if la_ == 1:
                             self.state = 636
-                            self.match(OCLsParser.COMMA)
+                            self.match(BOCLParser.COMMA)
 
                  
                     self.state = 643
@@ -3971,7 +3972,7 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 644
-                        self.match(OCLsParser.RBRACE) 
+                        self.match(BOCLParser.RBRACE) 
                     self.state = 649
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,121,self._ctx)
@@ -3982,7 +3983,7 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 650
-                        self.match(OCLsParser.RPAREN) 
+                        self.match(BOCLParser.RPAREN) 
                     self.state = 655
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,122,self._ctx)
@@ -3998,19 +3999,19 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 22:
-                localctx = OCLsParser.PREPENDContext(self, localctx)
+                localctx = BOCLParser.PREPENDContext(self, localctx)
                 self.enterOuterAlt(localctx, 22)
                 self.state = 659
-                self.match(OCLsParser.Arrow)
+                self.match(BOCLParser.Arrow)
                 self.state = 660
-                self.match(OCLsParser.PREPEND)
+                self.match(BOCLParser.PREPEND)
                 self.state = 662 
                 self._errHandler.sync(self)
                 _alt = 1
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt == 1:
                         self.state = 661
-                        self.match(OCLsParser.LPAREN)
+                        self.match(BOCLParser.LPAREN)
 
                     else:
                         raise NoViableAltException(self)
@@ -4027,7 +4028,7 @@ class OCLsParser ( Parser ):
                     la_ = self._interp.adaptivePredict(self._input,125,self._ctx)
                     if la_ == 1:
                         self.state = 666
-                        self.match(OCLsParser.SingleQuote)
+                        self.match(BOCLParser.SingleQuote)
 
 
                     self.state = 669
@@ -4037,7 +4038,7 @@ class OCLsParser ( Parser ):
                     la_ = self._interp.adaptivePredict(self._input,126,self._ctx)
                     if la_ == 1:
                         self.state = 670
-                        self.match(OCLsParser.SingleQuote)
+                        self.match(BOCLParser.SingleQuote)
 
 
                     self.state = 674
@@ -4045,7 +4046,7 @@ class OCLsParser ( Parser ):
                     _la = self._input.LA(1)
                     if _la==21:
                         self.state = 673
-                        self.match(OCLsParser.COMMA)
+                        self.match(BOCLParser.COMMA)
 
 
                     self.state = 680
@@ -4058,7 +4059,7 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt == 1:
                         self.state = 681
-                        self.match(OCLsParser.RPAREN)
+                        self.match(BOCLParser.RPAREN)
 
                     else:
                         raise NoViableAltException(self)
@@ -4077,21 +4078,21 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 23:
-                localctx = OCLsParser.LASTContext(self, localctx)
+                localctx = BOCLParser.LASTContext(self, localctx)
                 self.enterOuterAlt(localctx, 23)
                 self.state = 689
-                self.match(OCLsParser.Arrow)
+                self.match(BOCLParser.Arrow)
                 self.state = 690
-                self.match(OCLsParser.LAST)
+                self.match(BOCLParser.LAST)
                 self.state = 691
-                self.match(OCLsParser.LPAREN)
+                self.match(BOCLParser.LPAREN)
                 self.state = 693 
                 self._errHandler.sync(self)
                 _alt = 1
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt == 1:
                         self.state = 692
-                        self.match(OCLsParser.RPAREN)
+                        self.match(BOCLParser.RPAREN)
 
                     else:
                         raise NoViableAltException(self)
@@ -4110,14 +4111,14 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 24:
-                localctx = OCLsParser.APPENDContext(self, localctx)
+                localctx = BOCLParser.APPENDContext(self, localctx)
                 self.enterOuterAlt(localctx, 24)
                 self.state = 700
-                self.match(OCLsParser.Arrow)
+                self.match(BOCLParser.Arrow)
                 self.state = 701
-                self.match(OCLsParser.APPEND)
+                self.match(BOCLParser.APPEND)
                 self.state = 702
-                self.match(OCLsParser.LPAREN)
+                self.match(BOCLParser.LPAREN)
                 self.state = 715
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -4127,7 +4128,7 @@ class OCLsParser ( Parser ):
                     la_ = self._interp.adaptivePredict(self._input,133,self._ctx)
                     if la_ == 1:
                         self.state = 703
-                        self.match(OCLsParser.SingleQuote)
+                        self.match(BOCLParser.SingleQuote)
 
 
                     self.state = 706
@@ -4137,7 +4138,7 @@ class OCLsParser ( Parser ):
                     la_ = self._interp.adaptivePredict(self._input,134,self._ctx)
                     if la_ == 1:
                         self.state = 707
-                        self.match(OCLsParser.SingleQuote)
+                        self.match(BOCLParser.SingleQuote)
 
 
                     self.state = 711
@@ -4145,7 +4146,7 @@ class OCLsParser ( Parser ):
                     _la = self._input.LA(1)
                     if _la==21:
                         self.state = 710
-                        self.match(OCLsParser.COMMA)
+                        self.match(BOCLParser.COMMA)
 
 
                     self.state = 717
@@ -4158,7 +4159,7 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt == 1:
                         self.state = 718
-                        self.match(OCLsParser.RPAREN)
+                        self.match(BOCLParser.RPAREN)
 
                     else:
                         raise NoViableAltException(self)
@@ -4177,14 +4178,14 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 25:
-                localctx = OCLsParser.COLLECTIONContext(self, localctx)
+                localctx = BOCLParser.COLLECTIONContext(self, localctx)
                 self.enterOuterAlt(localctx, 25)
                 self.state = 727
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==75:
                     self.state = 726
-                    self.match(OCLsParser.Arrow)
+                    self.match(BOCLParser.Arrow)
 
 
                 self.state = 729
@@ -4195,21 +4196,21 @@ class OCLsParser ( Parser ):
                     self._errHandler.reportMatch(self)
                     self.consume()
                 self.state = 730
-                self.match(OCLsParser.LPAREN)
+                self.match(BOCLParser.LPAREN)
                 self.state = 739 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while True:
                     self.state = 731
-                    self.match(OCLsParser.ID)
+                    self.match(BOCLParser.ID)
                     self.state = 734
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if _la==20:
                         self.state = 732
-                        self.match(OCLsParser.COLON)
+                        self.match(BOCLParser.COLON)
                         self.state = 733
-                        self.match(OCLsParser.ID)
+                        self.match(BOCLParser.ID)
 
 
                     self.state = 737
@@ -4217,7 +4218,7 @@ class OCLsParser ( Parser ):
                     _la = self._input.LA(1)
                     if _la==21:
                         self.state = 736
-                        self.match(OCLsParser.COMMA)
+                        self.match(BOCLParser.COMMA)
 
 
                     self.state = 741 
@@ -4227,11 +4228,11 @@ class OCLsParser ( Parser ):
                         break
 
                 self.state = 743
-                self.match(OCLsParser.PIPE)
+                self.match(BOCLParser.PIPE)
                 self.state = 744
                 self.expression()
                 self.state = 745
-                self.match(OCLsParser.RPAREN)
+                self.match(BOCLParser.RPAREN)
                 self.state = 747
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,143,self._ctx)
@@ -4243,14 +4244,14 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 26:
-                localctx = OCLsParser.CollectionExpressionVariableContext(self, localctx)
+                localctx = BOCLParser.CollectionExpressionVariableContext(self, localctx)
                 self.enterOuterAlt(localctx, 26)
                 self.state = 750
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==75:
                     self.state = 749
-                    self.match(OCLsParser.Arrow)
+                    self.match(BOCLParser.Arrow)
 
 
                 self.state = 752
@@ -4261,11 +4262,11 @@ class OCLsParser ( Parser ):
                     self._errHandler.reportMatch(self)
                     self.consume()
                 self.state = 753
-                self.match(OCLsParser.LPAREN)
+                self.match(BOCLParser.LPAREN)
                 self.state = 754
                 self.expression()
                 self.state = 755
-                self.match(OCLsParser.RPAREN)
+                self.match(BOCLParser.RPAREN)
                 self.state = 757
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,145,self._ctx)
@@ -4277,14 +4278,14 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 27:
-                localctx = OCLsParser.SYMMETRICDIFFERENCEContext(self, localctx)
+                localctx = BOCLParser.SYMMETRICDIFFERENCEContext(self, localctx)
                 self.enterOuterAlt(localctx, 27)
                 self.state = 759
-                self.match(OCLsParser.Arrow)
+                self.match(BOCLParser.Arrow)
                 self.state = 760
-                self.match(OCLsParser.SYMMETRICDIFFERENCE)
+                self.match(BOCLParser.SYMMETRICDIFFERENCE)
                 self.state = 761
-                self.match(OCLsParser.LPAREN)
+                self.match(BOCLParser.LPAREN)
                 self.state = 762
                 self.expression()
                 self.state = 764 
@@ -4293,7 +4294,7 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt == 1:
                         self.state = 763
-                        self.match(OCLsParser.RPAREN)
+                        self.match(BOCLParser.RPAREN)
 
                     else:
                         raise NoViableAltException(self)
@@ -4312,16 +4313,16 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 28:
-                localctx = OCLsParser.FIRSTContext(self, localctx)
+                localctx = BOCLParser.FIRSTContext(self, localctx)
                 self.enterOuterAlt(localctx, 28)
                 self.state = 771
-                self.match(OCLsParser.Arrow)
+                self.match(BOCLParser.Arrow)
                 self.state = 772
-                self.match(OCLsParser.FIRST)
+                self.match(BOCLParser.FIRST)
                 self.state = 773
-                self.match(OCLsParser.LPAREN)
+                self.match(BOCLParser.LPAREN)
                 self.state = 774
-                self.match(OCLsParser.RPAREN)
+                self.match(BOCLParser.RPAREN)
                 self.state = 776
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,148,self._ctx)
@@ -4333,16 +4334,16 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 29:
-                localctx = OCLsParser.DERIVEContext(self, localctx)
+                localctx = BOCLParser.DERIVEContext(self, localctx)
                 self.enterOuterAlt(localctx, 29)
                 self.state = 778
-                self.match(OCLsParser.Arrow)
+                self.match(BOCLParser.Arrow)
                 self.state = 779
-                self.match(OCLsParser.DERIVE)
+                self.match(BOCLParser.DERIVE)
                 self.state = 780
-                self.match(OCLsParser.LPAREN)
+                self.match(BOCLParser.LPAREN)
                 self.state = 781
-                self.match(OCLsParser.RPAREN)
+                self.match(BOCLParser.RPAREN)
                 self.state = 783
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,149,self._ctx)
@@ -4354,18 +4355,18 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 30:
-                localctx = OCLsParser.UNIONContext(self, localctx)
+                localctx = BOCLParser.UNIONContext(self, localctx)
                 self.enterOuterAlt(localctx, 30)
                 self.state = 785
-                self.match(OCLsParser.Arrow)
+                self.match(BOCLParser.Arrow)
                 self.state = 786
-                self.match(OCLsParser.UNION)
+                self.match(BOCLParser.UNION)
                 self.state = 787
-                self.match(OCLsParser.LPAREN)
+                self.match(BOCLParser.LPAREN)
                 self.state = 788
                 self.expression()
                 self.state = 789
-                self.match(OCLsParser.RPAREN)
+                self.match(BOCLParser.RPAREN)
                 self.state = 791
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,150,self._ctx)
@@ -4377,33 +4378,33 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 31:
-                localctx = OCLsParser.DefExpContext(self, localctx)
+                localctx = BOCLParser.DefExpContext(self, localctx)
                 self.enterOuterAlt(localctx, 31)
                 self.state = 793
-                self.match(OCLsParser.Def)
+                self.match(BOCLParser.Def)
                 self.state = 794
-                self.match(OCLsParser.COLON)
+                self.match(BOCLParser.COLON)
                 self.state = 795
                 self.expression()
                 pass
 
             elif la_ == 32:
-                localctx = OCLsParser.DefIDAssignmentexpressionContext(self, localctx)
+                localctx = BOCLParser.DefIDAssignmentexpressionContext(self, localctx)
                 self.enterOuterAlt(localctx, 32)
                 self.state = 796
-                self.match(OCLsParser.ID)
+                self.match(BOCLParser.ID)
                 self.state = 797
-                self.match(OCLsParser.COLON)
+                self.match(BOCLParser.COLON)
                 self.state = 798
-                self.match(OCLsParser.ID)
+                self.match(BOCLParser.ID)
                 self.state = 799
-                self.match(OCLsParser.EQUAL)
+                self.match(BOCLParser.EQUAL)
                 self.state = 800
                 self.expression()
                 pass
 
             elif la_ == 33:
-                localctx = OCLsParser.PrimaryExpContext(self, localctx)
+                localctx = BOCLParser.PrimaryExpContext(self, localctx)
                 self.enterOuterAlt(localctx, 33)
                 self.state = 804
                 self._errHandler.sync(self)
@@ -4411,7 +4412,7 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 801
-                        self.match(OCLsParser.LPAREN) 
+                        self.match(BOCLParser.LPAREN) 
                     self.state = 806
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,151,self._ctx)
@@ -4430,9 +4431,9 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 810
-                        self.match(OCLsParser.DOT)
+                        self.match(BOCLParser.DOT)
                         self.state = 811
-                        self.match(OCLsParser.ID) 
+                        self.match(BOCLParser.ID) 
                     self.state = 816
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,153,self._ctx)
@@ -4459,9 +4460,9 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt == 1:
                         self.state = 823
-                        self.match(OCLsParser.DOT)
+                        self.match(BOCLParser.DOT)
                         self.state = 824
-                        self.match(OCLsParser.ID)
+                        self.match(BOCLParser.ID)
 
                     else:
                         raise NoViableAltException(self)
@@ -4480,7 +4481,7 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 34:
-                localctx = OCLsParser.FuncCallContext(self, localctx)
+                localctx = BOCLParser.FuncCallContext(self, localctx)
                 self.enterOuterAlt(localctx, 34)
                 self.state = 832
                 self.primaryExpression()
@@ -4489,7 +4490,7 @@ class OCLsParser ( Parser ):
                 _la = self._input.LA(1)
                 while _la==22:
                     self.state = 833
-                    self.match(OCLsParser.DOT)
+                    self.match(BOCLParser.DOT)
                     self.state = 838
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
@@ -4500,7 +4501,7 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 839
-                        self.match(OCLsParser.ID) 
+                        self.match(BOCLParser.ID) 
                     self.state = 844
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,159,self._ctx)
@@ -4526,7 +4527,7 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 35:
-                localctx = OCLsParser.OpContext(self, localctx)
+                localctx = BOCLParser.OpContext(self, localctx)
                 self.enterOuterAlt(localctx, 35)
                 self.state = 852
                 self.operator()
@@ -4541,19 +4542,19 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 36:
-                localctx = OCLsParser.ArrowexpContext(self, localctx)
+                localctx = BOCLParser.ArrowexpContext(self, localctx)
                 self.enterOuterAlt(localctx, 36)
                 self.state = 856
-                self.match(OCLsParser.Arrow)
+                self.match(BOCLParser.Arrow)
                 self.state = 857
                 self.expression()
                 pass
 
             elif la_ == 37:
-                localctx = OCLsParser.NumberContext(self, localctx)
+                localctx = BOCLParser.NumberContext(self, localctx)
                 self.enterOuterAlt(localctx, 37)
                 self.state = 858
-                self.match(OCLsParser.NUMBER)
+                self.match(BOCLParser.NUMBER)
                 self.state = 860
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,163,self._ctx)
@@ -4565,14 +4566,14 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 38:
-                localctx = OCLsParser.PredefinedfunctionCallContext(self, localctx)
+                localctx = BOCLParser.PredefinedfunctionCallContext(self, localctx)
                 self.enterOuterAlt(localctx, 38)
                 self.state = 863
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==75:
                     self.state = 862
-                    self.match(OCLsParser.Arrow)
+                    self.match(BOCLParser.Arrow)
 
 
                 self.state = 865
@@ -4588,7 +4589,7 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 39:
-                localctx = OCLsParser.IDContext(self, localctx)
+                localctx = BOCLParser.IDContext(self, localctx)
                 self.enterOuterAlt(localctx, 39)
                 self.state = 869
                 self.primaryExpression()
@@ -4603,10 +4604,10 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 40:
-                localctx = OCLsParser.SingleQuoteExpContext(self, localctx)
+                localctx = BOCLParser.SingleQuoteExpContext(self, localctx)
                 self.enterOuterAlt(localctx, 40)
                 self.state = 873
-                self.match(OCLsParser.SingleQuote)
+                self.match(BOCLParser.SingleQuote)
                 self.state = 874
                 self.expression()
                 self.state = 876
@@ -4614,17 +4615,17 @@ class OCLsParser ( Parser ):
                 _la = self._input.LA(1)
                 if _la==22:
                     self.state = 875
-                    self.match(OCLsParser.DOT)
+                    self.match(BOCLParser.DOT)
 
 
                 self.state = 878
-                self.match(OCLsParser.SingleQuote)
+                self.match(BOCLParser.SingleQuote)
                 self.state = 880
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,168,self._ctx)
                 if la_ == 1:
                     self.state = 879
-                    self.match(OCLsParser.DOT)
+                    self.match(BOCLParser.DOT)
 
 
                 self.state = 883
@@ -4638,19 +4639,19 @@ class OCLsParser ( Parser ):
                 pass
 
             elif la_ == 41:
-                localctx = OCLsParser.DoubleDotsContext(self, localctx)
+                localctx = BOCLParser.DoubleDotsContext(self, localctx)
                 self.enterOuterAlt(localctx, 41)
                 self.state = 885
-                self.match(OCLsParser.DoubleDots)
+                self.match(BOCLParser.DoubleDots)
                 self.state = 886
                 self.expression()
                 pass
 
             elif la_ == 42:
-                localctx = OCLsParser.DoubleCOLONsContext(self, localctx)
+                localctx = BOCLParser.DoubleCOLONsContext(self, localctx)
                 self.enterOuterAlt(localctx, 42)
                 self.state = 887
-                self.match(OCLsParser.DoubleCOLON)
+                self.match(BOCLParser.DoubleCOLON)
                 self.state = 888
                 self.expression()
                 pass
@@ -4673,36 +4674,36 @@ class OCLsParser ( Parser ):
             self.parser = parser
 
         def operator(self):
-            return self.getTypedRuleContext(OCLsParser.OperatorContext,0)
+            return self.getTypedRuleContext(BOCLParser.OperatorContext,0)
 
 
         def NUMBER(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.NUMBER)
+                return self.getTokens(BOCLParser.NUMBER)
             else:
-                return self.getToken(OCLsParser.NUMBER, i)
+                return self.getToken(BOCLParser.NUMBER, i)
 
         def DOT(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.DOT)
+                return self.getTokens(BOCLParser.DOT)
             else:
-                return self.getToken(OCLsParser.DOT, i)
+                return self.getToken(BOCLParser.DOT, i)
 
         def ID(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.ID)
+                return self.getTokens(BOCLParser.ID)
             else:
-                return self.getToken(OCLsParser.ID, i)
+                return self.getToken(BOCLParser.ID, i)
 
         def primaryExpression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(OCLsParser.PrimaryExpressionContext)
+                return self.getTypedRuleContexts(BOCLParser.PrimaryExpressionContext)
             else:
-                return self.getTypedRuleContext(OCLsParser.PrimaryExpressionContext,i)
+                return self.getTypedRuleContext(BOCLParser.PrimaryExpressionContext,i)
 
 
         def getRuleIndex(self):
-            return OCLsParser.RULE_binaryExpression
+            return BOCLParser.RULE_binaryExpression
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterBinaryExpression" ):
@@ -4717,7 +4718,7 @@ class OCLsParser ( Parser ):
 
     def binaryExpression(self):
 
-        localctx = OCLsParser.BinaryExpressionContext(self, self._ctx, self.state)
+        localctx = BOCLParser.BinaryExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 16, self.RULE_binaryExpression)
         self._la = 0 # Token type
         try:
@@ -4734,9 +4735,9 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 892
-                        self.match(OCLsParser.DOT)
+                        self.match(BOCLParser.DOT)
                         self.state = 893
-                        self.match(OCLsParser.ID) 
+                        self.match(BOCLParser.ID) 
                     self.state = 898
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,171,self._ctx)
@@ -4745,7 +4746,7 @@ class OCLsParser ( Parser ):
 
             elif la_ == 2:
                 self.state = 899
-                self.match(OCLsParser.NUMBER)
+                self.match(BOCLParser.NUMBER)
                 pass
 
 
@@ -4754,9 +4755,9 @@ class OCLsParser ( Parser ):
             _la = self._input.LA(1)
             while _la==22:
                 self.state = 902
-                self.match(OCLsParser.DOT)
+                self.match(BOCLParser.DOT)
                 self.state = 903
-                self.match(OCLsParser.ID)
+                self.match(BOCLParser.ID)
                 self.state = 908
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -4775,9 +4776,9 @@ class OCLsParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 911
-                        self.match(OCLsParser.DOT)
+                        self.match(BOCLParser.DOT)
                         self.state = 912
-                        self.match(OCLsParser.ID) 
+                        self.match(BOCLParser.ID) 
                     self.state = 917
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,174,self._ctx)
@@ -4786,7 +4787,7 @@ class OCLsParser ( Parser ):
 
             elif la_ == 2:
                 self.state = 918
-                self.match(OCLsParser.NUMBER)
+                self.match(BOCLParser.NUMBER)
                 pass
 
 
@@ -4807,17 +4808,21 @@ class OCLsParser ( Parser ):
             self.parser = parser
 
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def NOT(self):
-            return self.getToken(OCLsParser.NOT, 0)
+            return self.getToken(BOCLParser.NOT, 0)
 
         def MINUS(self):
-            return self.getToken(OCLsParser.MINUS, 0)
+            return self.getToken(BOCLParser.MINUS, 0)
+
+        def operator(self):
+            return self.getTypedRuleContext(BOCLParser.OperatorContext,0)
+
 
         def getRuleIndex(self):
-            return OCLsParser.RULE_unaryExpression
+            return BOCLParser.RULE_unaryExpression
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterUnaryExpression" ):
@@ -4832,19 +4837,30 @@ class OCLsParser ( Parser ):
 
     def unaryExpression(self):
 
-        localctx = OCLsParser.UnaryExpressionContext(self, self._ctx, self.state)
+        localctx = BOCLParser.UnaryExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 18, self.RULE_unaryExpression)
-        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 921
-            _la = self._input.LA(1)
-            if not(_la==35 or _la==46):
-                self._errHandler.recoverInline(self)
-            else:
-                self._errHandler.reportMatch(self)
-                self.consume()
-            self.state = 922
+            self.state = 924
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,176,self._ctx)
+            if la_ == 1:
+                self.state = 921
+                self.match(BOCLParser.NOT)
+                pass
+
+            elif la_ == 2:
+                self.state = 922
+                self.match(BOCLParser.MINUS)
+                pass
+
+            elif la_ == 3:
+                self.state = 923
+                self.operator()
+                pass
+
+
+            self.state = 926
             self.expression()
         except RecognitionException as re:
             localctx.exception = re
@@ -4863,49 +4879,49 @@ class OCLsParser ( Parser ):
             self.parser = parser
 
         def EQUAL(self):
-            return self.getToken(OCLsParser.EQUAL, 0)
+            return self.getToken(BOCLParser.EQUAL, 0)
 
         def NOTEQUAL(self):
-            return self.getToken(OCLsParser.NOTEQUAL, 0)
+            return self.getToken(BOCLParser.NOTEQUAL, 0)
 
         def LT(self):
-            return self.getToken(OCLsParser.LT, 0)
+            return self.getToken(BOCLParser.LT, 0)
 
         def LE(self):
-            return self.getToken(OCLsParser.LE, 0)
+            return self.getToken(BOCLParser.LE, 0)
 
         def GT(self):
-            return self.getToken(OCLsParser.GT, 0)
+            return self.getToken(BOCLParser.GT, 0)
 
         def GE(self):
-            return self.getToken(OCLsParser.GE, 0)
+            return self.getToken(BOCLParser.GE, 0)
 
         def PLUS(self):
-            return self.getToken(OCLsParser.PLUS, 0)
+            return self.getToken(BOCLParser.PLUS, 0)
 
         def MINUS(self):
-            return self.getToken(OCLsParser.MINUS, 0)
+            return self.getToken(BOCLParser.MINUS, 0)
 
         def EMPTYSTRING(self):
-            return self.getToken(OCLsParser.EMPTYSTRING, 0)
+            return self.getToken(BOCLParser.EMPTYSTRING, 0)
 
         def Divide(self):
-            return self.getToken(OCLsParser.Divide, 0)
+            return self.getToken(BOCLParser.Divide, 0)
 
         def AND(self):
-            return self.getToken(OCLsParser.AND, 0)
+            return self.getToken(BOCLParser.AND, 0)
 
         def OR(self):
-            return self.getToken(OCLsParser.OR, 0)
+            return self.getToken(BOCLParser.OR, 0)
 
         def XOR(self):
-            return self.getToken(OCLsParser.XOR, 0)
+            return self.getToken(BOCLParser.XOR, 0)
 
         def IMPLIES(self):
-            return self.getToken(OCLsParser.IMPLIES, 0)
+            return self.getToken(BOCLParser.IMPLIES, 0)
 
         def getRuleIndex(self):
-            return OCLsParser.RULE_operator
+            return BOCLParser.RULE_operator
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterOperator" ):
@@ -4920,12 +4936,12 @@ class OCLsParser ( Parser ):
 
     def operator(self):
 
-        localctx = OCLsParser.OperatorContext(self, self._ctx, self.state)
+        localctx = BOCLParser.OperatorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 20, self.RULE_operator)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 924
+            self.state = 928
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 4435386965164032) != 0)):
                 self._errHandler.recoverInline(self)
@@ -4949,25 +4965,25 @@ class OCLsParser ( Parser ):
             self.parser = parser
 
         def NUMBER(self):
-            return self.getToken(OCLsParser.NUMBER, 0)
+            return self.getToken(BOCLParser.NUMBER, 0)
 
         def ID(self):
-            return self.getToken(OCLsParser.ID, 0)
+            return self.getToken(BOCLParser.ID, 0)
 
         def SingleQuote(self, i:int=None):
             if i is None:
-                return self.getTokens(OCLsParser.SingleQuote)
+                return self.getTokens(BOCLParser.SingleQuote)
             else:
-                return self.getToken(OCLsParser.SingleQuote, i)
+                return self.getToken(BOCLParser.SingleQuote, i)
 
         def LPAREN(self):
-            return self.getToken(OCLsParser.LPAREN, 0)
+            return self.getToken(BOCLParser.LPAREN, 0)
 
         def RPAREN(self):
-            return self.getToken(OCLsParser.RPAREN, 0)
+            return self.getToken(BOCLParser.RPAREN, 0)
 
         def getRuleIndex(self):
-            return OCLsParser.RULE_numberORUserDefined
+            return BOCLParser.RULE_numberORUserDefined
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterNumberORUserDefined" ):
@@ -4982,52 +4998,52 @@ class OCLsParser ( Parser ):
 
     def numberORUserDefined(self):
 
-        localctx = OCLsParser.NumberORUserDefinedContext(self, self._ctx, self.state)
+        localctx = BOCLParser.NumberORUserDefinedContext(self, self._ctx, self.state)
         self.enterRule(localctx, 22, self.RULE_numberORUserDefined)
         self._la = 0 # Token type
         try:
-            self.state = 940
+            self.state = 944
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [78]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 926
-                self.match(OCLsParser.NUMBER)
+                self.state = 930
+                self.match(BOCLParser.NUMBER)
                 pass
             elif token in [24, 77]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 928
+                self.state = 932
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==24:
-                    self.state = 927
-                    self.match(OCLsParser.SingleQuote)
-
-
-                self.state = 930
-                self.match(OCLsParser.ID)
-                self.state = 932
-                self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,177,self._ctx)
-                if la_ == 1:
                     self.state = 931
-                    self.match(OCLsParser.LPAREN)
+                    self.match(BOCLParser.SingleQuote)
 
 
-                self.state = 935
+                self.state = 934
+                self.match(BOCLParser.ID)
+                self.state = 936
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,178,self._ctx)
                 if la_ == 1:
-                    self.state = 934
-                    self.match(OCLsParser.RPAREN)
+                    self.state = 935
+                    self.match(BOCLParser.LPAREN)
 
 
-                self.state = 938
+                self.state = 939
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,179,self._ctx)
                 if la_ == 1:
-                    self.state = 937
-                    self.match(OCLsParser.SingleQuote)
+                    self.state = 938
+                    self.match(BOCLParser.RPAREN)
+
+
+                self.state = 942
+                self._errHandler.sync(self)
+                la_ = self._interp.adaptivePredict(self._input,180,self._ctx)
+                if la_ == 1:
+                    self.state = 941
+                    self.match(BOCLParser.SingleQuote)
 
 
                 pass
@@ -5051,31 +5067,31 @@ class OCLsParser ( Parser ):
             self.parser = parser
 
         def literal(self):
-            return self.getTypedRuleContext(OCLsParser.LiteralContext,0)
+            return self.getTypedRuleContext(BOCLParser.LiteralContext,0)
 
 
         def SELF(self):
-            return self.getToken(OCLsParser.SELF, 0)
+            return self.getToken(BOCLParser.SELF, 0)
 
         def functionCall(self):
-            return self.getTypedRuleContext(OCLsParser.FunctionCallContext,0)
+            return self.getTypedRuleContext(BOCLParser.FunctionCallContext,0)
 
 
         def LPAREN(self):
-            return self.getToken(OCLsParser.LPAREN, 0)
+            return self.getToken(BOCLParser.LPAREN, 0)
 
         def expression(self):
-            return self.getTypedRuleContext(OCLsParser.ExpressionContext,0)
+            return self.getTypedRuleContext(BOCLParser.ExpressionContext,0)
 
 
         def RPAREN(self):
-            return self.getToken(OCLsParser.RPAREN, 0)
+            return self.getToken(BOCLParser.RPAREN, 0)
 
         def ID(self):
-            return self.getToken(OCLsParser.ID, 0)
+            return self.getToken(BOCLParser.ID, 0)
 
         def getRuleIndex(self):
-            return OCLsParser.RULE_primaryExpression
+            return BOCLParser.RULE_primaryExpression
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterPrimaryExpression" ):
@@ -5090,44 +5106,44 @@ class OCLsParser ( Parser ):
 
     def primaryExpression(self):
 
-        localctx = OCLsParser.PrimaryExpressionContext(self, self._ctx, self.state)
+        localctx = BOCLParser.PrimaryExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 24, self.RULE_primaryExpression)
         try:
-            self.state = 950
+            self.state = 954
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,181,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,182,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 942
+                self.state = 946
                 self.literal()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 943
-                self.match(OCLsParser.SELF)
+                self.state = 947
+                self.match(BOCLParser.SELF)
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 944
+                self.state = 948
                 self.functionCall()
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 945
-                self.match(OCLsParser.LPAREN)
-                self.state = 946
+                self.state = 949
+                self.match(BOCLParser.LPAREN)
+                self.state = 950
                 self.expression()
-                self.state = 947
-                self.match(OCLsParser.RPAREN)
+                self.state = 951
+                self.match(BOCLParser.RPAREN)
                 pass
 
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 949
-                self.match(OCLsParser.ID)
+                self.state = 953
+                self.match(BOCLParser.ID)
                 pass
 
 
@@ -5148,19 +5164,19 @@ class OCLsParser ( Parser ):
             self.parser = parser
 
         def NUMBER(self):
-            return self.getToken(OCLsParser.NUMBER, 0)
+            return self.getToken(BOCLParser.NUMBER, 0)
 
         def STRING_LITERAL(self):
-            return self.getToken(OCLsParser.STRING_LITERAL, 0)
+            return self.getToken(BOCLParser.STRING_LITERAL, 0)
 
         def BOOLEAN_LITERAL(self):
-            return self.getToken(OCLsParser.BOOLEAN_LITERAL, 0)
+            return self.getToken(BOCLParser.BOOLEAN_LITERAL, 0)
 
         def NULL(self):
-            return self.getToken(OCLsParser.NULL, 0)
+            return self.getToken(BOCLParser.NULL, 0)
 
         def getRuleIndex(self):
-            return OCLsParser.RULE_literal
+            return BOCLParser.RULE_literal
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterLiteral" ):
@@ -5175,12 +5191,12 @@ class OCLsParser ( Parser ):
 
     def literal(self):
 
-        localctx = OCLsParser.LiteralContext(self, self._ctx, self.state)
+        localctx = BOCLParser.LiteralContext(self, self._ctx, self.state)
         self.enterRule(localctx, 26, self.RULE_literal)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 952
+            self.state = 956
             _la = self._input.LA(1)
             if not(((((_la - 72)) & ~0x3f) == 0 and ((1 << (_la - 72)) & 449) != 0)):
                 self._errHandler.recoverInline(self)

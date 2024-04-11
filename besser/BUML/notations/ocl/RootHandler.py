@@ -4,7 +4,23 @@ class Root_Handler:
         self.root = None
         self.factory = Factory()
         self.all =[]
+        self.invariant = False
+        self.pre = False
+        self.post = False
         self.if_else_roots = []
+    def get_inv(self):
+        return self.invariant
+    def set_inv(self,inv):
+        self.invariant = inv
+    def set_post(self,post):
+        self.post = post
+    def get_post(self):
+        return self.post
+    def set_pre(self,pre):
+        self.pre=pre
+    def get_pre(self):
+        return self.pre
+
     def handle_property(self,prop):
          self.add_to_root(self.factory.create_property_Call_Expression(prop,"NP"))
 
@@ -131,7 +147,14 @@ class Root_Handler:
         self.handleColl(oclExp,collectionOperator)
 
         pass
-
+    def handle_single_variable(self, variable_name,sign):
+        op = self.factory.create_operation_call_expression(name = "operation")
+        infinix_op = self.factory.create_infix_operator(sign)
+        prop = self.factory.create_property_Call_Expression(variable_name,"NI")
+        op.arguments.append(infinix_op)
+        op.arguments.append(prop)
+        self.add_to_root(op)
+        pass
     def handleColl(self, forAllExp,collectionOperator):
 
         self.all.append(self.factory.create_loop_expression(collectionOperator))
@@ -151,7 +174,7 @@ class Root_Handler:
                 self.all[-1].addIterator(iteratorExp)
 
         pass
-    def handle_binary_expression(self, expression, operator,inbetween= None):
+    def handle_binary_expression(self, expression, operator,inbetween= None,beforeSign = None):
         expressionParts = expression.split(operator)
 
         leftside = self.checkNumberOrVariable(expressionParts[0])
@@ -177,14 +200,17 @@ class Root_Handler:
         elif "real" in rightside:
             rightPart = self.factory.create_real_literal_expression("NP", float(expressionParts[1]))
         elif "bool" in rightside:
-            rightside = self.factory.create_boolean_literal_expression("NP", bool(expressionParts[1]))
+            rightPart = self.factory.create_boolean_literal_expression("NP", bool(expressionParts[1]))
 
         infixOperator = self.factory.create_infix_operator(operator)
+        beforeOp = None
+        if beforeSign is not None:
+            beforeOp = self.factory.create_infix_operator(beforeSign)
         inBetweenOp = None
         if inbetween is not None:
             inBetweenOp = self.factory.create_infix_operator(inbetween)
         opeartion_call_exp = self.factory.create_operation_call_expression(leftPart, rightPart, infixOperator,
-                                                                           inBetweenOp)
+                                                                           inBetweenOp,beforeOp)
         self.add_to_root(opeartion_call_exp)
 
 
