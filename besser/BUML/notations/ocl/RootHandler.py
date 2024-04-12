@@ -8,6 +8,9 @@ class Root_Handler:
         self.pre = False
         self.post = False
         self.if_else_roots = []
+
+    def get_root(self):
+        return root
     def get_inv(self):
         return self.invariant
     def set_inv(self,inv):
@@ -16,13 +19,18 @@ class Root_Handler:
         self.post = post
     def get_post(self):
         return self.post
+
+    def set_body(self,body):
+        self.body = body
+    def get_body(self):
+        return self.body
     def set_pre(self,pre):
         self.pre=pre
     def get_pre(self):
         return self.pre
 
     def handle_property(self,prop):
-         self.add_to_root(self.factory.create_property_Call_Expression(prop,"NP"))
+        self.add_to_root(self.factory.create_property_Call_Expression(prop,"NP"))
 
     def get_root(self):
         return self.root
@@ -32,8 +40,7 @@ class Root_Handler:
         self.if_else_roots.append(None)
         return self.factory.create_if_else_exp(name,type)
     def pop(self):
-        self.last_coll_exp = self.all.pop()
-        self.add_to_root(self.last_coll_exp)
+        self.add_to_root(self.all.pop())
     def checkNumberOrVariable(self, txt):
         if txt.isnumeric():
             if "." in txt:
@@ -100,14 +107,30 @@ class Root_Handler:
     def create_sequence(self):
         type = self.factory.create_sequence_type ()
         return self.factory.create_collection_literal_expression("sequence",type)
+    def create_sub_sequence(self):
+        type = self.factory.create_sub_sequence_type ()
+        return self.factory.create_collection_literal_expression("subsequence",type)
+
     def create_bag(self):
         type = self.factory.create_bag_type()
         return self.factory.create_collection_literal_expression("bag",type = type)
 
     def create_type_exp(self,classifier):
         return self.factory.create_type_exp(classifier)
+    def handle_and_with_function_call(self, text):
+        op = None
+        inF = None
+        if text[0:3] == "and":
+            inF = self.factory.create_infix_operator("AND")
+            op = self.factory.create_operation_call_expression(name = "AND")
+        if text[0:2] == "or":
+            inF = self.factory.create_infix_operator("OR")
+            op = self.factory.create_operation_call_expression(name = "OR")
+        op.arguments.append(inF)
+        self.add_to_root(op)
+        pass
     def create_operation_call_exp(self,name):
-       return self.factory.create_operation_call_expression(name=name)
+        return self.factory.create_operation_call_expression(name=name)
     def get_factory(self):
         return self.factory
     def handle_bag(self,  collectionLiteral, operator):
@@ -172,6 +195,7 @@ class Root_Handler:
                     iteratorclass = "NotMentioned"
                 iteratorExp = self.factory.create_iterator_expression(iteratorVariableName ,iteratorclass)
                 self.all[-1].addIterator(iteratorExp)
+
 
         pass
     def handle_binary_expression(self, expression, operator,inbetween= None,beforeSign = None):

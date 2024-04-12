@@ -65,14 +65,15 @@ expression:
           | LPAREN*  primaryExpression?  (DOT ID)* operator? primaryExpression?  (DOT ID)+ expression? #PrimaryExp
           | primaryExpression  (DOT)* ID* functionCall operator? expression?  #funcCall
 //          | operator expression #operatorExp
-          | operator numberORUserDefined?  #op
           | Arrow expression #arrowexp
           | NUMBER expression?  #number
           | Arrow? functionCall expression? #PredefinedfunctionCall
-          | primaryExpression expression? #ID
+
           | SingleQuote expression DOT? SingleQuote DOT? expression? #SingleQuoteExp
           | DoubleDots expression #doubleDots
-          | DoubleCOLON expression #doubleCOLONs
+          | AND? OR? ID? DoubleCOLON expression #doubleCOLONs
+          | operator numberORUserDefined?  #op
+          | primaryExpression expression? #ID
 
 
 ;
@@ -80,9 +81,9 @@ expression:
 
 
 binaryExpression:  ((primaryExpression (DOT ID)*) | NUMBER)   (DOT ID)* operator ((primaryExpression (DOT ID)*) | NUMBER) ;
-unaryExpression: (NOT | MINUS|operator) expression ;
+unaryExpression: (NOT | MINUS|PLUS|Divide|'*') expression ;
 //
-operator: EQUAL | NOTEQUAL| LT | LE | GT | GE | PLUS | MINUS | EMPTYSTRING | Divide | AND | OR | XOR | IMPLIES ; // Added 'xor' and 'implies'
+operator: EQUAL | NOTEQUAL| LT | LE | GT | GE | PLUS|'*' | MINUS | EMPTYSTRING | Divide | AND | OR | XOR | IMPLIES ; // Added 'xor' and 'implies'
 //
 numberORUserDefined: NUMBER |SingleQuote? ID LPAREN? RPAREN? SingleQuote?  ;
 

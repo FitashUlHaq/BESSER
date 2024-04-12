@@ -39,6 +39,8 @@ class BOCLListener(ParseTreeListener):
             self.rootHandler.set_pre(True)
         if 'post:' in ctx.getText():
             self.rootHandler.set_post(True)
+        if 'body:' in ctx.getText():
+            self.rootHandler.set_post(True)
 
         pass
 
@@ -245,7 +247,11 @@ class BOCLListener(ParseTreeListener):
             if self.debug_print:
                 print(ctx.getText())
         op_call_exp = self.rootHandler.create_operation_call_exp('IsEmpty')
-        self.rootHandler.handle_adding_to_root(self.coll_data.pop())
+        if len(self.coll_data)!=0:
+            self.rootHandler.handle_adding_to_root(self.coll_data.pop())
+        else:
+            propertyName = ctx.getText().split('->')[0]
+            self.rootHandler.handle_property(propertyName)
         self.rootHandler.handle_adding_to_root(op_call_exp)
 
         pass
@@ -262,7 +268,12 @@ class BOCLListener(ParseTreeListener):
             if self.debug_print:
                 print(ctx.getText())
         op_call_exp = self.rootHandler.create_operation_call_exp('Sum')
-        self.rootHandler.handle_adding_to_root(self.coll_data.pop())
+        if len(self.coll_data)!=0:
+            self.rootHandler.handle_adding_to_root(self.coll_data.pop())
+        else:
+            propertyName = ctx.getText().split('->')[0]
+            self.rootHandler.handle_property(propertyName)
+
         self.rootHandler.handle_adding_to_root(op_call_exp)
 
         pass
@@ -279,8 +290,11 @@ class BOCLListener(ParseTreeListener):
             if self.debug_print:
                 print(ctx.getText())
         op_call_exp = self.rootHandler.create_operation_call_exp('Size')
-        if len(self.coll_data) > 0:
+        if len(self.coll_data) != 0:
             self.rootHandler.handle_adding_to_root(self.coll_data.pop())
+        else:
+            propertyName = ctx.getText().split('->')[0]
+            self.rootHandler.handle_property(propertyName)
         self.rootHandler.handle_adding_to_root(op_call_exp)
 
         pass
@@ -297,8 +311,11 @@ class BOCLListener(ParseTreeListener):
             if self.debug_print:
                 print(ctx.getText())
         op_call_exp = self.rootHandler.create_operation_call_exp('INCLUDES')
-        if len(self.coll_data) > 0:
+        if len(self.coll_data) != 0:
             self.rootHandler.handle_adding_to_root(self.coll_data.pop())
+        else:
+            propertyName = ctx.getText().split('->')[0]
+            self.rootHandler.handle_property(propertyName)
         self.coll_data.append(op_call_exp)
 
         pass
@@ -317,8 +334,11 @@ class BOCLListener(ParseTreeListener):
             if self.debug_print:
                 print(ctx.getText())
         op_call_exp = self.rootHandler.create_operation_call_exp('EXCLUDES')
-        if len(self.coll_data) > 0:
+        if len(self.coll_data) != 0:
             self.rootHandler.handle_adding_to_root(self.coll_data.pop())
+        else:
+            propertyName = ctx.getText().split('->')[0]
+            self.rootHandler.handle_property(propertyName)
         self.coll_data.append(op_call_exp)
 
         pass
@@ -359,11 +379,13 @@ class BOCLListener(ParseTreeListener):
             print(inspect.stack()[0][3])
             if self.debug_print:
                 print(ctx.getText())
+        self.coll_data.append(self.rootHandler.create_sub_sequence())
 
         pass
 
     # Exit a parse tree produced by BOCLParser#SUBSEQUENCE.
     def exitSUBSEQUENCE(self, ctx: BOCLParser.SUBSEQUENCEContext):
+        self.rootHandler.add_to_root(self.coll_data.pop())
         pass
 
     # Enter a parse tree produced by BOCLParser#ALLINSTANCES.
@@ -539,7 +561,11 @@ class BOCLListener(ParseTreeListener):
 
     # Exit a parse tree produced by BOCLParser#COLLECTION.
     def exitCOLLECTION(self, ctx: BOCLParser.COLLECTIONContext):
-        # print("exitCOLLECTION")
+        if self.debug:
+            print("exitCOLLECTION")
+            if self.debug_print:
+                print(ctx.getText())
+
         self.rootHandler.pop()
         pass
 
@@ -736,7 +762,8 @@ class BOCLListener(ParseTreeListener):
             if self.debug_print:
                 print(ctx.getText())
         item = self.rootHandler.get_factory().create_collection_item("item", ctx.getText())
-        self.coll_data[-1].add(item)
+        if len(self.coll_data)>0:
+            self.coll_data[-1].add(item)
         pass
 
     # Exit a parse tree produced by BOCLParser#number.
@@ -771,7 +798,8 @@ class BOCLListener(ParseTreeListener):
             item = self.rootHandler.get_factory().create_collection_item("item", ctx.getText())
             self.coll_data[-1].add(item)
         else:
-            self.rootHandler.handle_ID(ctx.getText())
+            if self.rootHandler.get_root() is not None:
+                self.rootHandler.handle_ID(ctx.getText())
         pass
 
     # Exit a parse tree produced by BOCLParser#ID.
@@ -799,6 +827,7 @@ class BOCLListener(ParseTreeListener):
             print(inspect.stack()[0][3])
             if self.debug_print:
                 print(ctx.getText())
+
 
         pass
 
@@ -999,6 +1028,11 @@ class BOCLListener(ParseTreeListener):
             print(inspect.stack()[0][3])
             if self.debug_print:
                 print(ctx.getText())
+        if ctx.getText()[0:3] == "and" or ctx.getText()[0:3] == "or":
+            self.rootHandler.handle_and_with_function_call(ctx.getText())
+
+
+        self.userDefined = ctx.getText().split('::')[0]
         pass
 
     # Exit a parse tree produced by BOCLParser#doubleCOLONs.

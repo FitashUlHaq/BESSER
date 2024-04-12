@@ -64,6 +64,8 @@ class Factory:
         return CollectionLiteralExp(name = name,type=type)
     def create_sequence_type(self):
         return SequenceType("SequenceType")
+    def create_sub_sequence_type(self):
+        return SequenceType("SubSequenceType")
     def create_collection_item(self,name ,item):
         return CollectionItem(name,item)
     def create_iterator_expression(self,name,type):
