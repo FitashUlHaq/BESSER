@@ -57,6 +57,7 @@ class BOCLListener(ParseTreeListener):
         else:
             pass  # throw exception
 
+
         pass
 
     # Enter a parse tree produced by BOCLParser#ContextExp.
@@ -565,6 +566,7 @@ class BOCLListener(ParseTreeListener):
             print(inspect.stack()[0][3])
             if self.debug_print:
                 print(ctx.getText())
+                print(ctx.parentCtx.getText())
             # print(ctx.getText())
 
         self.rootHandler.handle_collection(ctx.getText())
@@ -588,7 +590,9 @@ class BOCLListener(ParseTreeListener):
             print(inspect.stack()[0][3])
             if self.debug_print:
                 print(ctx.getText())
-
+                print(ctx.parentCtx.getText())
+        if ctx.parentCtx is not None:
+            self.rootHandler.verify(ctx.parentCtx.getText().split(ctx.getText())[0])
         self.rootHandler.handle_collection(ctx.getText())
         pass
 
@@ -812,6 +816,8 @@ class BOCLListener(ParseTreeListener):
             self.coll_data[-1].add(item)
         else:
             if self.rootHandler.get_root() is not None:
+                self.rootHandler.handle_ID(ctx.getText())
+            if len(self.rootHandler.all)>0:
                 self.rootHandler.handle_ID(ctx.getText())
         pass
 
@@ -1059,7 +1065,11 @@ class BOCLListener(ParseTreeListener):
             if self.debug_print:
                 print(ctx.getText())
         self.rootHandler.pop()
-        self.rootHandler.handle_and_with_function_call(ctx.getText())
+        if len(ctx.getText())>2:
+            if ctx.getText()[0:3] == "and" or ctx.getText()[0:2] == "or":
+                self.rootHandler.handle_and_with_function_call(ctx.getText())
+        # elif ctx.getText()[0:1] in ['+','-','*','/','=']:
+        #     self.rootHandler.create_infinix_op(ctx.getText()[0:1])
 
         pass
 # Exit a parse tree produced by BOCLParser#endExpression.

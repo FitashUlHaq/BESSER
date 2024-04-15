@@ -34,7 +34,7 @@ class Factory:
                                            [leftpart, infixOperator, rightpart])
             else:
                 return OperationCallExpression("Operation", infixOperator.get_infix_operator(),
-                                           [beforeOp, leftpart, infixOperator, rightpart])
+                                           [infixOperator, rightpart])
         elif inBetweenOp is None and isleftNone is True and name is None:
             return OperationCallExpression("Operation", infixOperator.get_infix_operator(),
                                            [infixOperator, rightpart])

@@ -329,5 +329,56 @@ class TestOclInterpreter(unittest.TestCase):
         walker.walk(listener, tree)
         assert rootHandler.get_root() != None
 
+    def test_excludes_researcher(self):
+            ocl = ("context Researcher inv NoSelfReviews: self.submission -> excludes(self.manuscript")
+            input_stream = InputStream(ocl)
+            rootHandler = Root_Handler()
+            lexer = BOCLLexer(input_stream)
+            stream = CommonTokenStream(lexer)
+            parser = BOCLParser(stream)
+            tree = parser.oclFile()
+            listener = BOCLListener(rootHandler)
+            walker = ParseTreeWalker()
+            walker.walk(listener, tree)
+            assert rootHandler.get_root() != None
+    def test_excludes_PaperLength(self):
+            ocl = ("context Paper inv PaperLength:self.wordCount < 10000")
+            input_stream = InputStream(ocl)
+            rootHandler = Root_Handler()
+            lexer = BOCLLexer(input_stream)
+            stream = CommonTokenStream(lexer)
+            parser = BOCLParser(stream)
+            tree = parser.oclFile()
+            listener = BOCLListener(rootHandler)
+            walker = ParseTreeWalker()
+            walker.walk(listener, tree)
+            assert rootHandler.get_root() != None
+
+
+    def test_AuthorsOfStudentPaper(self):
+            ocl = ("context Paper inv AuthorsOfStudentPaper:self.studentPaper = self.author->exists(x | x.isStudent )")
+            input_stream = InputStream(ocl)
+            rootHandler = Root_Handler()
+            lexer = BOCLLexer(input_stream)
+            stream = CommonTokenStream(lexer)
+            parser = BOCLParser(stream)
+            tree = parser.oclFile()
+            listener = BOCLListener(rootHandler)
+            walker = ParseTreeWalker()
+            walker.walk(listener, tree)
+            assert rootHandler.get_root() != None
+
+    def test_AuthorsOfStudentPaper(self):
+            ocl = ("context Paper inv NoStudentReviewers:self.referee->forAll(r | not r.isStudent)")
+            input_stream = InputStream(ocl)
+            rootHandler = Root_Handler()
+            lexer = BOCLLexer(input_stream)
+            stream = CommonTokenStream(lexer)
+            parser = BOCLParser(stream)
+            tree = parser.oclFile()
+            listener = BOCLListener(rootHandler)
+            walker = ParseTreeWalker()
+            walker.walk(listener, tree)
+            assert rootHandler.get_root() != None
 if __name__ == '__main__':
     pass

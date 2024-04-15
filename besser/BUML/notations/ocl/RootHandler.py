@@ -118,6 +118,9 @@ class Root_Handler:
 
     def create_type_exp(self,classifier):
         return self.factory.create_type_exp(classifier)
+
+    def create_infinix_op(self,op):
+        self.factory.create_infix_operator(op)
     def handle_and_with_function_call(self, text):
         op = None
         inF = None
@@ -178,6 +181,23 @@ class Root_Handler:
         op.arguments.append(infinix_op)
         op.arguments.append(prop)
         self.add_to_root(op)
+        pass
+    def verify(self,item):
+        referredOP= None
+        if 'and' in item[0:3]:
+            item = item[3:]
+            referredOP= 'AND'
+        if 'or' in item[0:2]:
+            item = item[2:]
+            referredOP = 'OR'
+        prop = self.factory.create_property_Call_Expression(item, 'NI')
+        if referredOP is None:
+            # prop= self.factory.create_property_Call_Expression(item,'NI')
+            self.add_to_root(prop)
+        else:
+            opCallExp = self.factory.create_operation_call_expression(name="and")
+            opCallExp.referredOperation = self.factory.create_infix_operator(referredOP)
+            self.add_to_root(opCallExp)
         pass
     def handleColl(self, forAllExp,collectionOperator):
 

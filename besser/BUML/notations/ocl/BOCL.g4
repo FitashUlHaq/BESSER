@@ -55,7 +55,7 @@ expression:
 
           | Arrow? (FORALL | EXISTS | SELECT | COLLECT) LPAREN (ID (COLON ID)? COMMA?)+ PIPE expression RPAREN endExpression? #COLLECTION
 
-          | Arrow? (FORALL | EXISTS | SELECT | COLLECT) LPAREN expression RPAREN expression? #CollectionExpressionVariable
+          | Arrow? (FORALL | EXISTS | SELECT | COLLECT) LPAREN expression RPAREN endExpression? #CollectionExpressionVariable
 //
 //
           | Arrow SYMMETRICDIFFERENCE LPAREN expression RPAREN+ expression? #SYMMETRICDIFFERENCE
@@ -79,7 +79,7 @@ expression:
 
 
 ;
-endExpression:  (AND | OR) expression;
+endExpression:  (AND | OR)? expression;
 
 
 binaryExpression:  ((primaryExpression (DOT ID)*) | NUMBER)   (DOT ID)* operator ((primaryExpression (DOT ID)*) | NUMBER) ;
