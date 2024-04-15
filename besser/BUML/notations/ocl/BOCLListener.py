@@ -18,8 +18,8 @@ class BOCLListener(ParseTreeListener):
         self.forAllBody = False
         self.operator = []
         self.coll_data = []
-        self.debug = True
-        self.debug_print = True
+        self.debug = False
+        self.debug_print = False
         self.all_if_else = []
         self.types_of = []
         self.userDefined = None
@@ -156,7 +156,7 @@ class BOCLListener(ParseTreeListener):
 
         if self.unary:
             self.sign.append(self.unary.split(self.binary)[0])
-            print(self.sign)
+            # print(self.sign)
         if self.debug:
             print(inspect.stack()[0][3])
             if self.debug_print:
@@ -376,7 +376,7 @@ class BOCLListener(ParseTreeListener):
     # Exit a parse tree produced by BOCLParser#SEQUENCE.
     def exitSEQUENCE(self, ctx: BOCLParser.SEQUENCEContext):
         op = None
-        print(ctx.getText())
+        # print(ctx.getText())
         if len(self.operator) != 0:
             op = self.operator.pop()
             if len(self.coll_data) > 0:
@@ -568,7 +568,8 @@ class BOCLListener(ParseTreeListener):
                 print(ctx.getText())
                 print(ctx.parentCtx.getText())
             # print(ctx.getText())
-
+        if ctx.parentCtx is not None:
+            self.rootHandler.verify(ctx.parentCtx.getText().split(ctx.getText())[0])
         self.rootHandler.handle_collection(ctx.getText())
         # print(inspect.stack()[0][3])
 
@@ -938,7 +939,7 @@ class BOCLListener(ParseTreeListener):
             if self.debug_print:
                 print(ctx.getText())
         # print(ctx.getText())
-        print(ctx.getText())
+        # print(ctx.getText())
         if len(self.types_of) != 0:
             self.rootHandler.handle_property(ctx.getText())
 

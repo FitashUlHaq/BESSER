@@ -22,3 +22,5 @@ besser/.idea/workspace.xml
 .idea/inspectionProfiles/profiles_settings.xml
 *.xml
 tests/structural/localTest.py
+tests/structural/localTestEvaluator.py
+tests/library_test/meetingObjectDiagram_temp.plantuml

@@ -71,7 +71,7 @@ class DataValue(Instance):
 
     @property
     def value(self):
-       return self.value
+       return self.__value
 
 
     @value.setter

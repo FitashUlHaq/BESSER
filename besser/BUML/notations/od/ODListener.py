@@ -105,15 +105,17 @@ class ODListener(ParseTreeListener):
 
     # Exit a parse tree produced by ODParser#linkDeclaration.
     def exitLinkDeclaration(self, ctx:ODParser.LinkDeclarationContext):
+        print(ctx.getText())
         linkParts = ctx.getText().split(":")[0].split(self.linkType)
 
         obj1 = self.getObject(linkParts[0])
         obj2 = self.getObject(linkParts[1])
-        linkEndLeft = LinkEnd(linkParts[0],obj1)
-        linkEndRight = LinkEnd(linkParts[1], obj2)
-
-        obj1.add_to_link_end(linkEndLeft)
-        obj1.add_to_link_end(linkEndRight)
+        linkEndLeft = LinkEnd(self.link_name, obj1)
+        linkEndRight = LinkEnd(self.link_name, obj2)
+        for o in obj1:
+            o.add_to_link_end(linkEndRight)
+        for o in obj2:
+            o.add_to_link_end(linkEndLeft)
 
 
         # link.add_to_connection(LinkEnd(linkParts[0]))
@@ -145,6 +147,7 @@ class ODListener(ParseTreeListener):
 
     # Enter a parse tree produced by ODParser#linkName.
     def enterLinkName(self, ctx:ODParser.LinkNameContext):
+        self.link_name = ctx.getText()
         pass
 
     # Exit a parse tree produced by ODParser#linkName.
@@ -152,13 +155,11 @@ class ODListener(ParseTreeListener):
         pass
 
     def getObject(self, param):
-
+        toRet= []
         for object in self.objs:
             for slot in object.get_slots():
                 if slot.name == param:
-                        return object
-                # if slot.get_attribute().is_id:
-                #     pass
-
+                        toRet.append(object)
+        return toRet
 
 del ODParser
