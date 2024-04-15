@@ -1,11 +1,13 @@
 # Generated from BOCL.g4 by ANTLR 4.13.1
 from antlr4 import *
+
 if "." in __name__:
     from .BOCLParser import BOCLParser
 else:
     from BOCLParser import BOCLParser
 import inspect
 from besser.BUML.metamodel.structural.rules import OperationCallExpression
+
 
 # This class defines a complete listener for a parse tree produced by BOCLParser.
 class BOCLListener(ParseTreeListener):
@@ -23,6 +25,7 @@ class BOCLListener(ParseTreeListener):
         self.userDefined = None
         self.unary = ""
         self.sign = []
+        self.num = []
         self.functions = []
 
     # Enter a parse tree produced by BOCLParser#oclFile.
@@ -46,6 +49,14 @@ class BOCLListener(ParseTreeListener):
 
     # Exit a parse tree produced by BOCLParser#oclFile.
     def exitOclFile(self, ctx: BOCLParser.OclFileContext):
+        if len(self.operator) == 1:
+            if self.userDefined is not None:
+                self.rootHandler.handle_last_opnum(self.operator.pop(),self.userDefined)
+            else:
+                pass #throw exception
+        else:
+            pass  # throw exception
+
         pass
 
     # Enter a parse tree produced by BOCLParser#ContextExp.
@@ -247,7 +258,7 @@ class BOCLListener(ParseTreeListener):
             if self.debug_print:
                 print(ctx.getText())
         op_call_exp = self.rootHandler.create_operation_call_exp('IsEmpty')
-        if len(self.coll_data)!=0:
+        if len(self.coll_data) != 0:
             self.rootHandler.handle_adding_to_root(self.coll_data.pop())
         else:
             propertyName = ctx.getText().split('->')[0]
@@ -268,7 +279,7 @@ class BOCLListener(ParseTreeListener):
             if self.debug_print:
                 print(ctx.getText())
         op_call_exp = self.rootHandler.create_operation_call_exp('Sum')
-        if len(self.coll_data)!=0:
+        if len(self.coll_data) != 0:
             self.rootHandler.handle_adding_to_root(self.coll_data.pop())
         else:
             propertyName = ctx.getText().split('->')[0]
@@ -567,6 +578,7 @@ class BOCLListener(ParseTreeListener):
                 print(ctx.getText())
 
         self.rootHandler.pop()
+
         pass
 
     # Enter a parse tree produced by BOCLParser#CollectionExpressionVariable.
@@ -583,7 +595,7 @@ class BOCLListener(ParseTreeListener):
     # Exit a parse tree produced by BOCLParser#CollectionExpressionVariable.
     def exitCollectionExpressionVariable(self, ctx: BOCLParser.CollectionExpressionVariableContext):
         # print("exitCollectionExpressionVariable")
-        self.rootHandler.pop()
+        # self.rootHandler.pop()
         pass
 
     # Enter a parse tree produced by BOCLParser#SYMMETRICDIFFERENCE.
@@ -762,8 +774,9 @@ class BOCLListener(ParseTreeListener):
             if self.debug_print:
                 print(ctx.getText())
         item = self.rootHandler.get_factory().create_collection_item("item", ctx.getText())
-        if len(self.coll_data)>0:
+        if len(self.coll_data) > 0:
             self.coll_data[-1].add(item)
+
         pass
 
     # Exit a parse tree produced by BOCLParser#number.
@@ -827,7 +840,6 @@ class BOCLListener(ParseTreeListener):
             print(inspect.stack()[0][3])
             if self.debug_print:
                 print(ctx.getText())
-
 
         pass
 
@@ -906,6 +918,7 @@ class BOCLListener(ParseTreeListener):
             if self.debug_print:
                 print(ctx.getText())
         self.userDefined = ctx.getText()
+
         pass
 
     # Exit a parse tree produced by BOCLParser#numberORUserDefined.
@@ -1028,15 +1041,29 @@ class BOCLListener(ParseTreeListener):
             print(inspect.stack()[0][3])
             if self.debug_print:
                 print(ctx.getText())
-        if ctx.getText()[0:3] == "and" or ctx.getText()[0:3] == "or":
-            self.rootHandler.handle_and_with_function_call(ctx.getText())
-
 
         self.userDefined = ctx.getText().split('::')[0]
         pass
 
     # Exit a parse tree produced by BOCLParser#doubleCOLONs.
     def exitDoubleCOLONs(self, ctx: BOCLParser.DoubleCOLONsContext):
+        if self.debug:
+            print(inspect.stack()[0][3])
+            if self.debug_print:
+                print(ctx.getText())
+        pass
+
+    def enterEndExpression(self, ctx: BOCLParser.EndExpressionContext):
+        if self.debug:
+            print(inspect.stack()[0][3])
+            if self.debug_print:
+                print(ctx.getText())
+        self.rootHandler.pop()
+        self.rootHandler.handle_and_with_function_call(ctx.getText())
+
+        pass
+# Exit a parse tree produced by BOCLParser#endExpression.
+    def exitEndExpression(self, ctx: BOCLParser.EndExpressionContext):
         if self.debug:
             print(inspect.stack()[0][3])
             if self.debug_print:

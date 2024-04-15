@@ -40,7 +40,8 @@ class Root_Handler:
         self.if_else_roots.append(None)
         return self.factory.create_if_else_exp(name,type)
     def pop(self):
-        self.add_to_root(self.all.pop())
+        if len(self.all)!=0:
+            self.add_to_root(self.all.pop())
     def checkNumberOrVariable(self, txt):
         if txt.isnumeric():
             if "." in txt:
@@ -239,7 +240,21 @@ class Root_Handler:
 
 
         pass
+    def handle_last_opnum(self,operator,number):
+        op= self.factory.create_operation_call_expression(name='callExp')
+        op.arguments.append(self.factory.create_infix_operator(operator))
+        num = self.checkNumberOrVariable(number)
 
+        if "int" in num:
+           rightPart = self.factory.create_integer_literal_expression("NP", int(number))
+
+        if "real" in num:
+            rightPart = self.factory.create_real_literal_expression("NP", float(number))
+
+        op.arguments.append(
+            rightPart
+        )
+        self.add_to_root(op)
     def handlePrint(self, root):
         if root == None:
             return

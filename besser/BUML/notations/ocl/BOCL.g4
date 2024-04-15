@@ -52,7 +52,9 @@ expression:
           | Arrow PREPEND LPAREN+ (SingleQuote? expression SingleQuote? COMMA?)* RPAREN+ expression? #PREPEND
           | Arrow LAST LPAREN RPAREN+ expression? #LAST
           | Arrow APPEND LPAREN (SingleQuote? expression SingleQuote? COMMA?)*  RPAREN+ expression?   #APPEND
-          | Arrow? (FORALL | EXISTS | SELECT | COLLECT) LPAREN (ID (COLON ID)? COMMA?)+ PIPE expression RPAREN expression? #COLLECTION
+
+          | Arrow? (FORALL | EXISTS | SELECT | COLLECT) LPAREN (ID (COLON ID)? COMMA?)+ PIPE expression RPAREN endExpression? #COLLECTION
+
           | Arrow? (FORALL | EXISTS | SELECT | COLLECT) LPAREN expression RPAREN expression? #CollectionExpressionVariable
 //
 //
@@ -77,7 +79,7 @@ expression:
 
 
 ;
-
+endExpression:  (AND | OR) expression;
 
 
 binaryExpression:  ((primaryExpression (DOT ID)*) | NUMBER)   (DOT ID)* operator ((primaryExpression (DOT ID)*) | NUMBER) ;
