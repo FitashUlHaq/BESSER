@@ -356,7 +356,8 @@ class TestOclInterpreter(unittest.TestCase):
 
 
     def test_AuthorsOfStudentPaper(self):
-            ocl = ("context Paper inv AuthorsOfStudentPaper:self.studentPaper = self.author->exists(x | x.isStudent )")
+            ocl = ("context Paper inv AuthorsOfStudentPaper:self.studentPaper = self.author->exists(x | x.isStudent = True"
+                   ")")
             input_stream = InputStream(ocl)
             rootHandler = Root_Handler()
             lexer = BOCLLexer(input_stream)

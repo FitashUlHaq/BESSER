@@ -48,6 +48,8 @@ class Object(Instance):
         super().__init__()
         self.slots: list[AttributeLink] = []
         self.linkEnd: list[LinkEnd] = []
+    def getLinkEnds(self):
+        return self.linkEnd
     def add_slot(self, slot):
         self.slots.append(slot)
 
@@ -83,6 +85,7 @@ class LinkEnd(NamedElement):
         super().__init__(name)
         self.associationEnd: Property = None
         self.instance= ins
+
 
 class Link(NamedElement):
     def __init__(self):

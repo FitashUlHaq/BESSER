@@ -105,7 +105,7 @@ class ODListener(ParseTreeListener):
 
     # Exit a parse tree produced by ODParser#linkDeclaration.
     def exitLinkDeclaration(self, ctx:ODParser.LinkDeclarationContext):
-        print(ctx.getText())
+        # print(ctx.getText())
         linkParts = ctx.getText().split(":")[0].split(self.linkType)
 
         obj1 = self.getObject(linkParts[0])

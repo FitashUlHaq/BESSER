@@ -28,12 +28,15 @@ class Root_Handler:
         self.pre=pre
     def get_pre(self):
         return self.pre
-
+    def create_property (self,prop):
+        return self.factory.create_property_Call_Expression(prop,"NP")
     def handle_property(self,prop):
         self.add_to_root(self.factory.create_property_Call_Expression(prop,"NP"))
 
     def get_root(self):
         return self.root
+    def get_context_name(self):
+        return self.context_name
     def set_context_name(self,name):
         self.context_name = name
     def create_if_else_exp(self,name,type):

@@ -18,8 +18,9 @@ class BOCLListener(ParseTreeListener):
         self.forAllBody = False
         self.operator = []
         self.coll_data = []
-        self.debug = False
-        self.debug_print = False
+        self.primaryExp =None
+        self.debug = True
+        self.debug_print = True
         self.all_if_else = []
         self.types_of = []
         self.userDefined = None
@@ -185,18 +186,6 @@ class BOCLListener(ParseTreeListener):
     def exitUnary(self, ctx: BOCLParser.UnaryContext):
         pass
 
-    # Enter a parse tree produced by BOCLParser#if.
-    # def enterIf(self, ctx: BOCLParser.IfContext):
-    #     # print(inspect.stack()[0][3])
-    #     print(ctx.getText())
-    #     if self.debug:
-    #         print(inspect.stack()[0][3])
-    #
-    #     pass
-    #
-    # # Exit a parse tree produced by BOCLParser#if.
-    # def exitIf(self, ctx: BOCLParser.IfContext):
-    #     pass
 
     # Enter a parse tree produced by BOCLParser#OCLISTYPEOF.
     def enterOCLISTYPEOF(self, ctx: BOCLParser.OCLISTYPEOFContext):
@@ -262,8 +251,9 @@ class BOCLListener(ParseTreeListener):
         if len(self.coll_data) != 0:
             self.rootHandler.handle_adding_to_root(self.coll_data.pop())
         else:
-            propertyName = ctx.getText().split('->')[0]
-            self.rootHandler.handle_property(propertyName)
+            if ctx.parentCtx is not None:
+                propertyName = ctx.parentCtx.getText().split('->')[0]
+                self.rootHandler.handle_property(propertyName)
         self.rootHandler.handle_adding_to_root(op_call_exp)
 
         pass
@@ -283,8 +273,9 @@ class BOCLListener(ParseTreeListener):
         if len(self.coll_data) != 0:
             self.rootHandler.handle_adding_to_root(self.coll_data.pop())
         else:
-            propertyName = ctx.getText().split('->')[0]
-            self.rootHandler.handle_property(propertyName)
+            if ctx.parentCtx is not None:
+                propertyName = ctx.parentCtx.getText().split('->')[0]
+                self.rootHandler.handle_property(propertyName)
 
         self.rootHandler.handle_adding_to_root(op_call_exp)
 
@@ -305,8 +296,11 @@ class BOCLListener(ParseTreeListener):
         if len(self.coll_data) != 0:
             self.rootHandler.handle_adding_to_root(self.coll_data.pop())
         else:
-            propertyName = ctx.getText().split('->')[0]
-            self.rootHandler.handle_property(propertyName)
+            if ctx.parentCtx is not None:
+                propertyName = ctx.parentCtx.getText().split('->')[0]
+                self.rootHandler.handle_property(propertyName)
+
+            # self.rootHandler.handle_property(propertyName)
         self.rootHandler.handle_adding_to_root(op_call_exp)
 
         pass
@@ -326,8 +320,9 @@ class BOCLListener(ParseTreeListener):
         if len(self.coll_data) != 0:
             self.rootHandler.handle_adding_to_root(self.coll_data.pop())
         else:
-            propertyName = ctx.getText().split('->')[0]
-            self.rootHandler.handle_property(propertyName)
+            if ctx.parentCtx is not None:
+                propertyName = ctx.parentCtx.getText().split('->')[0]
+                self.rootHandler.handle_property(propertyName)
         self.coll_data.append(op_call_exp)
 
         pass
@@ -335,7 +330,12 @@ class BOCLListener(ParseTreeListener):
     # Exit a parse tree produced by BOCLParser#INCLUDES.
     def exitINCLUDES(self, ctx: BOCLParser.INCLUDESContext):
 
-        self.rootHandler.add_to_root(self.coll_data.pop())
+        exp = self.coll_data.pop()
+        if self.primaryExp is not None:
+            if len(exp.arguments) == 0:
+                prop = self.rootHandler.create_property(self.primaryExp)
+                exp.arguments.append(prop)
+        self.rootHandler.add_to_root(exp)
         pass
 
     # Enter a parse tree produced by BOCLParser#EXCLUDES.
@@ -349,15 +349,26 @@ class BOCLListener(ParseTreeListener):
         if len(self.coll_data) != 0:
             self.rootHandler.handle_adding_to_root(self.coll_data.pop())
         else:
-            propertyName = ctx.getText().split('->')[0]
-            self.rootHandler.handle_property(propertyName)
+            temp = ctx.getText()
+            if ctx.parentCtx is not None:
+                propertyName = ctx.parentCtx.getText().split('->')[0]
+                self.rootHandler.handle_property(propertyName)
         self.coll_data.append(op_call_exp)
 
         pass
 
     # Exit a parse tree produced by BOCLParser#EXCLUDES.
     def exitEXCLUDES(self, ctx: BOCLParser.EXCLUDESContext):
-        self.rootHandler.add_to_root(self.coll_data.pop())
+        if self.debug:
+            print(inspect.stack()[0][3])
+            if self.debug_print:
+                print(ctx.getText())
+        exp = self.coll_data.pop()
+        if self.primaryExp is not None:
+            if len(exp.arguments)==0:
+                prop = self.rootHandler.create_property(self.primaryExp)
+                exp.arguments.append(prop)
+        self.rootHandler.add_to_root(exp)
 
         pass
 
@@ -710,11 +721,12 @@ class BOCLListener(ParseTreeListener):
             if self.unary == self.sign[-1] + ctx.getText():
                 self.rootHandler.handle_single_variable(ctx.getText(), self.sign.pop())
                 #
-
+        self.primaryExp = ctx.getText()
         if self.debug:
             print(inspect.stack()[0][3])
             if self.debug_print:
                 print(ctx.getText())
+
 
         # print(inspect.stack()[0][3])
         # print(ctx.getText())
